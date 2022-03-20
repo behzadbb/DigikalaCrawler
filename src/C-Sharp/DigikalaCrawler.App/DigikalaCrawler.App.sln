@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Models", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Services", "DigikalaCrawler.Services\DigikalaCrawler.Services.csproj", "{20E014F2-4158-4009-97FE-133AC0054EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Data.Mongo", "DigikalaCrawler.Data.Mongo\DigikalaCrawler.Data.Mongo.csproj", "{6435D68F-F9BF-41F6-B672-2D684EC19079}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6435D68F-F9BF-41F6-B672-2D684EC19079}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6435D68F-F9BF-41F6-B672-2D684EC19079}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6435D68F-F9BF-41F6-B672-2D684EC19079}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6435D68F-F9BF-41F6-B672-2D684EC19079}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
