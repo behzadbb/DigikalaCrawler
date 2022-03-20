@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.App", "DigikalaCrawler.App\DigikalaCrawler.App.csproj", "{5642F484-8810-4D65-85D4-322F7AEC561C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Models", "DigikalaCrawler.Models\DigikalaCrawler.Models.csproj", "{C567CCA3-282F-472C-866A-9DE13058D235}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5642F484-8810-4D65-85D4-322F7AEC561C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5642F484-8810-4D65-85D4-322F7AEC561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5642F484-8810-4D65-85D4-322F7AEC561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5642F484-8810-4D65-85D4-322F7AEC561C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C567CCA3-282F-472C-866A-9DE13058D235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C567CCA3-282F-472C-866A-9DE13058D235}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C567CCA3-282F-472C-866A-9DE13058D235}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C567CCA3-282F-472C-866A-9DE13058D235}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4516F094-C0E7-4DA3-8E29-AD202B09393D}
+	EndGlobalSection
+EndGlobal
