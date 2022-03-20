@@ -8,4 +8,13 @@ public class DigikalaProduct : Page
     public ObjectId _id { get; set; }
     public CommentDetails CommentDetails { get; set; }
     public ProductData ProductData { get; set; }
+
+    public DigikalaProduct()
+    {
+
+    }
+    public DigikalaProduct(int productId)
+    {
+        this.ProductId = productId;
+    }
 }
