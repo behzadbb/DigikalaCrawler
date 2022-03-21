@@ -1,5 +1,4 @@
-﻿using DigikalaCrawler.Models;
-using DigikalaCrawler.Models.Comments;
+﻿using DigikalaCrawler.Share.Models;
 using MongoDB.Bson;
 
 namespace DigikalaCrawler.Data.Mongo.DBModels;

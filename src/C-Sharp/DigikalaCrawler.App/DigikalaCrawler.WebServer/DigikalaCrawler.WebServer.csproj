@@ -12,6 +12,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DigikalaCrawler.Data.Mongo\DigikalaCrawler.Data.Mongo.csproj" />
+    <ProjectReference Include="..\DigikalaCrawler.Services\DigikalaCrawler.Services.csproj" />
   </ItemGroup>
 
 </Project>

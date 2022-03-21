@@ -1,4 +1,5 @@
 using DigikalaCrawler.Data.Mongo;
+using DigikalaCrawler.Services.Crawler;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<DigikalaMongo>();
+builder.Services.AddScoped<DigikalaCrawlerServiceV1>();
 
 var app = builder.Build();
 

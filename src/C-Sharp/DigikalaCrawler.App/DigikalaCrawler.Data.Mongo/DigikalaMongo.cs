@@ -1,7 +1,5 @@
 ﻿using DigikalaCrawler.Data.Mongo.DBModels;
-using DigikalaCrawler.Models;
-using DigikalaCrawler.Models.Comments;
-using MongoDB.Bson;
+using DigikalaCrawler.Share.Models;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 
@@ -21,23 +19,23 @@ public class DigikalaMongo
         DigikalaProducts = db.GetCollection<DigikalaProduct>("DigikalaProducts");
     }
 
-    public void InsertPages(int[] productIds)
+    public void InsertPages(List<int> productIds)
     {
         List<DigikalaProduct> pages = new List<DigikalaProduct>();
         pages.AddRange(productIds.Select(x => new DigikalaProduct(x)));
         DigikalaProducts.InsertBatch(pages);
     }
 
-    public IList<DigikalaProduct> GetFreeProduct(int userid, int count)
+    public IList<int> GetFreeProduct(int userid, int count)
     {
-        List<ObjectId> ids = DigikalaProducts.FindAll().Where(p => (p.Assign && p.UserId == userid && !p.Success)).Take(count).Select(x => x._id).ToList();
-        if (ids.Count() < 1)
-            ids = DigikalaProducts.FindAll().Where(p => !p.Success && !p.Assign && p.UserId == null).Take(count).Select(x => x._id).ToList();
-        var query = Query<DigikalaProduct>.Where(p => p._id.Equals(ids));
+        List<int> ids = DigikalaProducts.FindAll().Where(p => (p.Assign && p.UserId == userid && !p.Success)).Take(count).Select(x => x.ProductId).ToList();
+        if (ids.Count() < count)
+            ids.AddRange(DigikalaProducts.FindAll().Where(p => !p.Success && !p.Assign && p.UserId == null).Take(count - ids.Count).Select(x => x.ProductId).ToList());
+        var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
         var update = Update<DigikalaProduct>.Set(p => p.Assign, true).Set(p => p.Success, false).Set(p => p.UserId, userid).Set(p => p.AssignDate, DateTime.Now);
-        DigikalaProducts.Update(query, update);
+        DigikalaProducts.Update(query, update, UpdateFlags.Multi);
 
-        return DigikalaProducts.FindAll().Where(p => p._id.Equals(ids)).ToList();
+        return ids;
     }
 
     public void SetProduct(int userid, int productId, ProductData product, CommentDetails comments)

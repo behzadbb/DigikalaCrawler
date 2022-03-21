@@ -14,10 +14,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\DigikalaCrawler.Models\DigikalaCrawler.Models.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Content Remove="C:\Users\Behzad\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\osx\native\libsnappy64.dylib" />
   </ItemGroup>
 
@@ -127,6 +123,10 @@
 
   <ItemGroup>
     <Content Remove="C:\Users\Behzad\.nuget\packages\mongodb.driver.core\2.15.0\build\..\runtimes\win\native\snappy64.dll" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\DigikalaCrawler.Share.Models\DigikalaCrawler.Share.Models.csproj" />
   </ItemGroup>
 
 </Project>

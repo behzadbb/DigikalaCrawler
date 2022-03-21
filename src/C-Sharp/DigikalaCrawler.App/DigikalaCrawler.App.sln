@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31912.275
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.App", "DigikalaCrawler.App\DigikalaCrawler.App.csproj", "{5642F484-8810-4D65-85D4-322F7AEC561C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.App", "DigikalaCrawler.App\DigikalaCrawler.App.csproj", "{5642F484-8810-4D65-85D4-322F7AEC561C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Models", "DigikalaCrawler.Models\DigikalaCrawler.Models.csproj", "{C567CCA3-282F-472C-866A-9DE13058D235}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.Services", "DigikalaCrawler.Services\DigikalaCrawler.Services.csproj", "{20E014F2-4158-4009-97FE-133AC0054EE0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Services", "DigikalaCrawler.Services\DigikalaCrawler.Services.csproj", "{20E014F2-4158-4009-97FE-133AC0054EE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.Data.Mongo", "DigikalaCrawler.Data.Mongo\DigikalaCrawler.Data.Mongo.csproj", "{6435D68F-F9BF-41F6-B672-2D684EC19079}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Data.Mongo", "DigikalaCrawler.Data.Mongo\DigikalaCrawler.Data.Mongo.csproj", "{6435D68F-F9BF-41F6-B672-2D684EC19079}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.WebServer", "DigikalaCrawler.WebServer\DigikalaCrawler.WebServer.csproj", "{EF679621-B8F6-4555-AE51-14832E0013F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.WebServer", "DigikalaCrawler.WebServer\DigikalaCrawler.WebServer.csproj", "{EF679621-B8F6-4555-AE51-14832E0013F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Share.Models", "DigikalaCrawler.Share.Models\DigikalaCrawler.Share.Models.csproj", "{E8191803-8368-4ED0-AAD4-DF2B239E2595}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,6 @@ Global
 		{5642F484-8810-4D65-85D4-322F7AEC561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5642F484-8810-4D65-85D4-322F7AEC561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5642F484-8810-4D65-85D4-322F7AEC561C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C567CCA3-282F-472C-866A-9DE13058D235}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C567CCA3-282F-472C-866A-9DE13058D235}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C567CCA3-282F-472C-866A-9DE13058D235}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C567CCA3-282F-472C-866A-9DE13058D235}.Release|Any CPU.Build.0 = Release|Any CPU
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20E014F2-4158-4009-97FE-133AC0054EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -39,6 +35,10 @@ Global
 		{EF679621-B8F6-4555-AE51-14832E0013F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{EF679621-B8F6-4555-AE51-14832E0013F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{EF679621-B8F6-4555-AE51-14832E0013F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E8191803-8368-4ED0-AAD4-DF2B239E2595}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E8191803-8368-4ED0-AAD4-DF2B239E2595}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E8191803-8368-4ED0-AAD4-DF2B239E2595}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E8191803-8368-4ED0-AAD4-DF2B239E2595}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

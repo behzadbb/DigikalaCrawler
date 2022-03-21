@@ -1,11 +1,10 @@
-﻿using DigikalaCrawler.Models;
-using DigikalaCrawler.Models.Comments;
+﻿using DigikalaCrawler.Share.Models;
 using System.IO.Compression;
 using System.Net;
 using System.Net.Http.Json;
 using System.Text;
 using System.Xml;
-using File = System.IO.File;
+using System.IO;
 
 namespace DigikalaCrawler.Services.Crawler;
 
@@ -68,7 +67,7 @@ public class DigikalaCrawlerServiceV1 : IDisposable
         return locs;
     }
 
-    public async Task DownloadSitemap(string url, string savePath)
+    public async Task<string> DownloadSitemap(string url, string savePath)
     {
         string fileName = url.Substring(url.LastIndexOf("/") + 1, url.LastIndexOf(".") - url.LastIndexOf("/") - 1);
         string fileExt = url.Substring(url.LastIndexOf("."), url.Length - url.LastIndexOf("."));
@@ -89,6 +88,7 @@ public class DigikalaCrawlerServiceV1 : IDisposable
         XmlDocument xdocI = new XmlDocument();
         xdocI.LoadXml(ReadData);
         xdocI.Save(fullPath);
+        return fullPath;
     }
 
     public async Task<IList<string>> GetSitemap(string path)
@@ -113,9 +113,9 @@ public class DigikalaCrawlerServiceV1 : IDisposable
         return int.Parse(url.Substring(url.LastIndexOf("dkp-"), url.LastIndexOf('/') - url.LastIndexOf("dkp-")).Replace("dkp-", ""));
     }
 
-    public int[] GetProductIdFromUrls(List<string> urls)
+    public List<int> GetProductIdFromUrls(List<string> urls)
     {
-        return urls.Select(x => GetProductIdFromUrl(x)).ToArray();
+        return urls.Select(x => GetProductIdFromUrl(x)).ToList();
     }
     #endregion
 
