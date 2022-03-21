@@ -1,0 +1,2433 @@
+{
+  "status": 200,
+  "data": {
+    "product": {
+      "id": 76039,
+      "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+      "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+      "url": {
+        "base": null,
+        "uri": "\/product\/dkp-76039\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0631\u0648\u0627\u0628\u0637-\u0628\u06cc\u0646-\u0627\u0644\u0645\u0644\u0644-\u0627\u0632-1945-\u062a\u0627-2008-\u0627\u062b\u0631-\u0645\u0648\u0631\u06cc\u0633-\u0648\u0627\u0639\u06cc\u0633-\u062c\u0644\u062f-\u0633\u0648\u0645"
+      },
+      "status": "out_of_stock",
+      "has_quick_view": false,
+      "digiplus": {
+        "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+        "is_jet_eligible": false,
+        "cash_back": 0,
+        "is_general_location_jet_eligible": false
+      },
+      "data_layer": {
+        "brand": "\u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+        "category": "[MA,\u06a9\u062a\u0627\u0628]",
+        "metric6": 0,
+        "dimension2": 0,
+        "dimension6": 0,
+        "dimension7": "none",
+        "dimension9": 0,
+        "dimension11": 0,
+        "dimension20": "out_of_stock"
+      },
+      "images": {
+        "main": {
+          "storage_ids": [],
+          "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331115.jpg?x-oss-process=image\/resize,m_lfit,h_800,w_800\/quality,q_90" ],
+          "thumbnail_url": null,
+          "temporary_id": null
+        },
+        "list": [
+          {
+            "storage_ids": [],
+            "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331186.jpg?x-oss-process=image\/resize,m_lfit,h_800,w_800\/quality,q_90" ],
+            "thumbnail_url": null,
+            "temporary_id": null
+          },
+          {
+            "storage_ids": [],
+            "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331237.jpg?x-oss-process=image\/resize,m_lfit,h_800,w_800\/quality,q_90" ],
+            "thumbnail_url": null,
+            "temporary_id": null
+          }
+        ]
+      },
+      "rating": {
+        "rate": 0,
+        "count": 0
+      },
+      "colors": [],
+      "default_variant": [],
+      "properties": {
+        "is_fast_shipping": false,
+        "is_ship_by_seller": false,
+        "is_multi_warehouse": false,
+        "is_fake": false,
+        "has_gift": false,
+        "min_price_in_last_month": 0,
+        "is_non_inventory": false,
+        "is_ad": false,
+        "is_jet_eligible": false,
+        "is_medical_supplement": false,
+        "has_printed_price": false
+      },
+      "badges": [],
+      "videos": [],
+      "category": {
+        "id": 10562,
+        "title_fa": "\u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc",
+        "title_en": "Printed Book of Social Sciences",
+        "code": "printed-book-of-social-sciences",
+        "content_description": "\u0628\u0627 \u0647\u062f\u0641 \u062d\u0641\u0638 \u0633\u0644\u0627\u0645\u062a \u0638\u0627\u0647\u0631\u06cc \u06a9\u062a\u0627\u0628\u200c\u0647\u0627\u060c \u0627\u0645\u06a9\u0627\u0646 \u0628\u0631\u06af\u0634\u062a \u06a9\u0627\u0644\u0627 \u062f\u0631 \u06af\u0631\u0648\u0647 \u06a9\u062a\u0627\u0628\u060c \u0627\u06af\u0631 \u0641\u0642\u0637 \u0628\u0627 \u062f\u0644\u06cc\u0644 \u0022\u0627\u0646\u0635\u0631\u0627\u0641 \u0627\u0632 \u062e\u0631\u06cc\u062f\u0022 \u0628\u0627\u0634\u062f\u060c \u0627\u0645\u06a9\u0627\u0646\u200c\u067e\u0630\u06cc\u0631 \u0646\u06cc\u0633\u062a."
+      },
+      "brand": {
+        "id": 1736,
+        "code": "amir-kabir",
+        "title_fa": "\u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+        "title_en": "Amir Kabir",
+        "url": {
+          "base": null,
+          "uri": "\/brand\/amir-kabir\/"
+        },
+        "visibility": true,
+        "logo": {
+          "storage_ids": [],
+          "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-brands\/6192.png?x-oss-process=image\/resize,m_lfit,h_120,w_120\/quality,q_80" ],
+          "thumbnail_url": null,
+          "temporary_id": null
+        },
+        "is_premium": false,
+        "is_miscellaneous": false,
+        "is_name_similar": false
+      },
+      "review": {
+        "description": "\u062f\u0631 \u0637\u06cc \u0634\u0634 \u0633\u0627\u0644 \u062c\u0646\u06af \u062f\u0648\u0645 \u062c\u0647\u0627\u0646\u06cc \u0648\u0642\u0641\u0647 \u06a9\u0627\u0645\u0644\u06cc \u062f\u0631 \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644\u06cc \u0628\u0647\u200c\u0648\u062c\u0648\u062f \u0622\u0645\u062f. \u0627\u0641\u0648\u0644 \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0627\u0631\u0648\u067e\u0627\u06cc\u06cc\u060c \u0635\u0639\u0648\u062f \u0627\u06cc\u0627\u0644\u0627\u062a \u0645\u062a\u062d\u062f\u0647 \u0627\u0645\u0631\u06cc\u06a9\u0627 \u0648 \u0627\u062a\u062d\u0627\u062f \u062c\u0645\u0627\u0647\u06cc\u0631 \u0634\u0648\u0631\u0648\u06cc \u0631\u0627 \u0628\u0647\u200c\u062f\u0646\u0628\u0627\u0644 \u062f\u0627\u0634\u062a \u06a9\u0647 \u062c\u0628\u0647\u0629 \u0645\u062a\u062d\u062f \u0648\u0627\u062d\u062f\u06cc \u0631\u0627 \u062f\u0631 \u0627\u0637\u0631\u0627\u0641 \u062e\u0648\u062f \u062a\u0634\u06a9\u06cc\u0644 \u062f\u0627\u062f\u0646\u062f \u0648 \u0639\u0645\u0644\u0627\u064b \u062c\u0647\u0627\u0646 \u0628\u0647 \u062f\u0648 \u0628\u0644\u0648\u06a9 \u06a9\u0627\u067e\u06cc\u062a\u0627\u0644\u06cc\u0633\u062a\u06cc \u0648 \u06a9\u0645\u0648\u0646\u06cc\u0633\u062a\u06cc \u062a\u0642\u0633\u06cc\u0645 \u06af\u0631\u062f\u06cc\u062f. \u062f\u0631 \u0647\u0645\u06cc\u0646 \u0632\u0645\u0627\u0646 \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0645\u0633\u062a\u0639\u0645\u0631\u0647 \u0627\u0632 \u0632\u06cc\u0631 \u06cc\u0648\u063a \u0627\u0633\u062a\u0639\u0645\u0627\u0631 \u0648 \u0642\u06cc\u0645\u0648\u0645\u06cc\u062a \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0627\u0631\u0648\u067e\u0627\u06cc\u06cc \u0622\u0632\u0627\u062f \u0634\u062f\u0647 \u0648 \u062c\u0647\u0627\u0646 \u0633\u0648\u0645 \u0631\u0627 \u062a\u0634\u06a9\u06cc\u0644 \u062f\u0627\u062f\u0646\u062f. \u062c\u0647\u0627\u0646 \u062f\u0648\u0642\u0637\u0628\u06cc \u0627\u0632 1960 \u062a\u0627 1980 \u062f\u0631 \u0627\u0648\u062c \u062a\u0644\u0627\u0634 \u0628\u0648\u062f \u0648 \u067e\u0633 \u0627\u0632 \u0622\u0646 \u0628\u0647\u200c\u062a\u062f\u0631\u06cc\u062c \u062c\u0627\u06cc \u062e\u0648\u062f \u0631\u0627 \u0628\u0647 \u062c\u0647\u0627\u0646 \u0686\u0646\u062f\u0642\u0637\u0628\u06cc \u062f\u0627\u062f. \u062d\u0648\u0627\u062f\u062b \u0633\u0627\u0644\u200c\u0647\u0627\u06cc 1989 \u062a\u0627 1991 \u067e\u0627\u06cc\u0627\u0646 \u062c\u0646\u06af \u0633\u0631\u062f \u0648 \u0641\u0631\u0648\u067e\u0627\u0634\u06cc \u0627\u062a\u062d\u0627\u062f \u062c\u0645\u0627\u0647\u06cc\u0631 \u0634\u0648\u0631\u0648\u06cc \u0648 \u06cc\u0648\u06af\u0633\u0644\u0627\u0648\u06cc \u0631\u0627 \u0627\u0639\u0644\u0627\u0645 \u0648 \u067e\u0633 \u0627\u0632 \u0622\u0646 \u062c\u0627\u0645\u0639\u0647 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u062a\u062d\u062a \u062a\u0623\u062b\u06cc\u0631 \u0627\u0628\u0631\u0642\u062f\u0631\u062a \u0627\u0645\u0631\u06cc\u06a9\u0627 \u0642\u0631\u0627\u0631 \u06af\u0631\u0641\u062a \u0648 \u062f\u0631 \u062c\u0633\u062a\u062c\u0648\u06cc \u0646\u0638\u0645 \u062c\u062f\u06cc\u062f \u062c\u0647\u0627\u0646\u06cc \u0628\u0648\u062f \u06a9\u0647 \u0648\u0627\u0642\u0639\u0647 \u06cc\u0627\u0632\u062f\u0647\u0645 \u0633\u067e\u062a\u0627\u0645\u0628\u0631 2001 \u0648 \u067e\u06cc\u0627\u0645\u062f\u0647\u0627\u06cc \u0622\u0646 \u0627\u0632 \u0627\u062d\u062a\u0645\u0627\u0644 \u062a\u06a9\u0645\u06cc\u0644 \u0648 \u067e\u06cc\u0634\u0631\u0648\u06cc \u0622\u0646 \u06a9\u0627\u0633\u062a.\r\n \u067e\u0631\u0641\u0633\u0648\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633\u060c \u0627\u0633\u062a\u0627\u062f \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u0648 \u0645\u0633\u0626\u0648\u0644 \u062f\u0648\u0631\u0647 \u062f\u06a9\u062a\u0631\u0627\u06cc \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u062f\u0631 \u0645\u0624\u0633\u0633\u0647 \u0639\u0644\u0648\u0645 \u0633\u06cc\u0627\u0633\u06cc \u067e\u0627\u0631\u06cc\u0633\u060c \u0639\u0636\u0648 \u0647\u06cc\u0626\u062a \u062a\u062d\u0631\u06cc\u0631\u06cc\u0647 \u0645\u062c\u0644\u0647\u200c\u0647\u0627\u06cc \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644\u060c \u062a\u0627\u0631\u06cc\u062e \u062f\u06cc\u067e\u0644\u0645\u0627\u0633\u06cc\u060c \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0648 \u062f\u0641\u0627\u0639 \u0645\u0644\u06cc\u060c \u0648 \u0646\u06cc\u0632 \u0639\u0636\u0648 \u06a9\u0645\u06cc\u0633\u06cc\u0648\u0646 \u0627\u0633\u0646\u0627\u062f \u062f\u06cc\u067e\u0644\u0645\u0627\u062a\u06cc\u06a9 \u0641\u0631\u0627\u0646\u0633\u0647 \u0645\u06cc\u200c\u0628\u0627\u0634\u062f. \u0648\u06cc \u062f\u0631 \u0637\u0648\u0644 \u0641\u0639\u0627\u0644\u06cc\u062a\u200c\u0647\u0627\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u062e\u0648\u062f \u0622\u062b\u0627\u0631\u06cc \u062f\u0631 \u0632\u0645\u06cc\u0646\u0647\u200c\u0647\u0627\u06cc \u0645\u062e\u062a\u0644\u0641 \u062a\u0623\u0644\u06cc\u0641 \u06a9\u0631\u062f\u0647 \u0627\u0633\u062a \u0627\u0632 \u062c\u0645\u0644\u0647: \u062f\u06cc\u067e\u0644\u0645\u0627\u0633\u06cc \u0648 \u0627\u0628\u0632\u0627\u0631 \u0646\u0638\u0627\u0645\u06cc (1992)\u061b \u062c\u0646\u06af \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645\u060c (1993)\u061b \u0627\u0631\u0648\u067e\u0627 \u0648 \u0628\u062d\u0631\u0627\u0646 \u06a9\u0648\u0628\u0627 (1993)\u061b \u0639\u0638\u0645\u062a \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0698\u0646\u0631\u0627\u0644 \u062f\u0648\u06af\u064f\u0644\u061b \u0635\u0644\u062d \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645\u060c (2004)\u061b \u0641\u0631\u0627\u0646\u0633\u0647 \u0648 \u0627\u062a\u0645\u060c \u0645\u0637\u0627\u0644\u0639\u0627\u062a \u062a\u0627\u0631\u06cc\u062e\u06cc \u0647\u0633\u062a\u0647\u200c\u0627\u06cc (1994)\u061b \u0635\u0627\u0644\u062d \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645 (2004)\u061b \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u0627\u0632 1945 \u062a\u0627 \u0627\u0645\u0631\u0648\u0632\u060c (2008)\u061b \u0642\u062f\u0631\u062a \u06cc\u0627 \u0627\u0639\u062a\u0628\u0627\u0631 (2009) \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0641\u0631\u0627\u0646\u0633\u0647 \u0627\u0632 1958 \u062a\u0627 2008\u061b \u0686\u06af\u0648\u0646\u0647 \u0698\u0646\u0631\u0627\u0644 \u062f\u0648\u06af\u064f\u0644 \u0628\u0627\u0639\u062b \u0646\u0627\u06a9\u0627\u0645\u06cc \u06a9\u0648\u062f\u062a\u0627\u06cc \u0627\u0644\u062c\u0632\u0627\u06cc\u0631 \u0634\u062f\u060c (2011).",
+        "attributes": [
+          {
+            "title": "\u0642\u0637\u0639",
+            "values": [ "\u0648\u0632\u06cc\u0631\u06cc" ]
+          },
+          {
+            "title": "\u0646\u0648\u0639 \u062c\u0644\u062f",
+            "values": [ "\u0634\u0648\u0645\u06cc\u0632" ]
+          },
+          {
+            "title": "\u06af\u0631\u0648\u0647 \u0633\u0646\u06cc",
+            "values": [ "\u0628\u0632\u0631\u06af\u0633\u0627\u0644" ]
+          }
+        ]
+      },
+      "pros_and_cons": {
+        "advantages": [],
+        "disadvantages": []
+      },
+      "suggestion": {
+        "count": 0,
+        "percentage": 0
+      },
+      "variants": [],
+      "concurrent_viewers": 0,
+      "questions_count": 0,
+      "comments_count": 0,
+      "breadcrumb": [
+        {
+          "title": "\u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+          "url": {
+            "base": null,
+            "uri": "\/"
+          }
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628\u060c \u0644\u0648\u0627\u0632\u0645 \u062a\u062d\u0631\u06cc\u0631 \u0648 \u0647\u0646\u0631",
+          "url": {
+            "base": null,
+            "uri": "\/main\/book-and-media\/"
+          }
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628",
+          "url": {
+            "base": null,
+            "uri": "\/search\/category-book\/"
+          }
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc",
+          "url": {
+            "base": null,
+            "uri": "\/search\/category-printed-book-of-social-sciences\/"
+          }
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+          "url": {
+            "base": null,
+            "uri": "\/product\/dkp-76039\/%DA%A9%D8%AA%D8%A7%D8%A8-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84-%D8%A7%D8%B2-1945-%D8%AA%D8%A7-2008-%D8%A7%D8%AB%D8%B1-%D9%85%D9%88%D8%B1%DB%8C%D8%B3-%D9%88%D8%A7%D8%B9%DB%8C%D8%B3-%D8%AC%D9%84%D8%AF-%D8%B3%D9%88%D9%85"
+          }
+        }
+      ],
+      "size_guide": [],
+      "specifications": [
+        {
+          "title": "\u0645\u0634\u062e\u0635\u0627\u062a",
+          "attributes": [
+            {
+              "title": "\u0646\u0648\u06cc\u0633\u0646\u062f\u0647",
+              "values": [ "\u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 " ]
+            },
+            {
+              "title": "\u0645\u062a\u0631\u062c\u0645",
+              "values": [ "\u0633\u06cc\u062f \u062d\u0627\u0645\u062f \u0631\u0636\u06cc\u0626\u06cc " ]
+            },
+            {
+              "title": "\u0634\u0627\u0628\u06a9",
+              "values": [ "9789640014172 " ]
+            },
+            {
+              "title": "\u0646\u0627\u0634\u0631",
+              "values": [ "\u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 " ]
+            },
+            {
+              "title": "\u0645\u0648\u0636\u0648\u0639",
+              "values": [ "\u0633\u06cc\u0627\u0633\u062a \u062c\u0647\u0627\u0646 " ]
+            },
+            {
+              "title": "\u0631\u062f\u0647\u200c\u0628\u0646\u062f\u06cc \u06a9\u062a\u0627\u0628",
+              "values": [ "\u0639\u0644\u0648\u0645 \u0633\u06cc\u0627\u0633\u06cc (\u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc) " ]
+            },
+            {
+              "title": "\u0642\u0637\u0639",
+              "values": [ "\u0648\u0632\u06cc\u0631\u06cc " ]
+            },
+            {
+              "title": "\u0646\u0648\u0639 \u062c\u0644\u062f",
+              "values": [ "\u0634\u0648\u0645\u06cc\u0632 " ]
+            },
+            {
+              "title": "\u06af\u0631\u0648\u0647 \u0633\u0646\u06cc",
+              "values": [ "\u0628\u0632\u0631\u06af\u0633\u0627\u0644 " ]
+            },
+            {
+              "title": "\u062a\u0639\u062f\u0627\u062f \u0635\u0641\u062d\u0647",
+              "values": [ "367 " ]
+            },
+            {
+              "title": "\u062a\u0639\u062f\u0627\u062f \u062c\u0644\u062f",
+              "values": [ "1 " ]
+            },
+            {
+              "title": "\u0648\u0632\u0646",
+              "values": [ "519 \u06af\u0631\u0645" ]
+            }
+          ]
+        }
+      ],
+      "expert_reviews": {
+        "attributes": [],
+        "description": "\u062f\u0631 \u0637\u06cc \u0634\u0634 \u0633\u0627\u0644 \u062c\u0646\u06af \u062f\u0648\u0645 \u062c\u0647\u0627\u0646\u06cc \u0648\u0642\u0641\u0647 \u06a9\u0627\u0645\u0644\u06cc \u062f\u0631 \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644\u06cc \u0628\u0647\u200c\u0648\u062c\u0648\u062f \u0622\u0645\u062f. \u0627\u0641\u0648\u0644 \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0627\u0631\u0648\u067e\u0627\u06cc\u06cc\u060c \u0635\u0639\u0648\u062f \u0627\u06cc\u0627\u0644\u0627\u062a \u0645\u062a\u062d\u062f\u0647 \u0627\u0645\u0631\u06cc\u06a9\u0627 \u0648 \u0627\u062a\u062d\u0627\u062f \u062c\u0645\u0627\u0647\u06cc\u0631 \u0634\u0648\u0631\u0648\u06cc \u0631\u0627 \u0628\u0647\u200c\u062f\u0646\u0628\u0627\u0644 \u062f\u0627\u0634\u062a \u06a9\u0647 \u062c\u0628\u0647\u0629 \u0645\u062a\u062d\u062f \u0648\u0627\u062d\u062f\u06cc \u0631\u0627 \u062f\u0631 \u0627\u0637\u0631\u0627\u0641 \u062e\u0648\u062f \u062a\u0634\u06a9\u06cc\u0644 \u062f\u0627\u062f\u0646\u062f \u0648 \u0639\u0645\u0644\u0627\u064b \u062c\u0647\u0627\u0646 \u0628\u0647 \u062f\u0648 \u0628\u0644\u0648\u06a9 \u06a9\u0627\u067e\u06cc\u062a\u0627\u0644\u06cc\u0633\u062a\u06cc \u0648 \u06a9\u0645\u0648\u0646\u06cc\u0633\u062a\u06cc \u062a\u0642\u0633\u06cc\u0645 \u06af\u0631\u062f\u06cc\u062f. \u062f\u0631 \u0647\u0645\u06cc\u0646 \u0632\u0645\u0627\u0646 \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0645\u0633\u062a\u0639\u0645\u0631\u0647 \u0627\u0632 \u0632\u06cc\u0631 \u06cc\u0648\u063a \u0627\u0633\u062a\u0639\u0645\u0627\u0631 \u0648 \u0642\u06cc\u0645\u0648\u0645\u06cc\u062a \u06a9\u0634\u0648\u0631\u0647\u0627\u06cc \u0627\u0631\u0648\u067e\u0627\u06cc\u06cc \u0622\u0632\u0627\u062f \u0634\u062f\u0647 \u0648 \u062c\u0647\u0627\u0646 \u0633\u0648\u0645 \u0631\u0627 \u062a\u0634\u06a9\u06cc\u0644 \u062f\u0627\u062f\u0646\u062f. \u062c\u0647\u0627\u0646 \u062f\u0648\u0642\u0637\u0628\u06cc \u0627\u0632 1960 \u062a\u0627 1980 \u062f\u0631 \u0627\u0648\u062c \u062a\u0644\u0627\u0634 \u0628\u0648\u062f \u0648 \u067e\u0633 \u0627\u0632 \u0622\u0646 \u0628\u0647\u200c\u062a\u062f\u0631\u06cc\u062c \u062c\u0627\u06cc \u062e\u0648\u062f \u0631\u0627 \u0628\u0647 \u062c\u0647\u0627\u0646 \u0686\u0646\u062f\u0642\u0637\u0628\u06cc \u062f\u0627\u062f. \u062d\u0648\u0627\u062f\u062b \u0633\u0627\u0644\u200c\u0647\u0627\u06cc 1989 \u062a\u0627 1991 \u067e\u0627\u06cc\u0627\u0646 \u062c\u0646\u06af \u0633\u0631\u062f \u0648 \u0641\u0631\u0648\u067e\u0627\u0634\u06cc \u0627\u062a\u062d\u0627\u062f \u062c\u0645\u0627\u0647\u06cc\u0631 \u0634\u0648\u0631\u0648\u06cc \u0648 \u06cc\u0648\u06af\u0633\u0644\u0627\u0648\u06cc \u0631\u0627 \u0627\u0639\u0644\u0627\u0645 \u0648 \u067e\u0633 \u0627\u0632 \u0622\u0646 \u062c\u0627\u0645\u0639\u0647 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u062a\u062d\u062a \u062a\u0623\u062b\u06cc\u0631 \u0627\u0628\u0631\u0642\u062f\u0631\u062a \u0627\u0645\u0631\u06cc\u06a9\u0627 \u0642\u0631\u0627\u0631 \u06af\u0631\u0641\u062a \u0648 \u062f\u0631 \u062c\u0633\u062a\u062c\u0648\u06cc \u0646\u0638\u0645 \u062c\u062f\u06cc\u062f \u062c\u0647\u0627\u0646\u06cc \u0628\u0648\u062f \u06a9\u0647 \u0648\u0627\u0642\u0639\u0647 \u06cc\u0627\u0632\u062f\u0647\u0645 \u0633\u067e\u062a\u0627\u0645\u0628\u0631 2001 \u0648 \u067e\u06cc\u0627\u0645\u062f\u0647\u0627\u06cc \u0622\u0646 \u0627\u0632 \u0627\u062d\u062a\u0645\u0627\u0644 \u062a\u06a9\u0645\u06cc\u0644 \u0648 \u067e\u06cc\u0634\u0631\u0648\u06cc \u0622\u0646 \u06a9\u0627\u0633\u062a.\r\n \u067e\u0631\u0641\u0633\u0648\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633\u060c \u0627\u0633\u062a\u0627\u062f \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u0648 \u0645\u0633\u0626\u0648\u0644 \u062f\u0648\u0631\u0647 \u062f\u06a9\u062a\u0631\u0627\u06cc \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u062f\u0631 \u0645\u0624\u0633\u0633\u0647 \u0639\u0644\u0648\u0645 \u0633\u06cc\u0627\u0633\u06cc \u067e\u0627\u0631\u06cc\u0633\u060c \u0639\u0636\u0648 \u0647\u06cc\u0626\u062a \u062a\u062d\u0631\u06cc\u0631\u06cc\u0647 \u0645\u062c\u0644\u0647\u200c\u0647\u0627\u06cc \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644\u060c \u062a\u0627\u0631\u06cc\u062e \u062f\u06cc\u067e\u0644\u0645\u0627\u0633\u06cc\u060c \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0648 \u062f\u0641\u0627\u0639 \u0645\u0644\u06cc\u060c \u0648 \u0646\u06cc\u0632 \u0639\u0636\u0648 \u06a9\u0645\u06cc\u0633\u06cc\u0648\u0646 \u0627\u0633\u0646\u0627\u062f \u062f\u06cc\u067e\u0644\u0645\u0627\u062a\u06cc\u06a9 \u0641\u0631\u0627\u0646\u0633\u0647 \u0645\u06cc\u200c\u0628\u0627\u0634\u062f. \u0648\u06cc \u062f\u0631 \u0637\u0648\u0644 \u0641\u0639\u0627\u0644\u06cc\u062a\u200c\u0647\u0627\u06cc \u0622\u0645\u0648\u0632\u0634\u06cc \u062e\u0648\u062f \u0622\u062b\u0627\u0631\u06cc \u062f\u0631 \u0632\u0645\u06cc\u0646\u0647\u200c\u0647\u0627\u06cc \u0645\u062e\u062a\u0644\u0641 \u062a\u0623\u0644\u06cc\u0641 \u06a9\u0631\u062f\u0647 \u0627\u0633\u062a \u0627\u0632 \u062c\u0645\u0644\u0647: \u062f\u06cc\u067e\u0644\u0645\u0627\u0633\u06cc \u0648 \u0627\u0628\u0632\u0627\u0631 \u0646\u0638\u0627\u0645\u06cc (1992)\u061b \u062c\u0646\u06af \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645\u060c (1993)\u061b \u0627\u0631\u0648\u067e\u0627 \u0648 \u0628\u062d\u0631\u0627\u0646 \u06a9\u0648\u0628\u0627 (1993)\u061b \u0639\u0638\u0645\u062a \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0698\u0646\u0631\u0627\u0644 \u062f\u0648\u06af\u064f\u0644\u061b \u0635\u0644\u062d \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645\u060c (2004)\u061b \u0641\u0631\u0627\u0646\u0633\u0647 \u0648 \u0627\u062a\u0645\u060c \u0645\u0637\u0627\u0644\u0639\u0627\u062a \u062a\u0627\u0631\u06cc\u062e\u06cc \u0647\u0633\u062a\u0647\u200c\u0627\u06cc (1994)\u061b \u0635\u0627\u0644\u062d \u062f\u0631 \u0642\u0631\u0646 \u0628\u06cc\u0633\u062a\u0645 (2004)\u061b \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646\u200c\u0627\u0644\u0645\u0644\u0644 \u0627\u0632 1945 \u062a\u0627 \u0627\u0645\u0631\u0648\u0632\u060c (2008)\u061b \u0642\u062f\u0631\u062a \u06cc\u0627 \u0627\u0639\u062a\u0628\u0627\u0631 (2009) \u0633\u06cc\u0627\u0633\u062a \u062e\u0627\u0631\u062c\u06cc \u0641\u0631\u0627\u0646\u0633\u0647 \u0627\u0632 1958 \u062a\u0627 2008\u061b \u0686\u06af\u0648\u0646\u0647 \u0698\u0646\u0631\u0627\u0644 \u062f\u0648\u06af\u064f\u0644 \u0628\u0627\u0639\u062b \u0646\u0627\u06a9\u0627\u0645\u06cc \u06a9\u0648\u062f\u062a\u0627\u06cc \u0627\u0644\u062c\u0632\u0627\u06cc\u0631 \u0634\u062f\u060c (2011).",
+        "short_review": "",
+        "admin_rates": [],
+        "review_sections": [],
+        "technical_properties": {
+          "advantages": [],
+          "disadvantages": []
+        }
+      },
+      "meta": {
+        "brand_category_url": {
+          "base": null,
+          "uri": "\/search\/category-printed-book-of-social-sciences\/amir-kabir\/"
+        }
+      },
+      "fidibo": {
+        "url": "https:\/\/fidibo.com\/books\/search?utm_source=digikala\u0026utm_medium=integration_btn\u0026utm_campaign=book\u0026inbrowser=1\u0026key=\u062a\u0627\u0631\u06cc\u062e+\u0631\u0648\u0627\u0628\u0637+\u0628\u06cc\u0646+\u0627\u0644\u0645\u0644\u0644+(\u0627\u0632+1945+\u062a\u0627+2008)",
+        "image": ""
+      },
+      "last_comments": [],
+      "last_questions": []
+    },
+    "recommendations": {
+      "related_products": {
+        "title": "\u06a9\u0627\u0644\u0627\u0647\u0627\u06cc \u0645\u0634\u0627\u0628\u0647",
+        "discount_percent": null,
+        "see_more_url": null,
+        "products": [
+          {
+            "id": 42156,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u062a\u062d\u0644\u06cc\u0644\u06cc \u0635\u062f\u0631 \u0627\u0633\u0644\u0627\u0645 \u0627\u062b\u0631 \u0645\u062d\u0645\u062f \u0646\u0635\u06cc\u0631\u06cc",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u062a\u062d\u0644\u06cc\u0644\u06cc \u0635\u062f\u0631 \u0627\u0633\u0644\u0627\u0645 \u0627\u062b\u0631 \u0645\u062d\u0645\u062f \u0646\u0635\u06cc\u0631\u06cc",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-42156\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u062a\u062d\u0644\u06cc\u0644\u06cc-\u0635\u062f\u0631-\u0627\u0633\u0644\u0627\u0645-\u0627\u062b\u0631-\u0645\u062d\u0645\u062f-\u0646\u0635\u06cc\u0631\u06cc"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0645\u0639\u0627\u0631\u0641",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 188,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.4,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/243015.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 14519018,
+              "lead_time": 1,
+              "rank": 99.91,
+              "rate": 91.4,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 4,
+                  "rate": 57.14
+                },
+                "satisfied": {
+                  "rate_count": 3,
+                  "rate": 42.86
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 7,
+                "total_rate": 91.4
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": false,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 466904,
+                "title": "\u06a9\u06cc\u0627\u0646 \u06a9\u062a\u0627\u0628",
+                "code": "CRPFC",
+                "url": "https:\/\/www.digikala.com\/seller\/CRPFC\/",
+                "rating": {
+                  "total_rate": 88,
+                  "total_count": 737,
+                  "commitment": 100,
+                  "no_return": 100,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "1 \u0633\u0627\u0644 \u0648 5 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 4 },
+              "price": {
+                "selling_price": 350000,
+                "rrp_price": 350000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 0
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                "has_lead_time": false,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 89007,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062c\u0627\u0646 \u0645\u0627\u0631\u0646\u0628\u0648\u0646 - \u062c\u0644\u062f \u0633\u0648\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062c\u0627\u0646 \u0645\u0627\u0631\u0646\u0628\u0648\u0646 - \u062c\u0644\u062f \u0633\u0648\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-89007\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0641\u0644\u0633\u0641\u0647-\u06cc-\u0631\u0627\u062a\u0644\u062c-\u0627\u062b\u0631-\u062c\u0627\u0646-\u0645\u0627\u0631\u0646\u0628\u0648\u0646-\u062c\u0644\u062f-\u0633\u0648\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0686\u0634\u0645\u0647",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 16,
+              "dimension2": 29,
+              "dimension6": 0,
+              "dimension7": "special-offer",
+              "dimension9": 3.4,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/356255.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 85016,
+              "lead_time": 0,
+              "rank": 99.8,
+              "rate": 80,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 3,
+                  "rate": 37.5
+                },
+                "satisfied": {
+                  "rate_count": 4,
+                  "rate": 50
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 1,
+                  "rate": 12.5
+                },
+                "total_count": 8,
+                "total_rate": 80
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 1,
+                "title": "\u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "code": "5A52N",
+                "url": "https:\/\/www.digikala.com\/seller\/5A52N\/",
+                "rating": {
+                  "total_rate": 0,
+                  "total_count": 0,
+                  "commitment": 100,
+                  "no_return": 99.9,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "5 \u0633\u0627\u0644 \u0648 7 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 22 },
+              "price": {
+                "selling_price": 2109000,
+                "rrp_price": 2950000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": true,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 1,
+                "discount_percent": 29,
+                "badge": {
+                  "title": "\u0641\u0631\u0648\u0634 \u0648\u06cc\u0698\u0647",
+                  "color": "#E6123D",
+                  "icon": null
+                },
+                "is_digiplus_promotion": false,
+                "is_digiplus_early_access": false,
+                "is_application_incredible": false,
+                "is_lightening_deal": false
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 38982,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0647\u0631\u06cc \u067e\u0627\u062a\u0631 \u0648 \u0645\u062d\u0641\u0644 \u0642\u0642\u0646\u0648\u0633 \u0627\u062b\u0631 \u062c\u06cc. \u06a9\u06cc. \u0631\u0648\u0644\u06cc\u0646\u06af - \u062c\u0644\u062f \u0633\u0648\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u0647\u0631\u06cc \u067e\u0627\u062a\u0631 \u0648 \u0645\u062d\u0641\u0644 \u0642\u0642\u0646\u0648\u0633 \u0627\u062b\u0631 \u062c\u06cc. \u06a9\u06cc. \u0631\u0648\u0644\u06cc\u0646\u06af - \u062c\u0644\u062f \u0633\u0648\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-38982\/\u06a9\u062a\u0627\u0628-\u0647\u0631\u06cc-\u067e\u0627\u062a\u0631-\u0648-\u0645\u062d\u0641\u0644-\u0642\u0642\u0646\u0648\u0633-\u0627\u062b\u0631-\u062c\u06cc-\u06a9\u06cc-\u0631\u0648\u0644\u06cc\u0646\u06af-\u062c\u0644\u062f-\u0633\u0648\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u06a9\u062a\u0627\u0628\u0633\u0631\u0627\u06cc \u062a\u0646\u062f\u06cc\u0633",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 96,
+              "dimension2": 15,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.5,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/194664.png?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 12938673,
+              "lead_time": 1,
+              "rank": 99.94,
+              "rate": 94.2,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 10,
+                  "rate": 71.43
+                },
+                "satisfied": {
+                  "rate_count": 4,
+                  "rate": 28.57
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 14,
+                "total_rate": 94.2
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 475418,
+                "title": "\u06a9\u062a\u0627\u0628\u0633\u0631\u0627\u06cc \u062a\u0646\u062f\u06cc\u0633",
+                "code": "CSDY2",
+                "url": "https:\/\/www.digikala.com\/seller\/CSDY2\/",
+                "rating": {
+                  "total_rate": 92,
+                  "total_count": 1178,
+                  "commitment": 100,
+                  "no_return": 100,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "1 \u0633\u0627\u0644 \u0648 4 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 11 },
+              "price": {
+                "selling_price": 1020000,
+                "rrp_price": 1200000,
+                "order_limit": 2,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 15
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                "has_lead_time": false,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 98325,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u062c\u0647\u0627\u0646 \u0627\u062b\u0631 \u0641\u06cc\u0644\u06cc\u067e\u0647 \u0641\u0631\u0646\u0627\u0646\u062f\u0633 \u0622\u0631\u0645\u0633\u062a\u0648",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u062c\u0647\u0627\u0646 \u0627\u062b\u0631 \u0641\u06cc\u0644\u06cc\u067e\u0647 \u0641\u0631\u0646\u0627\u0646\u062f\u0633 \u0622\u0631\u0645\u0633\u062a\u0648",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-98325\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u062c\u0647\u0627\u0646-\u0627\u062b\u0631-\u0641\u06cc\u0644\u06cc\u067e\u0647-\u0641\u0631\u0646\u0627\u0646\u062f\u0633-\u0622\u0631\u0645\u0633\u062a\u0648"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0642\u0642\u0646\u0648\u0633",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 66,
+              "dimension2": 5,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.2,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/696660.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 25391373,
+              "lead_time": 1,
+              "rank": 99.8,
+              "rate": 80,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "satisfied": {
+                  "rate_count": 1,
+                  "rate": 100
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 1,
+                "total_rate": 80
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": true,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 149010,
+                "title": "\u062a\u0647\u0631\u0627\u0646 \u0628\u0648\u06a9",
+                "code": "AGV32",
+                "url": "https:\/\/www.digikala.com\/seller\/AGV32\/",
+                "rating": {
+                  "total_rate": 86,
+                  "total_count": 36436,
+                  "commitment": 98.7,
+                  "no_return": 99.2,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 2.1,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 10 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 22 },
+              "price": {
+                "selling_price": 2180000,
+                "rrp_price": 2300000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 2,
+                "discount_percent": 5
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0648 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  },
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0645\u0633\u062a\u0642\u06cc\u0645 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0627\u0631\u062f.",
+                    "has_lead_time": false,
+                    "type": "seller"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 355225,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0642\u0635\u0647\u200c \u0647\u0627\u06cc \u0634\u0627\u0647\u0646\u0627\u0645\u0647 \u0627\u062b\u0631 \u0622\u062a\u0648\u0633\u0627 \u0635\u0627\u0644\u062d\u06cc - \u062c\u0644\u062f \u0627\u0648\u0644 \u062a\u0627 \u0633\u0648\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u0642\u0635\u0647\u200c \u0647\u0627\u06cc \u0634\u0627\u0647\u0646\u0627\u0645\u0647 \u0627\u062b\u0631 \u0622\u062a\u0648\u0633\u0627 \u0635\u0627\u0644\u062d\u06cc - \u062c\u0644\u062f \u0627\u0648\u0644 \u062a\u0627 \u0633\u0648\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-355225\/\u06a9\u062a\u0627\u0628-\u0642\u0635\u0647-\u0647\u0627\u06cc-\u0634\u0627\u0647\u0646\u0627\u0645\u0647-\u0627\u062b\u0631-\u0622\u062a\u0648\u0633\u0627-\u0635\u0627\u0644\u062d\u06cc-\u062c\u0644\u062f-\u0627\u0648\u0644-\u062a\u0627-\u0633\u0648\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0627\u0641\u0642",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 26,
+              "dimension2": 3,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.4,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1219405.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 5875906,
+              "lead_time": 1,
+              "rank": 99.95,
+              "rate": 100,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 1,
+                  "rate": 100
+                },
+                "satisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 1,
+                "total_rate": 100
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": true,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 149010,
+                "title": "\u062a\u0647\u0631\u0627\u0646 \u0628\u0648\u06a9",
+                "code": "AGV32",
+                "url": "https:\/\/www.digikala.com\/seller\/AGV32\/",
+                "rating": {
+                  "total_rate": 86,
+                  "total_count": 36474,
+                  "commitment": 98.7,
+                  "no_return": 99.2,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 2.1,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 10 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 9 },
+              "price": {
+                "selling_price": 870000,
+                "rrp_price": 900000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 3
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0648 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  },
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0645\u0633\u062a\u0642\u06cc\u0645 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0627\u0631\u062f.",
+                    "has_lead_time": false,
+                    "type": "seller"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 88999,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062f\u06cc\u0648\u06cc\u062f \u0641\u0648\u0631\u0644\u06cc - \u062c\u0644\u062f \u062f\u0648\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062f\u06cc\u0648\u06cc\u062f \u0641\u0648\u0631\u0644\u06cc - \u062c\u0644\u062f \u062f\u0648\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-88999\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0641\u0644\u0633\u0641\u0647-\u06cc-\u0631\u0627\u062a\u0644\u062c-\u0627\u062b\u0631-\u062f\u06cc\u0648\u06cc\u062f-\u0641\u0648\u0631\u0644\u06cc-\u062c\u0644\u062f-\u062f\u0648\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0686\u0634\u0645\u0647",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 25,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.8,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/714040.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 14142209,
+              "lead_time": 1,
+              "rank": 99.9,
+              "rate": 100,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 1,
+                  "rate": 100
+                },
+                "satisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 1,
+                "total_rate": 100
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 535365,
+                "title": "\u06a9\u0648\u0686\u0647 \u06a9\u062a\u0627\u0628 \u0627\u0633\u062a\u0648\u0631",
+                "code": "CVRY2",
+                "url": "https:\/\/www.digikala.com\/seller\/CVRY2\/",
+                "rating": {
+                  "total_rate": 88,
+                  "total_count": 8318,
+                  "commitment": 100,
+                  "no_return": 99.6,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 4.7,
+                "registration_date": "1 \u0633\u0627\u0644 \u0648 3 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 29 },
+              "price": {
+                "selling_price": 2893000,
+                "rrp_price": 2893000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 2,
+                "discount_percent": 0
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                "has_lead_time": false,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 143453,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u0627\u0633\u062a\u0648\u0627\u0631\u062a \u0628\u0631\u0627\u0648\u0646 - \u062c\u0644\u062f \u067e\u0646\u062c\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u0627\u0633\u062a\u0648\u0627\u0631\u062a \u0628\u0631\u0627\u0648\u0646 - \u062c\u0644\u062f \u067e\u0646\u062c\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-143453\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0641\u0644\u0633\u0641\u0647-\u06cc-\u0631\u0627\u062a\u0644\u062c-\u0627\u062b\u0631-\u0627\u0633\u062a\u0648\u0627\u0631\u062a-\u0628\u0631\u0627\u0648\u0646-\u062c\u0644\u062f-\u067e\u0646\u062c\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0686\u0634\u0645\u0647",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 18,
+              "dimension2": 3,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.5,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1218081.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 6184998,
+              "lead_time": 1,
+              "rank": 99.8,
+              "rate": 80,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "satisfied": {
+                  "rate_count": 1,
+                  "rate": 100
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 1,
+                "total_rate": 80
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": true,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 149010,
+                "title": "\u062a\u0647\u0631\u0627\u0646 \u0628\u0648\u06a9",
+                "code": "AGV32",
+                "url": "https:\/\/www.digikala.com\/seller\/AGV32\/",
+                "rating": {
+                  "total_rate": 86,
+                  "total_count": 36474,
+                  "commitment": 98.7,
+                  "no_return": 99.2,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 2.1,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 10 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 23 },
+              "price": {
+                "selling_price": 2288000,
+                "rrp_price": 2350000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 3
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0648 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  },
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0645\u0633\u062a\u0642\u06cc\u0645 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0627\u0631\u062f.",
+                    "has_lead_time": false,
+                    "type": "seller"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 619072,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u0633\u06cc. \u0627\u0644. \u062a\u0646 - \u062c\u0644\u062f \u0647\u0641\u062a\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u0633\u06cc. \u0627\u0644. \u062a\u0646 - \u062c\u0644\u062f \u0647\u0641\u062a\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-619072\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0641\u0644\u0633\u0641\u0647-\u06cc-\u0631\u0627\u062a\u0644\u062c-\u0627\u062b\u0631-\u0633\u06cc-\u0627\u0644-\u062a\u0646-\u062c\u0644\u062f-\u0647\u0641\u062a\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0686\u0634\u0645\u0647",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 14,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.5,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/2582548.png?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 6185011,
+              "lead_time": 1,
+              "rank": 99.8,
+              "rate": 80,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "satisfied": {
+                  "rate_count": 1,
+                  "rate": 100
+                },
+                "neutral": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "total_count": 1,
+                "total_rate": 80
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": true,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 149010,
+                "title": "\u062a\u0647\u0631\u0627\u0646 \u0628\u0648\u06a9",
+                "code": "AGV32",
+                "url": "https:\/\/www.digikala.com\/seller\/AGV32\/",
+                "rating": {
+                  "total_rate": 86,
+                  "total_count": 36451,
+                  "commitment": 98.7,
+                  "no_return": 99.2,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 2.1,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 10 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 24 },
+              "price": {
+                "selling_price": 2347000,
+                "rrp_price": 2347000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 1,
+                "discount_percent": 0
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0648 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  },
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0645\u0633\u062a\u0642\u06cc\u0645 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0627\u0631\u062f.",
+                    "has_lead_time": false,
+                    "type": "seller"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 143462,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062c. \u0627\u0686. \u0622\u0631. \u067e\u0627\u0631\u06a9\u06cc\u0646\u0633\u0648\u0646 - \u062c\u0644\u062f \u0686\u0647\u0627\u0631\u0645",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0641\u0644\u0633\u0641\u0647 \u06cc \u0631\u0627\u062a\u0644\u062c \u0627\u062b\u0631 \u062c. \u0627\u0686. \u0622\u0631. \u067e\u0627\u0631\u06a9\u06cc\u0646\u0633\u0648\u0646 - \u062c\u0644\u062f \u0686\u0647\u0627\u0631\u0645",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-143462\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0641\u0644\u0633\u0641\u0647-\u06cc-\u0631\u0627\u062a\u0644\u062c-\u0627\u062b\u0631-\u062c-\u0627\u0686-\u0622\u0631-\u067e\u0627\u0631\u06a9\u06cc\u0646\u0633\u0648\u0646-\u062c\u0644\u062f-\u0686\u0647\u0627\u0631\u0645"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0686\u0634\u0645\u0647",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 18,
+              "dimension2": 24,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 4.2,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/815070.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 27980641,
+              "lead_time": 0,
+              "rank": 99.85,
+              "rate": 0,
+              "statistics": null,
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 871550,
+                "title": "\u0647\u0627\u062f\u0644\u0646\u062f",
+                "code": "DZHK3",
+                "url": "https:\/\/www.digikala.com\/seller\/DZHK3\/",
+                "rating": {
+                  "total_rate": 85,
+                  "total_count": 40,
+                  "commitment": 100,
+                  "no_return": 99.4,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 4.4,
+                "registration_date": "2 \u0645\u0627\u0647 \u0648 2 \u0647\u0641\u062a\u0647"
+              },
+              "digiclub": { "point": 17 },
+              "price": {
+                "selling_price": 1638400,
+                "rrp_price": 2150000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 1,
+                "discount_percent": 24
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 242708,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0638\u0631\u0627\u0641\u062a \u0647\u0627\u06cc \u0631\u0641\u062a\u0627\u0631 \u0648 \u0631\u0648\u0627\u0628\u0637 \u0627\u0646\u0633\u0627\u0646\u06cc \u0627\u062b\u0631 \u062d\u0633\u06cc\u0646 \u0639\u0628\u062f\u0627\u0644\u0644\u0647\u06cc",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u0638\u0631\u0627\u0641\u062a \u0647\u0627\u06cc \u0631\u0641\u062a\u0627\u0631 \u0648 \u0631\u0648\u0627\u0628\u0637 \u0627\u0646\u0633\u0627\u0646\u06cc \u0627\u062b\u0631 \u062d\u0633\u06cc\u0646 \u0639\u0628\u062f\u0627\u0644\u0644\u0647\u06cc",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-242708\/\u06a9\u062a\u0627\u0628-\u0638\u0631\u0627\u0641\u062a-\u0647\u0627\u06cc-\u0631\u0641\u062a\u0627\u0631-\u0648-\u0631\u0648\u0627\u0628\u0637-\u0627\u0646\u0633\u0627\u0646\u06cc-\u0627\u062b\u0631-\u062d\u0633\u06cc\u0646-\u0639\u0628\u062f\u0627\u0644\u0644\u0647\u06cc"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0633\u0627\u06cc\u0647 \u0633\u062e\u0646",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 1,
+              "dimension2": 31,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 4,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1711952.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 13735425,
+              "lead_time": 1,
+              "rank": 99.88,
+              "rate": 0,
+              "statistics": null,
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": false,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 535365,
+                "title": "\u06a9\u0648\u0686\u0647 \u06a9\u062a\u0627\u0628 \u0627\u0633\u062a\u0648\u0631",
+                "code": "CVRY2",
+                "url": "https:\/\/www.digikala.com\/seller\/CVRY2\/",
+                "rating": {
+                  "total_rate": 88,
+                  "total_count": 8408,
+                  "commitment": 100,
+                  "no_return": 99.6,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 4.7,
+                "registration_date": "1 \u0633\u0627\u0644 \u0648 3 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 5 },
+              "price": {
+                "selling_price": 449900,
+                "rrp_price": 650000,
+                "order_limit": 1,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "marketable_stock": 1,
+                "discount_percent": 31
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                "has_lead_time": false,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 42357,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0627\u0645\u0627\u0645\u0627\u0646 \u0634\u06cc\u0639\u0647 \u0627\u062b\u0631 \u062d\u0645\u06cc\u062f \u0627\u062d\u0645\u062f\u06cc",
+            "title_en": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0627\u0645\u0627\u0645\u0627\u0646 \u0634\u06cc\u0639\u0647 \u0627\u062b\u0631 \u062d\u0645\u06cc\u062f \u0627\u062d\u0645\u062f\u06cc",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-42357\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0627\u0645\u0627\u0645\u0627\u0646-\u0634\u06cc\u0639\u0647-\u0627\u062b\u0631-\u062d\u0645\u06cc\u062f-\u0627\u062d\u0645\u062f\u06cc"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+              "is_jet_eligible": false,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0646\u0634\u0631 \u0645\u0639\u0627\u0631\u0641",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 19,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.7,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/162794.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 14518962,
+              "lead_time": 1,
+              "rank": 94.84,
+              "rate": 81.4,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 6,
+                  "rate": 42.86
+                },
+                "satisfied": {
+                  "rate_count": 5,
+                  "rate": 35.71
+                },
+                "neutral": {
+                  "rate_count": 2,
+                  "rate": 14.29
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 1,
+                  "rate": 7.14
+                },
+                "total_count": 14,
+                "total_rate": 81.4
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": false,
+                "in_digikala_warehouse": false
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646" ],
+                "is_jet_eligible": false,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 466904,
+                "title": "\u06a9\u06cc\u0627\u0646 \u06a9\u062a\u0627\u0628",
+                "code": "CRPFC",
+                "url": "https:\/\/www.digikala.com\/seller\/CRPFC\/",
+                "rating": {
+                  "total_rate": 88,
+                  "total_count": 735,
+                  "commitment": 100,
+                  "no_return": 100,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "1 \u0633\u0627\u0644 \u0648 5 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 3 },
+              "price": {
+                "selling_price": 250000,
+                "rrp_price": 250000,
+                "order_limit": 3,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 0
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u0641\u0631\u0648\u0634\u0646\u062f\u0647",
+                "has_lead_time": false,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0627\u0632 1 \u0631\u0648\u0632 \u06a9\u0627\u0631\u06cc \u062f\u06cc\u06af\u0631",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u067e\u0633 \u0627\u0632 \u0645\u062f\u062a \u0632\u0645\u0627\u0646 \u0645\u0634\u062e\u0635 \u0634\u062f\u0647 \u062a\u0648\u0633\u0637 \u0641\u0631\u0648\u0634\u0646\u062f\u0647 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062a\u0627\u0645\u06cc\u0646 \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0645\u06cc\u200c\u06af\u0631\u062f\u062f \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": true,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 392946,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062a\u062e\u062a\u062e\u0648\u0627\u0628\u062a \u0631\u0627 \u0645\u0631\u062a\u0628 \u06a9\u0646 \u0627\u062b\u0631 \u0698\u0646\u0631\u0627\u0644 \u0648\u06cc\u0644\u06cc\u0627\u0645 \u0627\u0686. \u0645\u06a9 \u0631\u06cc\u0648\u0646",
+            "title_en": "",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-392946\/\u06a9\u062a\u0627\u0628-\u062a\u062e\u062a\u062e\u0648\u0627\u0628\u062a-\u0631\u0627-\u0645\u0631\u062a\u0628-\u06a9\u0646-\u0627\u062b\u0631-\u0698\u0646\u0631\u0627\u0644-\u0648\u06cc\u0644\u06cc\u0627\u0645-\u0627\u0686-\u0645\u06a9-\u0631\u06cc\u0648\u0646"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "1,000 \u062a\u0648\u0645\u0627\u0646 \u0647\u062f\u06cc\u0647 \u0646\u0642\u062f\u06cc", "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 10000,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u06a9\u062a\u0627\u0628 \u06a9\u0648\u0644\u0647 \u067e\u0634\u062a\u06cc",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 10033,
+              "dimension2": 36,
+              "dimension6": 0,
+              "dimension7": "special-offer",
+              "dimension9": 3.6,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/311494.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 618391,
+              "lead_time": 0,
+              "rank": 99.88,
+              "rate": 88,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 3036,
+                  "rate": 52.22
+                },
+                "satisfied": {
+                  "rate_count": 2270,
+                  "rate": 39.04
+                },
+                "neutral": {
+                  "rate_count": 366,
+                  "rate": 6.3
+                },
+                "dissatisfied": {
+                  "rate_count": 99,
+                  "rate": 1.7
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 43,
+                  "rate": 0.74
+                },
+                "total_count": 5814,
+                "total_rate": 88
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "1,000 \u062a\u0648\u0645\u0627\u0646 \u0647\u062f\u06cc\u0647 \u0646\u0642\u062f\u06cc", "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 10000,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 1,
+                "title": "\u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "code": "5A52N",
+                "url": "https:\/\/www.digikala.com\/seller\/5A52N\/",
+                "rating": {
+                  "total_rate": 0,
+                  "total_count": 0,
+                  "commitment": 100,
+                  "no_return": 99.9,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "5 \u0633\u0627\u0644 \u0648 7 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 2 },
+              "price": {
+                "selling_price": 173000,
+                "rrp_price": 270000,
+                "order_limit": 30,
+                "is_incredible": false,
+                "is_promotion": true,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 36,
+                "badge": {
+                  "title": "\u0641\u0631\u0648\u0634 \u0648\u06cc\u0698\u0647",
+                  "color": "#E6123D",
+                  "icon": null
+                },
+                "is_digiplus_promotion": false,
+                "is_digiplus_early_access": false,
+                "is_application_incredible": false,
+                "is_lightening_deal": false
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 968332,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u062e\u0648\u062f\u062a \u0628\u0627\u0634 \u062f\u062e\u062a\u0631 \u0627\u062b\u0631 \u0631\u06cc\u0686\u0644 \u0647\u0627\u0644\u06cc\u0633",
+            "title_en": "-",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-968332\/\u06a9\u062a\u0627\u0628-\u062e\u0648\u062f\u062a-\u0628\u0627\u0634-\u062f\u062e\u062a\u0631-\u0627\u062b\u0631-\u0631\u06cc\u0686\u0644-\u0647\u0627\u0644\u06cc\u0633"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u06a9\u062a\u0627\u0628 \u06a9\u0648\u0644\u0647 \u067e\u0634\u062a\u06cc",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 6104,
+              "dimension2": 31,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.2,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/4537013.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 8818178,
+              "lead_time": 0,
+              "rank": 99.9,
+              "rate": 89.8,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 672,
+                  "rate": 57
+                },
+                "satisfied": {
+                  "rate_count": 428,
+                  "rate": 36.3
+                },
+                "neutral": {
+                  "rate_count": 62,
+                  "rate": 5.26
+                },
+                "dissatisfied": {
+                  "rate_count": 13,
+                  "rate": 1.1
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 4,
+                  "rate": 0.34
+                },
+                "total_count": 1179,
+                "total_rate": 89.8
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 168637,
+                "title": "\u0646\u0645\u0627\u06cc\u0634\u06af\u0627\u0647 \u06a9\u062a\u0627\u0628",
+                "code": "AKP7J",
+                "url": "https:\/\/www.digikala.com\/seller\/AKP7J\/",
+                "rating": {
+                  "total_rate": 90,
+                  "total_count": 19043,
+                  "commitment": 100,
+                  "no_return": 99.8,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 8 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 4 },
+              "price": {
+                "selling_price": 345000,
+                "rrp_price": 500000,
+                "order_limit": 30,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 31
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 1111023,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0646\u06cc\u0645\u0647 \u062a\u0627\u0631\u06cc\u06a9 \u0648\u062c\u0648\u062f \u0627\u062b\u0631 \u062f\u0628\u06cc \u0641\u0648\u0631\u062f \u0646\u0634\u0631 \u0622\u062a\u06cc\u0633\u0627",
+            "title_en": "",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-1111023\/\u06a9\u062a\u0627\u0628-\u0646\u06cc\u0645\u0647-\u062a\u0627\u0631\u06cc\u06a9-\u0648\u062c\u0648\u062f-\u0627\u062b\u0631-\u062f\u0628\u06cc-\u0641\u0648\u0631\u062f-\u0646\u0634\u0631-\u0622\u062a\u06cc\u0633\u0627"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u0622\u062a\u06cc\u0633\u0627",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 4573,
+              "dimension2": 68,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 3.4,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/5268243.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 8005083,
+              "lead_time": 0,
+              "rank": 99.9,
+              "rate": 89.6,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 1526,
+                  "rate": 57.28
+                },
+                "satisfied": {
+                  "rate_count": 956,
+                  "rate": 35.89
+                },
+                "neutral": {
+                  "rate_count": 133,
+                  "rate": 4.99
+                },
+                "dissatisfied": {
+                  "rate_count": 30,
+                  "rate": 1.13
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 19,
+                  "rate": 0.71
+                },
+                "total_count": 2664,
+                "total_rate": 89.6
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 168831,
+                "title": "\u06a9\u062a\u0627\u0628\u0633\u062a\u0627\u0646",
+                "code": "AKPSH",
+                "url": "https:\/\/www.digikala.com\/seller\/AKPSH\/",
+                "rating": {
+                  "total_rate": 89,
+                  "total_count": 89650,
+                  "commitment": 100,
+                  "no_return": 99.9,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": true,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 8 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 4 },
+              "price": {
+                "selling_price": 380000,
+                "rrp_price": 1200000,
+                "order_limit": 30,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 68
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 2261675,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0633\u0647 \u062f\u0642\u06cc\u0642\u0647 \u062f\u0631 \u0642\u06cc\u0627\u0645\u062a \u0627\u062b\u0631 \u062c\u0645\u0639\u06cc \u0627\u0632 \u0646\u0648\u06cc\u0633\u0646\u062f\u06af\u0627\u0646 \u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u0634\u0647\u06cc\u062f \u0627\u0628\u0631\u0627\u0647\u06cc\u0645 \u0647\u0627\u062f\u06cc",
+            "title_en": "",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-2261675\/\u06a9\u062a\u0627\u0628-\u0633\u0647-\u062f\u0642\u06cc\u0642\u0647-\u062f\u0631-\u0642\u06cc\u0627\u0645\u062a-\u0627\u062b\u0631-\u062c\u0645\u0639\u06cc-\u0627\u0632-\u0646\u0648\u06cc\u0633\u0646\u062f\u06af\u0627\u0646-\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a-\u0634\u0647\u06cc\u062f-\u0627\u0628\u0631\u0627\u0647\u06cc\u0645-\u0647\u0627\u062f\u06cc"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u0634\u0647\u06cc\u062f \u0627\u0628\u0631\u0627\u0647\u06cc\u0645 \u0647\u0627\u062f\u06cc",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 3857,
+              "dimension2": 14,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 2.7,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/114632802.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 27738561,
+              "lead_time": 0,
+              "rank": 98.23,
+              "rate": 84,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 6,
+                  "rate": 60
+                },
+                "satisfied": {
+                  "rate_count": 2,
+                  "rate": 20
+                },
+                "neutral": {
+                  "rate_count": 1,
+                  "rate": 10
+                },
+                "dissatisfied": {
+                  "rate_count": 0,
+                  "rate": 0
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 1,
+                  "rate": 10
+                },
+                "total_count": 10,
+                "total_rate": 84
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 794542,
+                "title": "\u0634\u0647\u0631 \u06a9\u062a\u0627\u0628 \u0627\u06cc\u0631\u0627\u0646",
+                "code": "DRUM3",
+                "url": "https:\/\/www.digikala.com\/seller\/DRUM3\/",
+                "rating": {
+                  "total_rate": 90,
+                  "total_count": 186,
+                  "commitment": 99.5,
+                  "no_return": 99.7,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": false,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 3.9,
+                "registration_date": "6 \u0645\u0627\u0647 \u0648 3 \u0631\u0648\u0632"
+              },
+              "digiclub": { "point": 3 },
+              "price": {
+                "selling_price": 233000,
+                "rrp_price": 270000,
+                "order_limit": 30,
+                "is_incredible": false,
+                "is_promotion": false,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 14
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          },
+          {
+            "id": 575048,
+            "title_fa": "\u06a9\u062a\u0627\u0628 \u0646\u0628\u0631\u062f \u0645\u0646 \u0627\u062b\u0631 \u0622\u062f\u0648\u0644\u0641 \u0647\u06cc\u062a\u0644\u0631",
+            "title_en": "",
+            "url": {
+              "base": null,
+              "uri": "\/product\/dkp-575048\/\u06a9\u062a\u0627\u0628-\u0646\u0628\u0631\u062f-\u0645\u0646-\u0627\u062b\u0631-\u0622\u062f\u0648\u0644\u0641-\u0647\u06cc\u062a\u0644\u0631"
+            },
+            "status": "marketable",
+            "has_quick_view": false,
+            "digiplus": {
+              "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+              "is_jet_eligible": true,
+              "cash_back": 0,
+              "is_general_location_jet_eligible": false
+            },
+            "data_layer": {
+              "brand": "\u0627\u0646\u062a\u0634\u0627\u0631\u0627\u062a \u0622\u062a\u06cc\u0633\u0627",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 3129,
+              "dimension2": 69,
+              "dimension6": 0,
+              "dimension7": "special-offer",
+              "dimension9": 2.9,
+              "dimension11": 0,
+              "dimension20": "marketable"
+            },
+            "images": {
+              "main": {
+                "storage_ids": [],
+                "url": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/1607321.jpg?x-oss-process=image\/resize,m_lfit,h_300,w_300\/quality,q_80" ],
+                "thumbnail_url": null,
+                "temporary_id": null
+              }
+            },
+            "default_variant": {
+              "id": 8049455,
+              "lead_time": 0,
+              "rank": 99.84,
+              "rate": 84,
+              "statistics": {
+                "totally_satisfied": {
+                  "rate_count": 712,
+                  "rate": 47.69
+                },
+                "satisfied": {
+                  "rate_count": 542,
+                  "rate": 36.3
+                },
+                "neutral": {
+                  "rate_count": 105,
+                  "rate": 7.03
+                },
+                "dissatisfied": {
+                  "rate_count": 89,
+                  "rate": 5.96
+                },
+                "totally_dissatisfied": {
+                  "rate_count": 45,
+                  "rate": 3.01
+                },
+                "total_count": 1493,
+                "total_rate": 84
+              },
+              "status": "marketable",
+              "properties": {
+                "is_fast_shipping": false,
+                "is_ship_by_seller": false,
+                "is_multi_warehouse": false,
+                "has_similar_variants": true,
+                "in_digikala_warehouse": true
+              },
+              "digiplus": {
+                "services": [ "\u0627\u0631\u0633\u0627\u0644 \u0631\u0627\u06cc\u06af\u0627\u0646", "\u0627\u0645\u06a9\u0627\u0646 \u0627\u0631\u0633\u0627\u0644 \u0641\u0648\u0631\u06cc (\u0634\u0647\u0631 \u062a\u0647\u0631\u0627\u0646)" ],
+                "is_jet_eligible": true,
+                "cash_back": 0,
+                "is_general_location_jet_eligible": false
+              },
+              "warranty": {
+                "id": 272,
+                "title_fa": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627",
+                "title_en": "\u06af\u0627\u0631\u0627\u0646\u062a\u06cc \u0627\u0635\u0627\u0644\u062a \u0648 \u0633\u0644\u0627\u0645\u062a \u0641\u06cc\u0632\u06cc\u06a9\u06cc \u06a9\u0627\u0644\u0627"
+              },
+              "seller": {
+                "id": 168831,
+                "title": "\u06a9\u062a\u0627\u0628\u0633\u062a\u0627\u0646",
+                "code": "AKPSH",
+                "url": "https:\/\/www.digikala.com\/seller\/AKPSH\/",
+                "rating": {
+                  "total_rate": 89,
+                  "total_count": 89650,
+                  "commitment": 100,
+                  "no_return": 99.9,
+                  "on_time_shipping": 100
+                },
+                "properties": {
+                  "is_trusted": true,
+                  "is_official": false,
+                  "is_roosta": false,
+                  "is_new": false
+                },
+                "stars": 5,
+                "registration_date": "2 \u0633\u0627\u0644 \u0648 8 \u0645\u0627\u0647"
+              },
+              "digiclub": { "point": 8 },
+              "price": {
+                "selling_price": 713000,
+                "rrp_price": 2300000,
+                "order_limit": 10,
+                "is_incredible": false,
+                "is_promotion": true,
+                "is_locked_for_digiplus": false,
+                "discount_percent": 69,
+                "badge": {
+                  "title": "\u0641\u0631\u0648\u0634 \u0648\u06cc\u0698\u0647",
+                  "color": "#E6123D",
+                  "icon": null
+                },
+                "is_digiplus_promotion": false,
+                "is_digiplus_early_access": false,
+                "is_application_incredible": false,
+                "is_lightening_deal": false
+              },
+              "shipment_methods": {
+                "description": "\u0645\u0648\u062c\u0648\u062f \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                "has_lead_time": true,
+                "providers": [
+                  {
+                    "title": "\u0627\u0631\u0633\u0627\u0644 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+                    "description": "\u0627\u06cc\u0646 \u06a9\u0627\u0644\u0627 \u062f\u0631 \u0627\u0646\u0628\u0627\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u0645\u0648\u062c\u0648\u062f \u0648 \u0622\u0645\u0627\u062f\u0647 \u067e\u0631\u062f\u0627\u0632\u0634 \u0627\u0633\u062a \u0648 \u062a\u0648\u0633\u0637 \u067e\u06cc\u06a9 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627 \u062f\u0631 \u0628\u0627\u0632\u0647 \u0627\u0646\u062a\u062e\u0627\u0628\u06cc \u0627\u0631\u0633\u0627\u0644 \u062e\u0648\u0627\u0647\u062f \u0634\u062f.",
+                    "has_lead_time": false,
+                    "type": "digikala"
+                  }
+                ]
+              }
+            }
+          }
+        ],
+        "background": null,
+        "icon": null,
+        "products_count": null,
+        "data_layer": null
+      }
+    },
+    "data_layer": {
+      "event": "eec.productDetail",
+      "ecommerce": {
+        "detail": {
+          "actionField": { "list": "category-\u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc" },
+          "products": [
+            {
+              "brand": "\u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+              "category": "[MA,\u06a9\u062a\u0627\u0628]",
+              "metric6": 0,
+              "dimension2": 0,
+              "dimension6": 0,
+              "dimension7": "none",
+              "dimension9": 0,
+              "dimension11": 0,
+              "dimension20": "out_of_stock",
+              "name": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+              "id": 76039,
+              "price": null,
+              "metric8": 0,
+              "dimension3": "marketplace",
+              "dimension10": null,
+              "dimension15": 0,
+              "metric15": 0,
+              "metric11": 0,
+              "metric12": 0
+            }
+          ]
+        }
+      }
+    },
+    "seo": {
+      "title": "\u0645\u0634\u062e\u0635\u0627\u062a\u060c \u0642\u06cc\u0645\u062a \u0648 \u062e\u0631\u06cc\u062f \u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645 | \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+      "description": "\u062e\u0631\u06cc\u062f \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645 \u0648 \u0642\u06cc\u0645\u062a \u0627\u0646\u0648\u0627\u0639 \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0627\u0632 \u0641\u0631\u0648\u0634\u06af\u0627\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627. \u062c\u062f\u06cc\u062f\u062a\u0631\u06cc\u0646 \u0645\u062f\u0644\u200c\u0647\u0627\u06cc \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0628\u0627 \u0628\u0647\u062a\u0631\u06cc\u0646 \u0642\u06cc\u0645\u062a \u062f\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+      "twitter_card": {
+        "title": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+        "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331115.jpg?x-oss-process=image\/resize,m_lfit,h_350,w_350\/quality,q_60",
+        "price": 0,
+        "description": "\u062e\u0631\u06cc\u062f \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645 \u0648 \u0642\u06cc\u0645\u062a \u0627\u0646\u0648\u0627\u0639 \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0627\u0632 \u0641\u0631\u0648\u0634\u06af\u0627\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627. \u062c\u062f\u06cc\u062f\u062a\u0631\u06cc\u0646 \u0645\u062f\u0644\u200c\u0647\u0627\u06cc \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0628\u0627 \u0628\u0647\u062a\u0631\u06cc\u0646 \u0642\u06cc\u0645\u062a \u062f\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627"
+      },
+      "open_graph": {
+        "title": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+        "url": "https:\/\/www.digikala.com\/product\/dkp-76039\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0631\u0648\u0627\u0628\u0637-\u0628\u06cc\u0646-\u0627\u0644\u0645\u0644\u0644-\u0627\u0632-1945-\u062a\u0627-2008-\u0627\u062b\u0631-\u0645\u0648\u0631\u06cc\u0633-\u0648\u0627\u0639\u06cc\u0633-\u062c\u0644\u062f-\u0633\u0648\u0645",
+        "image": "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331115.jpg?x-oss-process=image\/resize,m_lfit,h_350,w_350\/quality,q_60",
+        "availability": "out of stock",
+        "type": "product",
+        "site": "\u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+        "price": 0,
+        "description": null
+      },
+      "header": {
+        "title": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+        "description": "\u062e\u0631\u06cc\u062f \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645 \u0648 \u0642\u06cc\u0645\u062a \u0627\u0646\u0648\u0627\u0639 \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0627\u0632 \u0641\u0631\u0648\u0634\u06af\u0627\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627. \u062c\u062f\u06cc\u062f\u062a\u0631\u06cc\u0646 \u0645\u062f\u0644\u200c\u0647\u0627\u06cc \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0628\u0627 \u0628\u0647\u062a\u0631\u06cc\u0646 \u0642\u06cc\u0645\u062a \u062f\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+        "canonical_url": "https:\/\/www.digikala.com\/product\/dkp-76039\/%DA%A9%D8%AA%D8%A7%D8%A8-%D8%AA%D8%A7%D8%B1%DB%8C%D8%AE-%D8%B1%D9%88%D8%A7%D8%A8%D8%B7-%D8%A8%DB%8C%D9%86-%D8%A7%D9%84%D9%85%D9%84%D9%84-%D8%A7%D8%B2-1945-%D8%AA%D8%A7-2008-%D8%A7%D8%AB%D8%B1-%D9%85%D9%88%D8%B1%DB%8C%D8%B3-%D9%88%D8%A7%D8%B9%DB%8C%D8%B3-%D8%AC%D9%84%D8%AF-%D8%B3%D9%88%D9%85"
+      },
+      "markup_schema": {
+        "@context": "https:\/\/www.schema.org",
+        "@type": "Product",
+        "name": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+        "alternateName": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+        "image": [ "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331186.jpg?x-oss-process=image\/resize,h_1600\/quality,q_80", "https:\/\/dkstatics-public.digikala.com\/digikala-products\/331237.jpg?x-oss-process=image\/resize,h_1600\/quality,q_80" ],
+        "description": "\u062e\u0631\u06cc\u062f \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645 \u0648 \u0642\u06cc\u0645\u062a \u0627\u0646\u0648\u0627\u0639 \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0627\u0632 \u0641\u0631\u0648\u0634\u06af\u0627\u0647 \u0622\u0646\u0644\u0627\u06cc\u0646 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627. \u062c\u062f\u06cc\u062f\u062a\u0631\u06cc\u0646 \u0645\u062f\u0644\u200c\u0647\u0627\u06cc \u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631 \u0628\u0627 \u0628\u0647\u062a\u0631\u06cc\u0646 \u0642\u06cc\u0645\u062a \u062f\u0631 \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+        "mpn": 76039,
+        "sku": 76039,
+        "category": "https:\/\/www.digikala.com\/search\/category-printed-book-of-social-sciences\/",
+        "brand": {
+          "@type": "Brand",
+          "name": "\u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+          "url": "https:\/\/www.digikala.com\/brand\/amir-kabir\/",
+          "@id": "https:\/\/www.digikala.com\/brand\/amir-kabir\/#brand"
+        },
+        "offers": {
+          "@type": "Offer",
+          "priceCurrency": "IRR",
+          "price": 0,
+          "itemCondition": "https:\/\/schema.org\/NewCondition",
+          "availability": "https:\/\/schema.org\/OutOfStock"
+        }
+      },
+      "category_breadcrumb": [
+        {
+          "title": "\u0641\u0631\u0648\u0634\u06af\u0627\u0647 \u0627\u06cc\u0646\u062a\u0631\u0646\u062a\u06cc \u062f\u06cc\u062c\u06cc\u200c\u06a9\u0627\u0644\u0627",
+          "url": "https:\/\/www.digikala.com"
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628\u060c \u0644\u0648\u0627\u0632\u0645 \u062a\u062d\u0631\u06cc\u0631 \u0648 \u0647\u0646\u0631",
+          "url": "https:\/\/www.digikala.com\/main\/book-and-media\/"
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628",
+          "url": "https:\/\/www.digikala.com\/search\/category-book\/"
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc",
+          "url": "https:\/\/www.digikala.com\/search\/category-printed-book-of-social-sciences\/"
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628 \u062a\u0627\u0631\u06cc\u062e \u0631\u0648\u0627\u0628\u0637 \u0628\u06cc\u0646 \u0627\u0644\u0645\u0644\u0644 (\u0627\u0632 1945 \u062a\u0627 2008) \u0627\u062b\u0631 \u0645\u0648\u0631\u06cc\u0633 \u0648\u0627\u0639\u06cc\u0633 - \u062c\u0644\u062f \u0633\u0648\u0645",
+          "url": "https:\/\/www.digikala.com\/product\/dkp-76039\/\u06a9\u062a\u0627\u0628-\u062a\u0627\u0631\u06cc\u062e-\u0631\u0648\u0627\u0628\u0637-\u0628\u06cc\u0646-\u0627\u0644\u0645\u0644\u0644-\u0627\u0632-1945-\u062a\u0627-2008-\u0627\u062b\u0631-\u0645\u0648\u0631\u06cc\u0633-\u0648\u0627\u0639\u06cc\u0633-\u062c\u0644\u062f-\u0633\u0648\u0645"
+        }
+      ],
+      "brand_breadcrumb": [
+        {
+          "title": "\u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+          "url": "https:\/\/www.digikala.com\/brand\/amir-kabir\/"
+        },
+        {
+          "title": "\u06a9\u062a\u0627\u0628 \u0639\u0644\u0648\u0645 \u0627\u062c\u062a\u0645\u0627\u0639\u06cc \u0646\u0634\u0631 \u0627\u0645\u06cc\u0631 \u06a9\u0628\u06cc\u0631",
+          "url": "https:\/\/www.digikala.com\/search\/category-printed-book-of-social-sciences\/amir-kabir\/"
+        }
+      ]
+    },
+    "landing_touchpoint": []
+  }
+}

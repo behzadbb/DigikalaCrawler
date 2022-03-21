@@ -1,5 +1,6 @@
 using DigikalaCrawler.Data.Mongo;
-using DigikalaCrawler.Services.Crawler;
+using DigikalaCrawler.Share.Models;
+using DigikalaCrawler.Share.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace DigikalaCrawler.WebServer.Controllers
@@ -19,13 +20,13 @@ namespace DigikalaCrawler.WebServer.Controllers
             _crawler = crawler;
         }
 
-        [HttpGet("[controller]/GetFreeProduct/{userid}/{count}")]
-        public IEnumerable<int> GetFreeProduct(int userid, int count)
+        [HttpGet("/[controller]/GetFreeProducts/{userid}/{count}")]
+        public IEnumerable<int> GetFreeProducts(int userid, int count)
         {
             return _digi.GetFreeProduct(userid, count);
         }
 
-        [HttpGet("[controller]/SetSitemap")]
+        [HttpGet("/[controller]/SetSitemap")]
         public async Task<IActionResult> SetSitemap()
         {
             IList<string> sitemaps = await _crawler.GetMainSitemap();
@@ -37,6 +38,16 @@ namespace DigikalaCrawler.WebServer.Controllers
                 productLinks.AddRange(_crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList()));
             }
             _digi.InsertPages(productLinks);
+            return Ok();
+        }
+
+        [HttpPost("/[controller]/SendProducts")]
+        public async Task<IActionResult> SendProducts(SetProductsDTO dto)
+        {
+            foreach (var product in dto.Products)
+            {
+                _digi.SetProduct(product);
+            }
             return Ok();
         }
     }

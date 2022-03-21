@@ -28,7 +28,8 @@ public class DigikalaMongo
 
     public IList<int> GetFreeProduct(int userid, int count)
     {
-        List<int> ids = DigikalaProducts.FindAll().Where(p => (p.Assign && p.UserId == userid && !p.Success)).Take(count).Select(x => x.ProductId).ToList();
+        List<int> ids = new List<int>();
+        ids = DigikalaProducts.FindAll().Where(p => p.Assign && p.UserId == userid && p.Success ==false).Take(count).Select(x => x.ProductId).ToList();
         if (ids.Count() < count)
             ids.AddRange(DigikalaProducts.FindAll().Where(p => !p.Success && !p.Assign && p.UserId == null).Take(count - ids.Count).Select(x => x.ProductId).ToList());
         var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
@@ -38,15 +39,15 @@ public class DigikalaMongo
         return ids;
     }
 
-    public void SetProduct(int userid, int productId, ProductData product, CommentDetails comments)
+    public void SetProduct(SetProductDTO dto)
     {
-        var query = Query<DigikalaProduct>.EQ(p => p.ProductId, productId);
+        var query = Query<DigikalaProduct>.EQ(p => p.ProductId, dto.ProductId);
         var update = Update<DigikalaProduct>
             .Set(p => p.Assign, true)
             .Set(p => p.Success, true)
             .Set(p => p.CrawleDate, DateTime.Now)
-            .Set(p => p.ProductData, product)
-            .Set(p => p.CommentDetails, comments);
+            .Set(p => p.ProductData, dto.Product)
+            .Set(p => p.CommentDetails, dto.Comments);
         DigikalaProducts.Update(query, update);
     }
 }

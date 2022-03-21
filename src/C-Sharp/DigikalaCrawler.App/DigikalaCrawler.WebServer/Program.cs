@@ -1,5 +1,5 @@
 using DigikalaCrawler.Data.Mongo;
-using DigikalaCrawler.Services.Crawler;
+using DigikalaCrawler.Share.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
