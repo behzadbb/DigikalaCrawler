@@ -6,7 +6,7 @@ namespace DigikalaCrawler.Share.Models
 {
     public class SetProductDTO
     {
-        public int ProductId { get; set; }
+        public long ProductId { get; set; }
         public ProductData Product { get; set; }
         public CommentDetails Comments { get; set; }
     }

@@ -21,7 +21,7 @@ namespace DigikalaCrawler.WebServer.Controllers
         }
 
         [HttpGet("/[controller]/GetFreeProducts/{userid}/{count}/{checkUserId}")]
-        public IEnumerable<int> GetFreeProducts(int userid, int count, bool checkUserId)
+        public IEnumerable<long> GetFreeProducts(int userid, int count, bool checkUserId)
         {
             return _digi.GetFreeProduct(userid, count, checkUserId);
         }
@@ -43,20 +43,28 @@ namespace DigikalaCrawler.WebServer.Controllers
             _logger.Log(LogLevel.Information, "1");
             IList<string> sitemaps = await _crawler.GetMainSitemap();
             _logger.Log(LogLevel.Information, "2 _ Count: " + sitemaps.Count());
-            List<int> productLinks = new List<int>();
+            List<long> productLinks = new List<long>();
             foreach (string sitemap in sitemaps)
             {
                 var main1 = await _crawler.DownloadSitemap(sitemap, path);
                 var main2 = await _crawler.GetSitemap(main1);
                 //productLinks.AddRange(_crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList()));
-                var _productLinks = _crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList());
-                _digi.InsertPages(_productLinks);
-                Thread.Sleep(50);
-                Console.Write(" _ " + _productLinks.Count());
+                List<long> _productLinks = _crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList());
+                //_digi.InsertPages(_productLinks);
+                productLinks.AddRange(_productLinks);
+                
+                if (productLinks.Count() > 150000)
+                {
+                    _digi.InsertPages(productLinks);
+                    Console.Write(" _ insert: " + productLinks.Count());
+                    productLinks.Clear();
+                }
             }
-            _logger.Log(LogLevel.Information, "3 _ Success!");
+            _digi.InsertPages(productLinks);
+            Console.Write(" _ insert: " + productLinks.Count());
+            _logger.Log(LogLevel.Information, "\n3 _ Success!");
             _digi.CreateIndex();
-            _logger.Log(LogLevel.Information, "4 _ Create Index!");
+            _logger.Log(LogLevel.Information, "\n4 _ Create Index!");
             //_digi.InsertPages(productLinks);
             return Ok("Success");
         }

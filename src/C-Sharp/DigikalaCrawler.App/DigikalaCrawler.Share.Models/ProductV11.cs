@@ -16,7 +16,7 @@ namespace DigikalaCrawler.Share.Models
     }
     public class Product
     {
-        public int id { get; set; }
+        public long id { get; set; }
         public string title_fa { get; set; }
         public string title_en { get; set; }
         public Category category { get; set; }

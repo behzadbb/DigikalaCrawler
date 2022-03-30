@@ -12,7 +12,7 @@ public class DigikalaProduct : Page
     {
 
     }
-    public DigikalaProduct(int productId)
+    public DigikalaProduct(long productId)
     {
         this.ProductId = productId;
     }

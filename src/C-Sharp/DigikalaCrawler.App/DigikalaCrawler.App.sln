@@ -9,11 +9,13 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.Data.Mongo"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.WebServer", "DigikalaCrawler.WebServer\DigikalaCrawler.WebServer.csproj", "{EF679621-B8F6-4555-AE51-14832E0013F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Share.Models", "DigikalaCrawler.Share.Models\DigikalaCrawler.Share.Models.csproj", "{E8191803-8368-4ED0-AAD4-DF2B239E2595}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.Share.Models", "DigikalaCrawler.Share.Models\DigikalaCrawler.Share.Models.csproj", "{E8191803-8368-4ED0-AAD4-DF2B239E2595}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.App.Client", "DigikalaCrawler.App.Client\DigikalaCrawler.App.Client.csproj", "{CC16A520-221E-491A-BE28-6B0DE874FEA5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.Share.Services", "DigikalaCrawler.Share.Services\DigikalaCrawler.Share.Services.csproj", "{3D90E5D4-FA16-4649-9271-7D9E12D02909}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DigikalaCrawler.Share.Services", "DigikalaCrawler.Share.Services\DigikalaCrawler.Share.Services.csproj", "{3D90E5D4-FA16-4649-9271-7D9E12D02909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigikalaCrawler.App.ClientCore", "DigikalaCrawler.App.ClientCore\DigikalaCrawler.App.ClientCore.csproj", "{65FCFEFB-5333-4357-B699-D4783FBF61A8}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{3D90E5D4-FA16-4649-9271-7D9E12D02909}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D90E5D4-FA16-4649-9271-7D9E12D02909}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D90E5D4-FA16-4649-9271-7D9E12D02909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65FCFEFB-5333-4357-B699-D4783FBF61A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65FCFEFB-5333-4357-B699-D4783FBF61A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65FCFEFB-5333-4357-B699-D4783FBF61A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65FCFEFB-5333-4357-B699-D4783FBF61A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

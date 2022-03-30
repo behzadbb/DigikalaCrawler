@@ -20,16 +20,16 @@ public class DigikalaMongo
         DigikalaProducts = db.GetCollection<DigikalaProduct>("DigikalaProducts");
     }
 
-    public void InsertPages(List<int> productIds)
+    public void InsertPages(List<long> productIds)
     {
         List<DigikalaProduct> pages = new List<DigikalaProduct>();
         pages.AddRange(productIds.Select(x => new DigikalaProduct(x)));
         DigikalaProducts.InsertBatch(pages);
     }
 
-    public IList<int> GetFreeProduct(int userid, int count, bool checkUserId)
+    public IList<long> GetFreeProduct(int userid, int count, bool checkUserId)
     {
-        List<int> ids = new List<int>();
+        List<long> ids = new List<long>();
 
         if (checkUserId)
         {
@@ -53,7 +53,7 @@ public class DigikalaMongo
 
         return ids;
     }
-    private void UpdateProductsAsync(List<int> ids, int userid)
+    private void UpdateProductsAsync(List<long> ids, int userid)
     {
         var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
         var update = Update<DigikalaProduct>.Set(p => p.Assign, true).Set(p => p.Success, false).Set(p => p.UserId, userid).Set(p => p.AssignDate, DateTime.Now);

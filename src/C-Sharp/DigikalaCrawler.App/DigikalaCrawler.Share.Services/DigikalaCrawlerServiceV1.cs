@@ -8,6 +8,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
 
@@ -50,6 +51,22 @@ namespace DigikalaCrawler.Share.Services
         #region init
         private Config _config;
 
+        List<string> proxies = new List<string>(){
+            "130.185.73.139:8888",
+            "185.72.27.98:8080",
+            "188.95.89.81:8080",
+            "217.60.194.51:8080",
+            "37.255.135.18:8080",
+            "46.100.166.38:8080",
+            "5.202.191.226:8080",
+            "77.104.97.5:8080",
+            "78.38.100.121:8080",
+            "79.127.56.147:8080",
+            "80.191.162.2:514",
+            "81.91.144.190:55443",
+            "89.165.40.12:8080",
+            "94.74.132.129:808"};
+
         public DigikalaCrawlerServiceV1()
         {
         }
@@ -61,6 +78,22 @@ namespace DigikalaCrawler.Share.Services
 
         public Task<HttpResponseMessage> GetHttp(string url)
         {
+            //var proxy = new WebProxy
+            //{
+            //    Address = new Uri(proxies[1]),
+            //    BypassProxyOnLocal = false,
+            //    UseDefaultCredentials = false,
+
+            //    // *** These creds are given to the proxy server, not the web server ***
+            //    Credentials = new NetworkCredential()
+            //};
+            //// Now create a client handler which uses that proxy
+            //var httpClientHandler = new HttpClientHandler
+            //{
+            //    Proxy = proxy,
+            //};
+            //// Finally, create the HTTP client object
+            //var client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
             HttpClient client = new HttpClient();
             return client.GetAsync(url);
         }
@@ -97,6 +130,7 @@ namespace DigikalaCrawler.Share.Services
             {
                 WebClient ClientI = new WebClient();
                 ClientI.DownloadFile(url, fullPathCompress);
+                Thread.Sleep(500);
             }
             string ReadData = "";
             GZipStream instreamI = new GZipStream(File.OpenRead(fullPathCompress), CompressionMode.Decompress);
@@ -126,7 +160,7 @@ namespace DigikalaCrawler.Share.Services
             return locs;
         }
 
-        public int GetProductIdFromUrl(string url)
+        public long GetProductIdFromUrl(string url)
         {
             try
             {
@@ -134,9 +168,9 @@ namespace DigikalaCrawler.Share.Services
                 var s2 = url.IndexOf("dkp-");
                 if (s2 - s1 == 1)
                 {
-                    return int.Parse(url.Substring(url.IndexOf("dkp-"), url.Length - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                    return long.Parse(url.Substring(url.IndexOf("dkp-"), url.Length - url.IndexOf("dkp-")).Replace("dkp-", ""));
                 }
-                var i = int.Parse(url.Substring(url.IndexOf("dkp-"), url.LastIndexOf('/') - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                var i = long.Parse(url.Substring(url.IndexOf("dkp-"), url.LastIndexOf('/') - url.IndexOf("dkp-")).Replace("dkp-", ""));
                 return i;
             }
             catch (Exception)
@@ -146,22 +180,22 @@ namespace DigikalaCrawler.Share.Services
             }
         }
 
-        public List<int> GetProductIdFromUrls(List<string> urls)
+        public List<long> GetProductIdFromUrls(List<string> urls)
         {
             return urls.Select(x => GetProductIdFromUrl(x)).ToList();
         }
         #endregion
 
         #region Crawl
-        public async Task<ProductData> GetProduct(int productId)
+        public async Task<ProductData> GetProduct(long productId)
         {
             string url = "https://api.digikala.com/v1/product/" + productId + "/";
-            string res = await new HttpClient().GetAsync(url).Result.Content.ReadAsStringAsync();
+            string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
             var product = JsonConvert.DeserializeObject<ProductObjV1>(res).data;
             return product;
         }
 
-        public async Task<CommentObjV1> GetProductComment(int productId, int page = 1)
+        public async Task<CommentObjV1> GetProductComment(long productId, int page = 1)
         {
             try
             {
@@ -171,19 +205,20 @@ namespace DigikalaCrawler.Share.Services
             }
             catch
             {
-                return null;
+                return new CommentObjV1();
             }
         }
 
-        public async Task<CommentDetails> GetProductComments(int productId)
+        public async Task<CommentDetails> GetProductComments(long productId)
         {
             CommentDetails cm = (await GetProductComment(productId, 1)).data;
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
-            if (cm.pager.total_pages > 1)
+            if (cm != null && cm.pager.total_pages > 1)
             {
                 for (int i = 2; i <= cm.pager.total_pages; i++)
                 {
                     tasks.Add(GetProductComment(productId, i));
+                    Thread.Sleep(100);
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());
@@ -197,7 +232,7 @@ namespace DigikalaCrawler.Share.Services
             foreach (var task in tasks)
             {
                 var _data = task.Result;
-                if (_data != null)
+                if (_data != null && _data.data != null && _data.data.comments != null && _data.data.comments.Count() > 0)
                     cm.comments.AddRange(_data.data.comments.ToList());
             }
             return cm;
