@@ -128,7 +128,22 @@ namespace DigikalaCrawler.Share.Services
 
         public int GetProductIdFromUrl(string url)
         {
-            return int.Parse(url.Substring(url.LastIndexOf("dkp-"), url.LastIndexOf('/') - url.LastIndexOf("dkp-")).Replace("dkp-", ""));
+            try
+            {
+                var s1 = url.LastIndexOf('/');
+                var s2 = url.IndexOf("dkp-");
+                if (s2 - s1 == 1)
+                {
+                    return int.Parse(url.Substring(url.IndexOf("dkp-"), url.Length - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                }
+                var i = int.Parse(url.Substring(url.IndexOf("dkp-"), url.LastIndexOf('/') - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                return i;
+            }
+            catch (Exception)
+            {
+                Console.WriteLine("\n\t\tError Url:\n" + url + "\n\n\n");
+                throw;
+            }
         }
 
         public List<int> GetProductIdFromUrls(List<string> urls)
@@ -142,15 +157,22 @@ namespace DigikalaCrawler.Share.Services
         {
             string url = "https://api.digikala.com/v1/product/" + productId + "/";
             string res = await new HttpClient().GetAsync(url).Result.Content.ReadAsStringAsync();
-            var product =JsonConvert.DeserializeObject<ProductObjV1>(res).data;
+            var product = JsonConvert.DeserializeObject<ProductObjV1>(res).data;
             return product;
         }
 
         public async Task<CommentObjV1> GetProductComment(int productId, int page = 1)
         {
-            string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
-            string res = await new HttpClient().GetAsync(url).Result.Content.ReadAsStringAsync();
-            return JsonConvert.DeserializeObject<CommentObjV1>(res);
+            try
+            {
+                string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
+                string res = await new HttpClient().GetAsync(url).Result.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<CommentObjV1>(res);
+            }
+            catch
+            {
+                return null;
+            }
         }
 
         public async Task<CommentDetails> GetProductComments(int productId)
@@ -174,31 +196,33 @@ namespace DigikalaCrawler.Share.Services
             }
             foreach (var task in tasks)
             {
-                cm.comments.AddRange(task.Result.data.comments.ToList());
+                var _data = task.Result;
+                if (_data != null)
+                    cm.comments.AddRange(_data.data.comments.ToList());
             }
             return cm;
         }
         #endregion
 
         #region Server Call
-        public IEnumerable<int> GetFreeProductsFromServer()
+        public IEnumerable<int> GetFreeProductsFromServer(bool checkUserId)
         {
             using (HttpClient client = new HttpClient())
             {
-                string url = $"{_config.Server}/Digikala/GetFreeProducts/{_config.UserId}/{_config.Count}";
+                string url = $"{_config.Server}/Digikala/GetFreeProducts/{_config.UserId}/{_config.Count}/{checkUserId}";
                 string res = client.GetAsync(url).Result.Content.ReadAsStringAsync().Result;
                 return JsonConvert.DeserializeObject<List<int>>(res);
             }
         }
-        public IEnumerable<int> SendProductsServer(SetProductsDTO products)
+        public Task SendProductsServer(SetProductsDTO products)
         {
             using (HttpClient client = new HttpClient())
             {
                 string url = $"{_config.Server}/Digikala/SendProducts/";
                 var json = JsonConvert.SerializeObject(products);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
-                string res = client.PostAsync(url,data).Result.Content.ReadAsStringAsync().Result;
-                return JsonConvert.DeserializeObject<List<int>>(res);
+                client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
+                return Task.CompletedTask;
             }
         }
         #endregion

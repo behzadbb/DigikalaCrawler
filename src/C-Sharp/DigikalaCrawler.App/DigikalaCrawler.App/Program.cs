@@ -9,7 +9,8 @@
 
 #endregion
 
-using DigikalaCrawler.Services.Crawler;
+using DigikalaCrawler.Share.Services;
+
 using (DigikalaCrawlerServiceV1 digikalaCrawler = new DigikalaCrawlerServiceV1())
 {
     //await digikalaCrawler.GetMainSitemap();
@@ -18,8 +19,9 @@ using (DigikalaCrawlerServiceV1 digikalaCrawler = new DigikalaCrawlerServiceV1()
     //digikalaCrawler.GetProductIdFromUrl(@"https://www.digikala.com/product/dkp-7971541/%D8%AA%DB%8C-%D8%B4%D8%B1%D8%AA-%D8%A2%D8%B3%D8%AA%DB%8C%D9%86-%DA%A9%D9%88%D8%AA%D8%A7%D9%87-%D9%85%D8%B1%D8%AF%D8%A7%D9%86%D9%87-%DA%A9%D8%AF-ar258");
     //var s = await digikalaCrawler.GetProduct(3246506);
     var start = DateTime.Now;
-    var s = await digikalaCrawler.GetProductComments(7353298);
+    //var s = await digikalaCrawler.GetProductComments(7353298);
+    var dkp = digikalaCrawler.GetProductIdFromUrl("https://www.digikala.com/product/dkp-968477");
     var end = DateTime.Now;
     Console.WriteLine("\n\n\tTime: " + (end - start).Milliseconds);
-    Console.WriteLine("\n\n\tCount: " + s.comments.Count());
+    //Console.WriteLine("\n\n\tCount: " + s.comments.Count());
 }

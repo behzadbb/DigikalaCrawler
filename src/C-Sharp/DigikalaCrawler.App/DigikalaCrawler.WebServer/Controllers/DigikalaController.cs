@@ -20,25 +20,45 @@ namespace DigikalaCrawler.WebServer.Controllers
             _crawler = crawler;
         }
 
-        [HttpGet("/[controller]/GetFreeProducts/{userid}/{count}")]
-        public IEnumerable<int> GetFreeProducts(int userid, int count)
+        [HttpGet("/[controller]/GetFreeProducts/{userid}/{count}/{checkUserId}")]
+        public IEnumerable<int> GetFreeProducts(int userid, int count, bool checkUserId)
         {
-            return _digi.GetFreeProduct(userid, count);
+            return _digi.GetFreeProduct(userid, count, checkUserId);
         }
 
         [HttpGet("/[controller]/SetSitemap")]
         public async Task<IActionResult> SetSitemap()
         {
+            string path = "";
+            path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "DigikalaSiteMap");
+            _logger.Log(LogLevel.Information, "0 _ Path: " + path);
+            if (string.IsNullOrEmpty(path))
+            {
+                return Ok("Path is Empty");
+            }
+            if (!Directory.Exists(path))
+            {
+                Directory.CreateDirectory(path);
+            }
+            _logger.Log(LogLevel.Information, "1");
             IList<string> sitemaps = await _crawler.GetMainSitemap();
+            _logger.Log(LogLevel.Information, "2 _ Count: " + sitemaps.Count());
             List<int> productLinks = new List<int>();
             foreach (string sitemap in sitemaps)
             {
-                var main1 = await _crawler.DownloadSitemap(sitemap, @"e:\newSitemap");
+                var main1 = await _crawler.DownloadSitemap(sitemap, path);
                 var main2 = await _crawler.GetSitemap(main1);
-                productLinks.AddRange(_crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList()));
+                //productLinks.AddRange(_crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList()));
+                var _productLinks = _crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList());
+                _digi.InsertPages(_productLinks);
+                Thread.Sleep(50);
+                Console.Write(" _ " + _productLinks.Count());
             }
-            _digi.InsertPages(productLinks);
-            return Ok();
+            _logger.Log(LogLevel.Information, "3 _ Success!");
+            _digi.CreateIndex();
+            _logger.Log(LogLevel.Information, "4 _ Create Index!");
+            //_digi.InsertPages(productLinks);
+            return Ok("Success");
         }
 
         [HttpPost("/[controller]/SendProducts")]
@@ -49,6 +69,12 @@ namespace DigikalaCrawler.WebServer.Controllers
                 _digi.SetProduct(product);
             }
             return Ok();
+        }
+
+        [HttpGet("/[controller]/GetProductCount")]
+        public async Task<IActionResult> GetProductCount()
+        {
+            return Ok(_digi.ProductCount());
         }
     }
 }

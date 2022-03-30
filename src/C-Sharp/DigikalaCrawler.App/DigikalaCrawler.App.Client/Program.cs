@@ -13,29 +13,33 @@ namespace DigikalaCrawler.App.Client
         public static void Main(string[] args)
         {
             loadConfig();
+            var checkUserId = true;
+            int k = 0;
             while (!string.IsNullOrEmpty(_config.Server))
             {
                 using (DigikalaCrawlerServiceV1 digi = new DigikalaCrawlerServiceV1(_config))
                 {
-                    var ids = digi.GetFreeProductsFromServer();
+                    var ids = digi.GetFreeProductsFromServer(checkUserId).ToList();
+                    checkUserId = false;
+
                     SetProductsDTO products = new SetProductsDTO();
-                    foreach (var id in ids)
+                    for (int i = 0; i < ids.Count(); i++)
                     {
                         var product = new SetProductDTO();
-                        product.ProductId = id;
-                        product.Product = digi.GetProduct(id).Result;
+                        product.ProductId = ids[i];
+                        product.Product = digi.GetProduct(ids[i]).Result;
                         if (product.Product != null && product.Product.product.comments_count > 0)
                         {
-                            product.Comments = digi.GetProductComments(id).Result;
+                            product.Comments = digi.GetProductComments(ids[i]).Result;
                         }
                         products.Products.Add(product);
                     }
                     if (products.Products.Count() > 0)
                     {
                         digi.SendProductsServer(products);
-                        Console.WriteLine("s");
                     }
                 }
+                Console.Write("\r{0} Iteration", k++);
             }
         }
         public static void loadConfig()

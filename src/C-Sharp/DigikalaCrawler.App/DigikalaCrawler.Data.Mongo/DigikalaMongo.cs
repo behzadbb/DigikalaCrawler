@@ -2,6 +2,7 @@
 using DigikalaCrawler.Share.Models;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
+using System.Linq;
 
 namespace DigikalaCrawler.Data.Mongo;
 public class DigikalaMongo
@@ -26,17 +27,37 @@ public class DigikalaMongo
         DigikalaProducts.InsertBatch(pages);
     }
 
-    public IList<int> GetFreeProduct(int userid, int count)
+    public IList<int> GetFreeProduct(int userid, int count, bool checkUserId)
     {
         List<int> ids = new List<int>();
-        ids = DigikalaProducts.FindAll().Where(p => p.Assign && p.UserId == userid && p.Success ==false).Take(count).Select(x => x.ProductId).ToList();
+
+        if (checkUserId)
+        {
+            IMongoQuery querySelect1 = Query<DigikalaProduct>.Where(p => p.Assign && p.UserId == userid && p.Success == false);
+            ids = DigikalaProducts.Find(querySelect1).Select(x => x.ProductId).ToList();
+        }
+
         if (ids.Count() < count)
-            ids.AddRange(DigikalaProducts.FindAll().Where(p => !p.Success && !p.Assign && p.UserId == null).Take(count - ids.Count).Select(x => x.ProductId).ToList());
+        {
+            IMongoQuery querySelect2 = Query<DigikalaProduct>.Where(p => !p.Success && !p.Assign && p.UserId == null);
+            ids.AddRange(DigikalaProducts.Find(querySelect2).SetLimit(count - ids.Count).Select(x => x.ProductId).ToList());
+        }
+        //var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
+        //var update = Update<DigikalaProduct>.Set(p => p.Assign, true).Set(p => p.Success, false).Set(p => p.UserId, userid).Set(p => p.AssignDate, DateTime.Now);
+        //DigikalaProducts.Update(query, update, UpdateFlags.Multi);
+
+        //Task.Run(() => { UpdateProductsAsync(ids, userid); });
+
+        UpdateProductsAsync(ids, userid);
+
+
+        return ids;
+    }
+    private void UpdateProductsAsync(List<int> ids, int userid)
+    {
         var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
         var update = Update<DigikalaProduct>.Set(p => p.Assign, true).Set(p => p.Success, false).Set(p => p.UserId, userid).Set(p => p.AssignDate, DateTime.Now);
         DigikalaProducts.Update(query, update, UpdateFlags.Multi);
-
-        return ids;
     }
 
     public void SetProduct(SetProductDTO dto)
@@ -49,5 +70,15 @@ public class DigikalaMongo
             .Set(p => p.ProductData, dto.Product)
             .Set(p => p.CommentDetails, dto.Comments);
         DigikalaProducts.Update(query, update);
+    }
+
+    public void CreateIndex()
+    {
+        DigikalaProducts.CreateIndex("ProductId");
+    }
+
+    public long ProductCount()
+    {
+        return DigikalaProducts.Count();
     }
 }
