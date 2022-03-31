@@ -218,7 +218,7 @@ namespace DigikalaCrawler.Share.Services
                 for (int i = 2; i <= cm.pager.total_pages; i++)
                 {
                     tasks.Add(GetProductComment(productId, i));
-                    Thread.Sleep(100);
+                    Thread.Sleep(50);
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());

@@ -49,8 +49,6 @@ public class DigikalaMongo
         //Task.Run(() => { UpdateProductsAsync(ids, userid); });
 
         UpdateProductsAsync(ids, userid);
-
-
         return ids;
     }
     private void UpdateProductsAsync(List<long> ids, int userid)
@@ -74,7 +72,7 @@ public class DigikalaMongo
 
     public void CreateIndex()
     {
-        DigikalaProducts.CreateIndex("ProductId");
+        DigikalaProducts.CreateIndex("ProductId", "UserId");
     }
 
     public long ProductCount()
