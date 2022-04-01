@@ -2,7 +2,8 @@
 using DigikalaCrawler.Share.Models;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
-using System.Linq;
+using Newtonsoft.Json;
+using System.Text;
 
 namespace DigikalaCrawler.Data.Mongo;
 public class DigikalaMongo
@@ -61,22 +62,51 @@ public class DigikalaMongo
     public void SetProduct(SetProductDTO dto)
     {
         var query = Query<DigikalaProduct>.EQ(p => p.ProductId, dto.ProductId);
-        var update = Update<DigikalaProduct>
+        try
+        {
+            var update = Update<DigikalaProduct>
             .Set(p => p.Assign, true)
             .Set(p => p.Success, true)
             .Set(p => p.CrawleDate, DateTime.Now)
             .Set(p => p.ProductData, dto.Product)
-            .Set(p => p.CommentDetails, dto.Comments);
-        DigikalaProducts.Update(query, update);
+            .Set(p => p.CommentDetails, dto.Comments)
+            .Set(p => p.Error, dto.Error)
+            .Set(p => p.ErrorMessage, dto.ErrorMessage)
+            .Set(p => p.ClientError, dto.ClientError);
+            DigikalaProducts.Update(query, update);
+        }
+        catch (Exception ex)
+        {
+            string json = JsonConvert.SerializeObject(dto);
+            var update = Update<DigikalaProduct>
+            .Set(p => p.Assign, true)
+            .Set(p => p.Success, true)
+            .Set(p => p.CrawleDate, DateTime.Now)
+            .Set(p => p.Error, true)
+            .Set(p => p.ErrorMessage, ex.Message)
+            .Set(p => p.JsonObject, json)
+            .Set(p => p.ServerError, true);
+            DigikalaProducts.Update(query, update);
+        }
     }
 
-    public void CreateIndex()
+    public void CreateIndex(params string[] indexs)
     {
-        DigikalaProducts.CreateIndex("ProductId", "UserId");
+        DigikalaProducts.CreateIndex(indexs);
     }
 
-    public long ProductCount()
+    public string ProductCount()
     {
-        return DigikalaProducts.Count();
+        StringBuilder sb = new StringBuilder();
+        sb.AppendFormat("All: {0}\n", DigikalaProducts.Count());
+        IMongoQuery query1 = Query<DigikalaProduct>.Where(p => p.Success);
+        sb.AppendFormat("Crawl: {0}\n", DigikalaProducts.Find(query1).Count());
+        IMongoQuery query2 = Query<DigikalaProduct>.Where(p => p.Error);
+        sb.AppendFormat("Crawl Error: {0}\n", DigikalaProducts.Find(query2).Count());
+        IMongoQuery query3 = Query<DigikalaProduct>.Where(p => p.Error && p.ClientError);
+        sb.AppendFormat("Client Error: {0}\n", DigikalaProducts.Find(query3).Count());
+        IMongoQuery query4 = Query<DigikalaProduct>.Where(p => p.Error && p.ClientError);
+        sb.AppendFormat("Server Error: {0}\n", DigikalaProducts.Find(query4).Count());
+        return sb.ToString();
     }
 }

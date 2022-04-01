@@ -52,7 +52,7 @@ namespace DigikalaCrawler.WebServer.Controllers
                 List<long> _productLinks = _crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList());
                 //_digi.InsertPages(_productLinks);
                 productLinks.AddRange(_productLinks);
-                
+
                 if (productLinks.Count() > 150000)
                 {
                     _digi.InsertPages(productLinks);
@@ -63,7 +63,7 @@ namespace DigikalaCrawler.WebServer.Controllers
             _digi.InsertPages(productLinks);
             Console.Write(" _ insert: " + productLinks.Count());
             _logger.Log(LogLevel.Information, "\n3 _ Success!");
-            _digi.CreateIndex();
+            _digi.CreateIndex("ProductId", "UserId");
             _logger.Log(LogLevel.Information, "\n4 _ Create Index!");
             //_digi.InsertPages(productLinks);
             return Ok("Success");
@@ -80,9 +80,16 @@ namespace DigikalaCrawler.WebServer.Controllers
         }
 
         [HttpGet("/[controller]/GetProductCount")]
-        public async Task<IActionResult> GetProductCount()
+        public IActionResult GetProductCount()
         {
             return Ok(_digi.ProductCount());
+        }
+
+        [HttpGet("/[controller]/CreateIndex")]
+        public IActionResult CreateIndex()
+        {
+            _digi.CreateIndex("ProductId", "UserId", "ServerError");
+            return Ok("Create Index!!!");
         }
     }
 }

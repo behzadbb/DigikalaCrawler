@@ -17,20 +17,30 @@ while (!string.IsNullOrEmpty(_config.Server))
         {
             var product = new SetProductDTO();
             product.ProductId = ids[i];
-            product.Product = digi.GetProduct(ids[i]).Result;
-            Thread.Sleep(150);
-            if (product.Product != null && product.Product.product.comments_count > 0)
+            try
             {
-                product.Comments = digi.GetProductComments(ids[i]).Result;
+                product.Product = digi.GetProduct(ids[i]).Result;
+                Thread.Sleep(150);
+                if (product.Product != null && product.Product.product.comments_count > 0)
+                {
+                    product.Comments = digi.GetProductComments(ids[i]).Result;
+                }
+                products.Products.Add(product);
             }
-            products.Products.Add(product);
+            catch (Exception ex)
+            {
+                product.Error = true;
+                product.ErrorMessage = ex.Message;
+                product.ClientError = true;
+                products.Products.Add(product);
+            }
         }
         if (products.Products.Count() > 0)
         {
             digi.SendProductsServer(products);
         }
     }
-    Console.Write("\r{0} Iteration", k++);
+    Console.Write("\r{0} \tIteration", k++);
 }
 
 void loadConfig()
