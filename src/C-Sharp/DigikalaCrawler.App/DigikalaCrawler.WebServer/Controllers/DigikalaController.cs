@@ -88,7 +88,7 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpGet("/[controller]/CreateIndex")]
         public IActionResult CreateIndex()
         {
-            _digi.CreateIndex("ProductId", "UserId", "ServerError");
+            _digi.CreateIndex("ProductId", "UserId");
             return Ok("Create Index!!!");
         }
     }

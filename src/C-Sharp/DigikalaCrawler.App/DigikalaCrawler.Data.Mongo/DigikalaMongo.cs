@@ -85,6 +85,7 @@ public class DigikalaMongo
             .Set(p => p.Error, true)
             .Set(p => p.ErrorMessage, ex.Message)
             .Set(p => p.JsonObject, json)
+            .Set(p => p.ClientError, dto.ClientError)
             .Set(p => p.ServerError, true);
             DigikalaProducts.Update(query, update);
         }
