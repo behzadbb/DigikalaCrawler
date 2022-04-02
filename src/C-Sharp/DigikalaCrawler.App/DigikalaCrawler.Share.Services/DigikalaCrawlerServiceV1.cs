@@ -78,23 +78,20 @@ namespace DigikalaCrawler.Share.Services
 
         public Task<HttpResponseMessage> GetHttp(string url)
         {
-            //var proxy = new WebProxy
-            //{
-            //    Address = new Uri(proxies[1]),
-            //    BypassProxyOnLocal = false,
-            //    UseDefaultCredentials = false,
-
-            //    // *** These creds are given to the proxy server, not the web server ***
-            //    Credentials = new NetworkCredential()
-            //};
-            //// Now create a client handler which uses that proxy
-            //var httpClientHandler = new HttpClientHandler
-            //{
-            //    Proxy = proxy,
-            //};
-            //// Finally, create the HTTP client object
-            //var client = new HttpClient(handler: httpClientHandler, disposeHandler: true);
-            HttpClient client = new HttpClient();
+            HttpClient client;
+            if (_config.UseProxy)
+            {
+                MihaZupan.HttpToSocks5Proxy proxy = new MihaZupan.HttpToSocks5Proxy(_config.ProxyHost, _config.ProxyPort);
+                var handler = new HttpClientHandler
+                {
+                    Proxy = proxy
+                };
+                client = new HttpClient(handler);
+            }
+            else
+            {
+                client = new HttpClient();
+            }
             return client.GetAsync(url);
         }
         #endregion
@@ -200,7 +197,7 @@ namespace DigikalaCrawler.Share.Services
             try
             {
                 string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
-                string res = await new HttpClient().GetAsync(url).Result.Content.ReadAsStringAsync();
+                string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<CommentObjV1>(res);
             }
             catch
