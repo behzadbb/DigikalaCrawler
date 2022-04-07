@@ -208,6 +208,7 @@ namespace DigikalaCrawler.Share.Services
 
         public async Task<CommentDetails> GetProductComments(long productId)
         {
+            int random = new Random().Next(10, 45);
             CommentDetails cm = (await GetProductComment(productId, 1)).data;
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
             if (cm != null && cm.pager.total_pages > 1)
@@ -215,7 +216,7 @@ namespace DigikalaCrawler.Share.Services
                 for (int i = 2; i <= cm.pager.total_pages; i++)
                 {
                     tasks.Add(GetProductComment(productId, i));
-                    Thread.Sleep(50);
+                    Thread.Sleep(random);
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());
@@ -237,13 +238,13 @@ namespace DigikalaCrawler.Share.Services
         #endregion
 
         #region Server Call
-        public IEnumerable<int> GetFreeProductsFromServer(bool checkUserId)
+        public async Task<List<long>> GetFreeProductsFromServer(bool checkUserId)
         {
             using (HttpClient client = new HttpClient())
             {
                 string url = $"{_config.Server}/Digikala/GetFreeProducts/{_config.UserId}/{_config.Count}/{checkUserId}";
-                string res = client.GetAsync(url).Result.Content.ReadAsStringAsync().Result;
-                return JsonConvert.DeserializeObject<List<int>>(res);
+                string res = await client.GetAsync(url).Result.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<List<long>>(res);
             }
         }
         public Task SendProductsServer(SetProductsDTO products)

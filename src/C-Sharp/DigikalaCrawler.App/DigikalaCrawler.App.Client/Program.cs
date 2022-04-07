@@ -19,7 +19,7 @@ namespace DigikalaCrawler.App.Client
             {
                 using (DigikalaCrawlerServiceV1 digi = new DigikalaCrawlerServiceV1(_config))
                 {
-                    var ids = digi.GetFreeProductsFromServer(checkUserId).ToList();
+                    var ids = digi.GetFreeProductsFromServer(checkUserId).Result;
                     checkUserId = false;
 
                     SetProductsDTO products = new SetProductsDTO();

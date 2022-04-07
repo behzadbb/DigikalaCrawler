@@ -1,4 +1,5 @@
 using DigikalaCrawler.Data.Mongo;
+using DigikalaCrawler.Data.Mongo.DBModels;
 using DigikalaCrawler.Share.Models;
 using DigikalaCrawler.Share.Services;
 using Microsoft.AspNetCore.Mvc;
@@ -72,10 +73,30 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpPost("/[controller]/SendProducts")]
         public async Task<IActionResult> SendProducts(SetProductsDTO dto)
         {
-            foreach (var product in dto.Products)
+            var products = dto.Products.Select(x => new DigikalaProductCrawl()
             {
-                _digi.SetProduct(product);
+                ClientError = x.ClientError,
+                CommentDetails = x.Comments,
+                CrawleDate = DateTime.Now,
+                Error = x.Error,
+                ErrorMessage = x.ErrorMessage,
+                JsonObject = x.JsonObject,
+                ProductData = x.Product,
+                ProductId = x.ProductId,
+                Success = true,
+                UserId = dto.UserId
+            }).ToList();
+            foreach (var product in products)
+            {
+                await Task.Run(() =>
+                {
+                    _digi.InsertDigikalaProductCrawl(product);
+                });
             }
+            await Task.Run(() =>
+            {
+                _digi.UpdateProductsCrawlAsync(products.Select(x => x.ProductId).ToList());
+            });
             return Ok();
         }
 
@@ -88,8 +109,15 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpGet("/[controller]/CreateIndex")]
         public IActionResult CreateIndex()
         {
-            _digi.CreateIndex("ProductId", "UserId");
+            _digi.CreateIndex("_id", "ProductId", "UserId", "Assign", "Success");
             return Ok("Create Index!!!");
+        }
+
+        [HttpGet("/[controller]/DropIndex")]
+        public IActionResult DropIndex()
+        {
+            _digi.DropIndex();
+            return Ok("Drop Index!!!");
         }
     }
 }

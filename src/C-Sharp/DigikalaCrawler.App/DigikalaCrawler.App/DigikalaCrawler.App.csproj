@@ -8,6 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\DigikalaCrawler.Data.Mongo\DigikalaCrawler.Data.Mongo.csproj" />
     <ProjectReference Include="..\DigikalaCrawler.Share.Services\DigikalaCrawler.Share.Services.csproj" />
   </ItemGroup>
 

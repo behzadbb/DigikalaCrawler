@@ -15,5 +15,6 @@ namespace DigikalaCrawler.Share.Models
     public class SetProductsDTO
     {
         public List<SetProductDTO> Products { get; set; } = new List<SetProductDTO>();
+        public int UserId { get; set; }
     }
 }
