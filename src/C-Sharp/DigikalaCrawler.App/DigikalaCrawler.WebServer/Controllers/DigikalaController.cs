@@ -93,7 +93,7 @@ namespace DigikalaCrawler.WebServer.Controllers
                     _digi.InsertDigikalaProductCrawl(product);
                 });
             }
-            await Task.Run(() =>
+            _ = Task.Run(() =>
             {
                 _digi.UpdateProductsCrawlAsync(products.Select(x => x.ProductId).ToList());
             });

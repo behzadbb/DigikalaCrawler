@@ -3,11 +3,13 @@ using DigikalaCrawler.Share.Services;
 using Newtonsoft.Json;
 using System.Diagnostics;
 
-Montoring montoring = new Montoring();
+Montoring monitoring = new Montoring();
 Console.WriteLine("Start: {0}", DateTime.Now);
+Thread.Sleep(1000);
 Config _config;
 loadConfig();
 var checkUserId = true;
+Console.WriteLine($"#_ \t| ALL \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H: \t| CmH: ____");
 
 Stopwatch sw = new Stopwatch();
 while (!string.IsNullOrEmpty(_config.Server))
@@ -16,7 +18,7 @@ while (!string.IsNullOrEmpty(_config.Server))
     using (DigikalaCrawlerServiceV1 digi = new DigikalaCrawlerServiceV1(_config))
     {
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
-        montoring.LoadTimeProducts = sw.ElapsedMilliseconds;
+        monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 30);
         Thread.Sleep(random);
         if (ids != null && ids.Any())
@@ -44,44 +46,53 @@ while (!string.IsNullOrEmpty(_config.Server))
                 }
                 products.Products.Add(product);
             }
+            monitoring.LastCrawlTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000 - monitoring.LoadTimeProducts, 1);
             if (products.Products.Count() > 0)
             {
                 try
                 {
-                    montoring.LastCommentCount = products.Products.Where(y => y.Product != null).Select(x => x.Product.product).Sum(x => x.comments_count);
-                    montoring.TotalCommentCount += montoring.LastCommentCount;
-                    montoring.TotalProductCount += products.Products.Count();
+                    monitoring.LastCommentCount = products.Products.Where(y => y.Product != null).Select(x => x.Product.product).Sum(x => x.comments_count);
+                    monitoring.TotalCommentCount += monitoring.LastCommentCount;
+                    monitoring.TotalProductCount += products.Products.Count();
                 }
                 catch
                 {
 
                 }
                 digi.SendProductsServer(products);
+                monitoring.LastSendToServerTimeProducts = Math.Round(((double)sw.ElapsedMilliseconds / 1000) - monitoring.LoadTimeProducts - monitoring.LastCrawlTimeProducts, 1);
             }
         }
     }
     sw.Stop();
-    montoring.TimeSheet.Add(sw.ElapsedMilliseconds);
+    monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
+    monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
     Thread.Sleep(150);
 }
 
 void Calc()
 {
-    if (montoring.K % 5 == 0)
+    if (monitoring.K % 5 == 0)
     {
         try
         {
-            montoring.TimeSheet.Remove(montoring.TimeSheet.Max());
-            montoring.AvrageCrawling = Math.Round(montoring.TimeSheet.Average());
-            montoring.HoursDurration = Math.Round((DateTime.Now - montoring.StartTime).TotalHours, 4);
-            montoring.CountPerHours = Convert.ToInt32(montoring.TotalCommentCount / montoring.HoursDurration);
+            monitoring.TimeSheet.Remove(monitoring.TimeSheet.Max());
+            monitoring.AvrageCrawling = Math.Round(monitoring.TimeSheet.Average());
+            monitoring.HoursDurration = Math.Round((DateTime.Now - monitoring.StartTime).TotalHours, 2);
+            monitoring.CountPerHours = Convert.ToInt32(monitoring.TotalCommentCount / monitoring.HoursDurration);
+            Thread.Sleep(1000);
         }
         catch
         {
         }
+        if (monitoring.K % 10 == 0)
+        {
+            Thread.Sleep((int)monitoring.Last * 1000);
+        }
     }
-    Console.Write($"\r{montoring.K++}_\t|_P:{montoring.TotalProductCount}_\t| Last Crawl:{sw.ElapsedMilliseconds}_\t |  Avg:{montoring.AvrageCrawling}_ \t| Last Comment:{montoring.LastCommentCount}_ \t| Total:{montoring.TotalCommentCount}_\t | H:{montoring.HoursDurration}_\t | Comment/H:{montoring.CountPerHours}_/t | LoadProductTime:_{montoring.LoadTimeProducts}____\t| .");
+
+    Console.Write($"\r{monitoring.K++}  \t\t| {monitoring.TotalProductCount} \t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1)+"_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
 }
 
 void loadConfig()
@@ -109,7 +120,10 @@ public struct Montoring
     public int TotalProductCount { set; get; } = 0;
     public double HoursDurration { set; get; } = 0;
     public int CountPerHours { set; get; } = 0;
-    public long LoadTimeProducts { set; get; } = 0;
+    public double LoadTimeProducts { set; get; } = 0;
+    public double LastCrawlTimeProducts { set; get; } = 0;
+    public double LastSendToServerTimeProducts { set; get; } = 0;
+    public double Last { set; get; } = 0;
     public long K { set; get; } = 0;
-    public List<long> TimeSheet = new List<long>();
+    public List<double> TimeSheet = new List<double>();
 }

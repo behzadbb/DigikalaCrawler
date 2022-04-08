@@ -7,7 +7,7 @@ using System.Diagnostics;
 using System.Text;
 
 namespace DigikalaCrawler.Data.Mongo;
-public class DigikalaMongo
+public class DigikalaMongo : IDisposable
 {
     private MongoClient client;
     private MongoServer server;
@@ -15,6 +15,7 @@ public class DigikalaMongo
     //private MongoCollection<DigikalaProduct> DigikalaProducts;
     private MongoCollection<DigikalaPage> DigikalaPages;
     private MongoCollection<DigikalaProductCrawl> DigikalaProductCrawls;
+    private bool disposedValue;
 
     public DigikalaMongo()
     {
@@ -35,13 +36,13 @@ public class DigikalaMongo
 
     public List<long> GetFreeProduct(int userid, int count, bool checkUserId)
     {
-        Stopwatch sw = new Stopwatch();
+        //Stopwatch sw = new Stopwatch();
         //Console.Clear();
         List<long> ids = new List<long>();
-        sw.Restart();
+        //sw.Restart();
         if (checkUserId)
         {
-            Console.WriteLine(" T1: " + sw.ElapsedMilliseconds);
+            //Console.WriteLine(" T1: " + sw.ElapsedMilliseconds);
             IMongoQuery querySelect1 = Query<DigikalaPage>.Where(p => p.Assign && p.UserId == userid && p.Success == false);
             ids = DigikalaPages.Find(querySelect1).Select(x => x.ProductId).ToList();
         }
@@ -50,7 +51,7 @@ public class DigikalaMongo
         {
             IMongoQuery querySelect2 = Query<DigikalaPage>.Where(p => !p.Success && !p.Assign && p.UserId == null);
             ids.AddRange(DigikalaPages.Find(querySelect2).SetLimit(count).Select(x => x.ProductId).ToList());
-            Console.Write(" T2: " + sw.ElapsedMilliseconds);
+            //Console.Write(" T2: " + sw.ElapsedMilliseconds);
         }
         //var query = Query<DigikalaProduct>.In(p => p.ProductId, ids);
         //var update = Update<DigikalaProduct>.Set(p => p.Assign, true).Set(p => p.Success, false).Set(p => p.UserId, userid).Set(p => p.AssignDate, DateTime.Now);
@@ -59,7 +60,7 @@ public class DigikalaMongo
         Task.Run(() => { UpdateProductsFreeAsync(ids, userid); });
 
         //UpdateProductsFreeAsync(ids, userid);
-        Console.Write(" T3: " + sw.ElapsedMilliseconds);
+        //Console.Write(" T3: " + sw.ElapsedMilliseconds);
         return ids;
     }
 
@@ -73,9 +74,13 @@ public class DigikalaMongo
 
     public Task UpdateProductCrawlAsync(long id)
     {
+        //Stopwatch sw = new Stopwatch();
+        //sw.Start();
         var query = Query<DigikalaPage>.EQ(p => p.ProductId, id);
         var update = Update<DigikalaPage>.Set(p => p.Success, true).Set(p => p.CrawleDate, DateTime.Now);
         DigikalaPages.Update(query, update);
+        //sw.Stop();
+        //Console.WriteLine("\n Update: " + sw.ElapsedMilliseconds + " ms");
         return Task.CompletedTask;
     }
 
@@ -182,14 +187,46 @@ public class DigikalaMongo
         }
         return Task.CompletedTask;
     }
+
     public Task InsertBatchDigikalaProductCrawl(List<DigikalaProductCrawl> digikalaProductCrawls)
     {
         DigikalaProductCrawls.InsertBatch(digikalaProductCrawls);
         return Task.CompletedTask;
     }
+
     public long GetDigikalaProductCrawl()
     {
         return DigikalaProductCrawls.Count();
     }
 
+    #region Dispose
+    protected virtual void Dispose(bool disposing)
+    {
+        if (!disposedValue)
+        {
+            if (disposing)
+            {
+                // TODO: dispose managed state (managed objects)
+            }
+
+            // TODO: free unmanaged resources (unmanaged objects) and override finalizer
+            // TODO: set large fields to null
+            disposedValue = true;
+        }
+    }
+
+    // // TODO: override finalizer only if 'Dispose(bool disposing)' has code to free unmanaged resources
+    // ~DigikalaMongo()
+    // {
+    //     // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+    //     Dispose(disposing: false);
+    // }
+
+    void IDisposable.Dispose()
+    {
+        // Do not change this code. Put cleanup code in 'Dispose(bool disposing)' method
+        Dispose(disposing: true);
+        GC.SuppressFinalize(this);
+    }
+    #endregion
 }

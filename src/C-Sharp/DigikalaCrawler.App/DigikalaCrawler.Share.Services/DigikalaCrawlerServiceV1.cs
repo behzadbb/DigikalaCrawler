@@ -217,6 +217,10 @@ namespace DigikalaCrawler.Share.Services
                 {
                     tasks.Add(GetProductComment(productId, i));
                     Thread.Sleep(random);
+                    if (i > 10 && i % 5 == 0)
+                    {
+                        Thread.Sleep(50);
+                    }
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());
