@@ -19,8 +19,8 @@ while (!string.IsNullOrEmpty(_config.Server))
     {
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
-        int random = new Random().Next(3, 30);
-        Thread.Sleep(random);
+        int random = new Random().Next(3, 50);
+        Thread.Sleep(random * 10);
         if (ids != null && ids.Any())
         {
             checkUserId = false;
@@ -68,12 +68,12 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
-    Thread.Sleep(150);
+    Thread.Sleep(5000);
 }
 
 void Calc()
 {
-    if (monitoring.K % 5 == 0)
+    if (monitoring.K % 2 == 0)
     {
         try
         {
@@ -81,18 +81,18 @@ void Calc()
             monitoring.AvrageCrawling = Math.Round(monitoring.TimeSheet.Average());
             monitoring.HoursDurration = Math.Round((DateTime.Now - monitoring.StartTime).TotalHours, 2);
             monitoring.CountPerHours = Convert.ToInt32(monitoring.TotalCommentCount / monitoring.HoursDurration);
-            Thread.Sleep(1000);
+            Thread.Sleep(1500);
         }
         catch
         {
         }
         if (monitoring.K % 10 == 0)
         {
-            Thread.Sleep((int)monitoring.Last * 1000);
+            Thread.Sleep(5000);
         }
     }
 
-    Console.Write($"\r{monitoring.K++}  \t\t| {monitoring.TotalProductCount} \t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1)+"_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
+    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount} \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1)+"_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
 }
 
 void loadConfig()
