@@ -81,11 +81,11 @@ void Calc()
             monitoring.AvrageCrawling = Math.Round(monitoring.TimeSheet.Average());
             monitoring.HoursDurration = Math.Round((DateTime.Now - monitoring.StartTime).TotalHours, 2);
             monitoring.CountPerHours = Convert.ToInt32(monitoring.TotalCommentCount / monitoring.HoursDurration);
-            Thread.Sleep(1500);
         }
         catch
         {
         }
+        Thread.Sleep(1500);
         if (monitoring.K % 10 == 0)
         {
             Thread.Sleep(5000);
@@ -109,21 +109,4 @@ void loadConfig()
         _config = JsonConvert.DeserializeObject<Config>(content);
         Console.WriteLine(content);
     }
-}
-
-public struct Montoring
-{
-    public DateTime StartTime { get; set; } = DateTime.Now;
-    public double AvrageCrawling { set; get; } = 0;
-    public int LastCommentCount { set; get; } = 0;
-    public int TotalCommentCount { set; get; } = 0;
-    public int TotalProductCount { set; get; } = 0;
-    public double HoursDurration { set; get; } = 0;
-    public int CountPerHours { set; get; } = 0;
-    public double LoadTimeProducts { set; get; } = 0;
-    public double LastCrawlTimeProducts { set; get; } = 0;
-    public double LastSendToServerTimeProducts { set; get; } = 0;
-    public double Last { set; get; } = 0;
-    public long K { set; get; } = 0;
-    public List<double> TimeSheet = new List<double>();
 }
