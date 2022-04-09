@@ -492,7 +492,7 @@
 //        public float no_return { get; set; }
 //        public int on_time_shipping { get; set; }
 //    }
-    
+
 
 //    public class Properties4
 //    {

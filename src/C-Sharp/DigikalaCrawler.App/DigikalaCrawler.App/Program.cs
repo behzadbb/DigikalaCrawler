@@ -10,9 +10,6 @@
 #endregion
 
 using DigikalaCrawler.Data.Mongo;
-using DigikalaCrawler.Data.Mongo.DBModels;
-using DigikalaCrawler.Share.Services;
-using System.Linq;
 
 //using (DigikalaCrawlerServiceV1 digikalaCrawler = new DigikalaCrawlerServiceV1())
 //{

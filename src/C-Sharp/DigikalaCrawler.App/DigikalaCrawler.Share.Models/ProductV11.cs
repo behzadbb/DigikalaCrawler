@@ -1,7 +1,4 @@
-﻿using Newtonsoft.Json;
-using System.Collections.Generic;
-
-namespace DigikalaCrawler.Share.Models
+﻿namespace DigikalaCrawler.Share.Models
 {
 
     public class ProductObjV1

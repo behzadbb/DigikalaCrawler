@@ -1,9 +1,7 @@
 ﻿using DigikalaCrawler.Data.Mongo.DBModels;
-using DigikalaCrawler.Share.Models;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using Newtonsoft.Json;
-using System.Diagnostics;
 using System.Text;
 
 namespace DigikalaCrawler.Data.Mongo;

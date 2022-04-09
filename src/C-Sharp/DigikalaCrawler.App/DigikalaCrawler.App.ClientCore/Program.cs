@@ -92,7 +92,7 @@ void Calc()
         }
     }
 
-    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount} \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1)+"_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
+    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount} \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
 }
 
 void loadConfig()
