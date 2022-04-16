@@ -18,5 +18,6 @@ namespace DigikalaCrawler.Share.Models
         public double Last { set; get; } = 0;
         public long K { set; get; } = 0;
         public List<double> TimeSheet = new List<double>();
+        public int ClientError = 0;
     }
 }

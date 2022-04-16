@@ -154,8 +154,14 @@ public class DigikalaMongo : IDisposable
     public string ProductCount()
     {
         StringBuilder sb = new StringBuilder();
-        sb.AppendFormat("All: {0}\n", DigikalaPages.Count());
-        sb.AppendFormat("Crawl: {0}\n", DigikalaProductCrawls.Count());
+        var pagesCount = DigikalaPages.Count();
+        var crawlCount = DigikalaProductCrawls.Count();
+        sb.AppendFormat("All: {0}\n", pagesCount);
+        sb.AppendFormat("Crawl: {0}\n", crawlCount);
+        if (pagesCount>0 && crawlCount >0)
+        {
+            sb.AppendFormat("\t{0}", Math.Round((double)(crawlCount / pagesCount) * 100, 2));
+        }
         return sb.ToString();
     }
 

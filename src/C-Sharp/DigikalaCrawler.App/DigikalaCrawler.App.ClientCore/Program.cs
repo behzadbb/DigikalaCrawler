@@ -9,7 +9,7 @@ Thread.Sleep(1000);
 Config _config;
 loadConfig();
 var checkUserId = true;
-Console.WriteLine($"#_ \t| ALL \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H: \t| CmH: ____");
+Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t| Error ____");
 
 Stopwatch sw = new Stopwatch();
 while (!string.IsNullOrEmpty(_config.Server))
@@ -40,6 +40,7 @@ while (!string.IsNullOrEmpty(_config.Server))
                 }
                 catch (Exception ex)
                 {
+                    ++monitoring.ClientError;
                     product.Error = true;
                     product.ErrorMessage = ex.Message;
                     product.ClientError = true;
@@ -92,7 +93,7 @@ void Calc()
         }
     }
 
-    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount} \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours}________________.");
+    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t|_{monitoring.ClientError}________________.");
 }
 
 void loadConfig()
