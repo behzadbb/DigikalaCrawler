@@ -3,6 +3,8 @@ using DigikalaCrawler.Data.Mongo.DBModels;
 using DigikalaCrawler.Share.Models;
 using DigikalaCrawler.Share.Services;
 using Microsoft.AspNetCore.Mvc;
+using System.Collections.Generic;
+using System.Text;
 
 namespace DigikalaCrawler.WebServer.Controllers
 {
@@ -73,6 +75,11 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpPost("/[controller]/SendProducts")]
         public async Task<IActionResult> SendProducts(SetProductsDTO dto)
         {
+            if (CountStatic.LastTime.ContainsKey(dto.UserId))
+                CountStatic.LastTime[dto.UserId] = DateTime.Now;
+            else
+                CountStatic.LastTime.Add(dto.UserId, DateTime.Now);
+
             var products = dto.Products.Select(x => new DigikalaProductCrawl()
             {
                 ClientError = x.ClientError,
@@ -103,7 +110,11 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpGet("/[controller]/GetProductCount")]
         public IActionResult GetProductCount()
         {
-            return Ok(_digi.ProductCount());
+            StringBuilder sb = new StringBuilder();
+            sb.AppendLine(_digi.ProductCount());
+            if (CountStatic.LastTime.Any())
+                sb.AppendLine(string.Join("\n", CountStatic.LastTime.Select(x => x.Key + ": " + (DateTime.Now - x.Value).TotalSeconds + "s")));
+            return Ok(sb.ToString());
         }
 
         [HttpGet("/[controller]/CreateIndex")]
@@ -119,5 +130,15 @@ namespace DigikalaCrawler.WebServer.Controllers
             _digi.DropIndex();
             return Ok("Drop Index!!!");
         }
+    }
+
+
+    public static class CountStatic
+    {
+        static CountStatic()
+        {
+            LastTime = new Dictionary<int, DateTime>();
+        }
+        public static Dictionary<int, DateTime> LastTime { get; set; }
     }
 }

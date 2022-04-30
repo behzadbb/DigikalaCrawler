@@ -25,6 +25,7 @@ while (!string.IsNullOrEmpty(_config.Server))
         {
             checkUserId = false;
             SetProductsDTO products = new SetProductsDTO();
+            products.UserId = _config.UserId;
             for (int i = 0; i < ids.Count(); i++)
             {
                 var product = new SetProductDTO();
@@ -69,7 +70,6 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
-    Thread.Sleep(5000);
 }
 
 void Calc()
