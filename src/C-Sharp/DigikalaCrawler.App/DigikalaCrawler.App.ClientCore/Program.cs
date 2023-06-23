@@ -107,7 +107,7 @@ void loadConfig()
     if (!File.Exists(path))
     {
         //_config = new Config { Server = "http://185.147.160.124:5000", UserId = new Random().Next(100, int.MaxValue), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
-        _config = new Config { Server = "https://localhost:5001", UserId = new Random().Next(100, int.MaxValue), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
+        _config = new Config { Server = "https://localhost:5001", UserId = new Random().Next(0, 1000), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
         File.WriteAllText(path, JsonConvert.SerializeObject(_config));
     }
     else
