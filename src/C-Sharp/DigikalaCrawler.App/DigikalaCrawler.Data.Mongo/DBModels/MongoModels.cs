@@ -1,4 +1,5 @@
 ﻿using DigikalaCrawler.Share.Models;
+using DigikalaCrawler.Share.Models.Question;
 using MongoDB.Bson;
 
 namespace DigikalaCrawler.Data.Mongo.DBModels;
@@ -30,6 +31,7 @@ public class DigikalaProductCrawl
     public bool ClientError { get; set; } = false;
     public bool ServerError { get; set; } = false;
     public CommentDetails CommentDetails { get; set; }
+    public Questions Questions { get; set; }
     public ProductData ProductData { get; set; }
 }
 public class DigikalaPage
@@ -41,4 +43,9 @@ public class DigikalaPage
     public DateTime? CrawleDate { get; set; } = null;
     public bool Assign { get; set; } = false;
     public bool Success { get; set; } = false;
+}
+public class Comment
+{
+    public ObjectId _id { get; set; }
+    public string Review { get; set; }
 }

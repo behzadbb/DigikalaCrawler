@@ -1,4 +1,5 @@
 ﻿using DigikalaCrawler.Share.Models;
+using DigikalaCrawler.Share.Models.Question;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -161,13 +162,13 @@ namespace DigikalaCrawler.Share.Services
         {
             try
             {
-                var s1 = url.LastIndexOf('/');
-                var s2 = url.IndexOf("dkp-");
-                if (s2 - s1 == 1)
+                var lastSlashIndex = url.LastIndexOf('/');
+                var dkpIndex = url.IndexOf("dkp-");
+                if (dkpIndex - lastSlashIndex == 1)
                 {
-                    return long.Parse(url.Substring(url.IndexOf("dkp-"), url.Length - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                    return long.Parse(url.Substring(dkpIndex, url.Length - dkpIndex).Replace("dkp-", ""));
                 }
-                var i = long.Parse(url.Substring(url.IndexOf("dkp-"), url.LastIndexOf('/') - url.IndexOf("dkp-")).Replace("dkp-", ""));
+                var i = long.Parse(url.Substring(dkpIndex, lastSlashIndex - dkpIndex).Replace("dkp-", ""));
                 return i;
             }
             catch (Exception)
@@ -238,6 +239,57 @@ namespace DigikalaCrawler.Share.Services
                     cm.comments.AddRange(_data.data.comments.ToList());
             }
             return cm;
+        }
+
+        #endregion
+
+        #region Question
+        public async Task<QuestionResponse> GetQuestion(long productId, int page = 1)
+        {
+            try
+            {
+                string url =  $"https://api.digikala.com/v1/product/{productId}/questions/?page={page}&sort=created_at";
+                string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
+                return JsonConvert.DeserializeObject<QuestionResponse>(res);
+            }
+            catch
+            {
+                return new QuestionResponse();
+            }
+        }
+
+        public async Task<Questions> GetQuestions(long productId)
+        {
+            int random = new Random().Next(10, 45);
+            Questions _questions = (await GetQuestion(productId, 1)).data;
+            List<Task<QuestionResponse>> tasks = new List<Task<QuestionResponse>>();
+            if (_questions != null && _questions.pager.total_pages > 1)
+            {
+                for (int i = 2; i <= _questions.pager.total_pages; i++)
+                {
+                    tasks.Add(GetQuestion(productId, i));
+                    Thread.Sleep(random);
+                    if (i > 10 && i % 5 == 0)
+                    {
+                        Thread.Sleep(50);
+                    }
+                }
+            }
+            Task t = Task.WhenAll(tasks.ToArray());
+            try
+            {
+                await t;
+            }
+            catch
+            {
+            }
+            foreach (var task in tasks)
+            {
+                var _data = task.Result;
+                if (_data != null && _data.data != null && _data.data.questions != null && _data.data.questions.Count() > 0)
+                    _questions.questions.AddRange(_data.data.questions.ToList());
+            }
+            return _questions;
         }
         #endregion
 

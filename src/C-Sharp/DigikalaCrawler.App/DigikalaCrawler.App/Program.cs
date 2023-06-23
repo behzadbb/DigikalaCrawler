@@ -25,6 +25,88 @@ using DigikalaCrawler.Data.Mongo;
 //    Console.WriteLine("\n\n\tTime: " + (end - start).Milliseconds);
 //    //Console.WriteLine("\n\n\tCount: " + s.comments.Count());
 //}
-DigikalaMongo digikalaMongo = new DigikalaMongo();
+//DigikalaMongo digikalaMongo = new DigikalaMongo();
+//digikalaMongo.CreateIndex("ProductId", "CommentDetails");
+//var allData = digikalaMongo.GetDigikalaProductCrawl1();
+//Console.WriteLine(allData);
+//var uniq = allData.Distinct().ToList();
+//var str = string.Join("\n", uniq);
+//File.WriteAllText(@"d:\digikala_crawl_ids.txt", str);
+//Console.WriteLine("File write ---> count: " + uniq);
 
-digikalaMongo.CreateIndex("_id", "ProductId", "UserId", "Assign", "Success");
+#region Spilit Comments
+//List<string> cm = new List<string>();
+
+//var batch = 10000;
+//var TotalId = File.ReadAllLines(@"d:\digikala_crawl_ids.txt").Select(x => long.Parse(x)).ToList();
+//var LoopCount = TotalId.Count / batch;
+//Console.WriteLine("TotalId: " + TotalId.Count);
+//Console.WriteLine("LoopCount: " + LoopCount);
+//try
+//{
+//    for (int i = 0; i <= LoopCount; i++)
+//    {
+//        var allData1 = digikalaMongo.GetDigikalaProductCrawlOnlyTextById(TotalId.Skip(i * batch).Take(batch).ToList());
+//        var msg = allData1.Where(x => x.CommentDetails != null && x.CommentDetails.comments.Count > 0).Select(x => x.CommentDetails.comments.Select(u => u.body)).ToList();
+//        var msg1 = allData1.Where(x => x.CommentDetails != null && x.CommentDetails.comments.Count > 0).Select(x => x.CommentDetails.comments.Select(u => u.title)).ToList();
+//        var advantages = allData1.Where(x => x.CommentDetails != null && x.CommentDetails.comments.Count > 0).Select(x => x.CommentDetails.comments.Select(u => u.advantages)).ToList();
+//        var disadvantages = allData1.Where(x => x.CommentDetails != null && x.CommentDetails.comments.Count > 0).Select(x => x.CommentDetails.comments.Select(u => u.disadvantages.Select(x => x))).ToList();
+//        foreach (var item in msg)
+//        {
+//            cm.AddRange(item);
+//        }
+//        foreach (var item in msg1)
+//        {
+//            cm.AddRange(item);
+//        }
+//        foreach (var item in advantages)
+//        {
+//            foreach (var item1 in item)
+//            {
+//                cm.AddRange(item1.Select(x=>x));
+//            }
+//        }
+//        foreach (var item in disadvantages)
+//        {
+//            foreach (var item1 in item)
+//            {
+//                cm.AddRange(item1.Select(x => x));
+//            }
+//        }
+//        Console.Write(i + "_");
+//        if (i > 0 && i % 10 == 0)
+//        {
+//            Console.WriteLine("\nComments Count: " + cm.Count());
+//        }
+//    }
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine("\n\nError:\n" + ex.Message + "\n\nStack:\n" + ex.StackTrace.ToString() + "\n\n");
+//}
+
+
+//Console.WriteLine("\n____\nAll Comments Count: " + cm.Count());
+
+//Console.WriteLine("Uniq Comments Count: " + cm.Distinct().Count());
+//List<string> final = cm.Where(x => x != null && x != "").Select(x => x.Trim()).Where(x => x != "").Distinct().ToList();
+//Console.WriteLine("Tootal Comments Count: " + final.Count() + "\n____\n");
+//digikalaMongo.InsertComments(final);
+#endregion
+
+internal class Program
+{
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Hello, World!");
+        using (DigikalaMongo digikalaMongo = new DigikalaMongo())
+        {
+            Console.WriteLine("Hello, World!");
+            var comments = digikalaMongo.GetAllComments();
+        }
+        int a = 0;
+    }
+}
+
+
+//digikalaMongo.CreateIndex("_id", "ProductId", "UserId", "Assign", "Success");

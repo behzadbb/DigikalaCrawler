@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using DigikalaCrawler.Share.Models.Question;
+using System.Collections.Generic;
 
 namespace DigikalaCrawler.Share.Models
 {
@@ -7,6 +8,7 @@ namespace DigikalaCrawler.Share.Models
         public long ProductId { get; set; }
         public ProductData Product { get; set; }
         public CommentDetails Comments { get; set; }
+        public Questions Questions { get; set; }
         public bool Error { get; set; } = false;
         public string ErrorMessage { get; set; }
         public string JsonObject { get; set; }

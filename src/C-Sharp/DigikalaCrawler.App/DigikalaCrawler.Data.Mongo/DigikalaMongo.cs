@@ -13,6 +13,7 @@ public class DigikalaMongo : IDisposable
     //private MongoCollection<DigikalaProduct> DigikalaProducts;
     private MongoCollection<DigikalaPage> DigikalaPages;
     private MongoCollection<DigikalaProductCrawl> DigikalaProductCrawls;
+    private MongoCollection<Comment> Comments;
     private bool disposedValue;
 
     public DigikalaMongo()
@@ -23,6 +24,7 @@ public class DigikalaMongo : IDisposable
         //DigikalaProducts = db.GetCollection<DigikalaProduct>("DigikalaProducts");
         DigikalaPages = db.GetCollection<DigikalaPage>("DigikalaPages");
         DigikalaProductCrawls = db.GetCollection<DigikalaProductCrawl>("DigikalaProductCrawls");
+        Comments = db.GetCollection<Comment>("Comments");
     }
 
     public void InsertPages(List<long> productIds)
@@ -126,15 +128,18 @@ public class DigikalaMongo : IDisposable
     {
         try
         {
-            DigikalaPages.DropAllIndexes();
+            //DigikalaPages.DropAllIndexes();
+            DigikalaProductCrawls.DropAllIndexes();
             Thread.Sleep(200);
-            DigikalaPages.CreateIndex(indexs);
+            //DigikalaPages.CreateIndex(indexs);
+            DigikalaProductCrawls.CreateIndex(indexs);
             Console.WriteLine("Success, Drop Index and Create Index");
         }
         catch
         {
             Console.WriteLine("Error, ReIndex Run");
-            DigikalaPages.ReIndex();
+            //DigikalaPages.ReIndex();
+            DigikalaProductCrawls.ReIndex();
         }
     }
 
@@ -153,10 +158,10 @@ public class DigikalaMongo : IDisposable
 
     public string ProductCount()
     {
-        var queryAssign = Query<DigikalaPage>.EQ(p => p.Assign , false);
-        var queryNotAssign = Query<DigikalaPage>.EQ(p => p.Assign , true);
-        var querySuccess = Query<DigikalaPage>.EQ(p => p.Success , false);
-        var queryNotSuccess = Query<DigikalaPage>.EQ(p => p.Success , true);
+        var queryAssign = Query<DigikalaPage>.EQ(p => p.Assign, false);
+        var queryNotAssign = Query<DigikalaPage>.EQ(p => p.Assign, true);
+        var querySuccess = Query<DigikalaPage>.EQ(p => p.Success, false);
+        var queryNotSuccess = Query<DigikalaPage>.EQ(p => p.Success, true);
         StringBuilder sb = new StringBuilder();
         var pagesCount = DigikalaPages.Count();
         var pagesAssignCount = DigikalaPages.Find(queryAssign).Count();
@@ -170,7 +175,7 @@ public class DigikalaMongo : IDisposable
         sb.AppendFormat("Success Page: {0}\n", pagesSuccessCount);
         sb.AppendFormat("Not Success Page: {0}\n", pagesNotSuccessCount);
         sb.AppendFormat("Crawl: {0}\n", crawlCount);
-        if (pagesCount>0 && crawlCount >0)
+        if (pagesCount > 0 && crawlCount > 0)
         {
             sb.AppendFormat("\t{0}", Math.Round((double)(crawlCount / pagesCount) * 100, 2));
         }
@@ -215,6 +220,45 @@ public class DigikalaMongo : IDisposable
         return DigikalaProductCrawls.Count();
     }
 
+    public List<long> GetDigikalaProductCrawl1()
+    {
+        Console.WriteLine("GetDigikalaProductCrawl1");
+        IMongoQuery querySelect1 = Query<DigikalaProductCrawl>.NE(p => p.CommentDetails, null);
+        var ids11 = DigikalaProductCrawls.Find(querySelect1).Select(x => x.ProductId).ToList();
+        Console.WriteLine("Count: " + ids11.Count());
+        return ids11;
+
+        //Console.WriteLine("GetDigikalaProductCrawl1");
+        //List<DigikalaProductCrawl>? list = DigikalaProductCrawls.FindAll().ToList();
+        //Console.WriteLine("List: " + list.Count());
+        //return list;
+    }
+
+    public List<DigikalaProductCrawl> GetDigikalaProductCrawlOnlyTextById(List<long> ids)
+    {
+        //Console.WriteLine("GetDigikalaProductCrawl1");
+        IMongoQuery querySelect1 = Query<DigikalaProductCrawl>.In(x => x.ProductId, ids);
+        //IMongoQuery querySelect1 = Query<DigikalaProductCrawl>.Where(x => ids.Contains(x.ProductId) && x.CommentDetails.comments != null && x.CommentDetails.comments.Count > 0);//.In(p => p.ProductId, ids);
+        List<DigikalaProductCrawl>? ids11 = DigikalaProductCrawls.Find(querySelect1).ToList();
+        //Console.WriteLine("Count: " + ids11.Count());
+        return ids11;
+
+        //Console.WriteLine("GetDigikalaProductCrawl1");
+        //List<DigikalaProductCrawl>? list = DigikalaProductCrawls.FindAll().ToList();
+        //Console.WriteLine("List: " + list.Count());
+        //return list;
+    }
+
+    public void InsertComments(List<string> inputs)
+    {
+        List<Comment> _comments = inputs.Select(x => new Comment { Review = x }).ToList();
+        Comments.InsertBatch(_comments);
+    }
+
+    public List<Comment> GetAllComments()
+    {
+        return Comments.FindAll().ToList();
+    }
     #region Dispose
     protected virtual void Dispose(bool disposing)
     {

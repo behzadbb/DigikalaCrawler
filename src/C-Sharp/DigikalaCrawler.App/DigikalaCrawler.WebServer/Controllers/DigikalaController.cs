@@ -3,7 +3,6 @@ using DigikalaCrawler.Data.Mongo.DBModels;
 using DigikalaCrawler.Share.Models;
 using DigikalaCrawler.Share.Services;
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
 using System.Text;
 
 namespace DigikalaCrawler.WebServer.Controllers
@@ -47,24 +46,25 @@ namespace DigikalaCrawler.WebServer.Controllers
             IList<string> sitemaps = await _crawler.GetMainSitemap();
             _logger.Log(LogLevel.Information, "2 _ Count: " + sitemaps.Count());
             List<long> productLinks = new List<long>();
-            foreach (string sitemap in sitemaps)
+            foreach (string sitemap in sitemaps.Skip(10).Take(2))
             {
-                var main1 = await _crawler.DownloadSitemap(sitemap, path);
-                var main2 = await _crawler.GetSitemap(main1);
+                var _xmlPath = await _crawler.DownloadSitemap(sitemap, path);
+                var _fullUrl = await _crawler.GetSitemap(_xmlPath);
                 //productLinks.AddRange(_crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList()));
-                List<long> _productLinks = _crawler.GetProductIdFromUrls(main2.Where(x => x.Contains("dkp-")).ToList());
+                List<long> _productIds = _crawler.GetProductIdFromUrls(_fullUrl.Where(x => x.Contains("dkp-")).ToList());
                 //_digi.InsertPages(_productLinks);
-                productLinks.AddRange(_productLinks);
+                productLinks.AddRange(_productIds);
 
-                if (productLinks.Count() > 150000)
-                {
-                    _digi.InsertPages(productLinks);
-                    Console.Write(" _ insert: " + productLinks.Count());
-                    productLinks.Clear();
-                }
+                //if (productLinks.Count() > 150000)
+                //{
+                //    _digi.InsertPages(productLinks);
+                //    Console.Write(" _ insert: " + productLinks.Count());
+                //    productLinks.Clear();
+                //}
             }
-            _digi.InsertPages(productLinks);
-            Console.Write(" _ insert: " + productLinks.Count());
+            List<long> ids = productLinks.Distinct().OrderBy(x => x).ToList();
+            _digi.InsertPages(ids);
+            Console.Write(" _ insert: " + ids.Count());
             _logger.Log(LogLevel.Information, "\n3 _ Success!");
             _digi.CreateIndex("ProductId", "UserId");
             _logger.Log(LogLevel.Information, "\n4 _ Create Index!");
@@ -84,6 +84,7 @@ namespace DigikalaCrawler.WebServer.Controllers
             {
                 ClientError = x.ClientError,
                 CommentDetails = x.Comments,
+                Questions = x.Questions,
                 CrawleDate = DateTime.Now,
                 Error = x.Error,
                 ErrorMessage = x.ErrorMessage,
