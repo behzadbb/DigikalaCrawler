@@ -158,16 +158,16 @@ public class DigikalaMongo : IDisposable
 
     public string ProductCount()
     {
-        var queryAssign = Query<DigikalaPage>.EQ(p => p.Assign, false);
-        var queryNotAssign = Query<DigikalaPage>.EQ(p => p.Assign, true);
-        var querySuccess = Query<DigikalaPage>.EQ(p => p.Success, false);
-        var queryNotSuccess = Query<DigikalaPage>.EQ(p => p.Success, true);
+        var queryAssign = Query<DigikalaPage>.EQ(p => p.Assign, true);
+        var queryNotAssign = Query<DigikalaPage>.EQ(p => p.Assign, false);
+        var querySuccess = Query<DigikalaPage>.EQ(p => p.Success, true);
+        var queryNotSuccess = Query<DigikalaPage>.EQ(p => p.Success, false);
         StringBuilder sb = new StringBuilder();
         var pagesCount = DigikalaPages.Count();
-        var pagesAssignCount = DigikalaPages.Find(queryAssign).Count();
-        var pagesNotAssignCount = DigikalaPages.Find(queryNotAssign).Count();
-        var pagesSuccessCount = DigikalaPages.Find(queryAssign).Count();
-        var pagesNotSuccessCount = DigikalaPages.Find(queryNotSuccess).Count();
+        var pagesAssignCount = DigikalaPages.Count(queryAssign);
+        var pagesNotAssignCount = DigikalaPages.Count(queryNotAssign);
+        var pagesSuccessCount = DigikalaPages.Count(queryAssign);
+        var pagesNotSuccessCount = DigikalaPages.Count(queryNotSuccess);
         var crawlCount = DigikalaProductCrawls.Count();
         sb.AppendFormat("All: {0}\n", pagesCount);
         sb.AppendFormat("Assign Page: {0}\n", pagesAssignCount);

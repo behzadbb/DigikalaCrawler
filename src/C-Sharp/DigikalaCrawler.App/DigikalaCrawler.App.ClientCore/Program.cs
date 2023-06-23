@@ -2,6 +2,7 @@
 using DigikalaCrawler.Share.Services;
 using Newtonsoft.Json;
 using System.Diagnostics;
+using System.IO;
 
 Montoring monitoring = new Montoring();
 Console.WriteLine("Start: {0}", DateTime.Now);
@@ -107,7 +108,7 @@ void loadConfig()
     if (!File.Exists(path))
     {
         //_config = new Config { Server = "http://185.147.160.124:5000", UserId = new Random().Next(100, int.MaxValue), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
-        _config = new Config { Server = "https://localhost:5001", UserId = new Random().Next(0, 1000), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
+        _config = new Config { Server = "https://localhost:5001", UserId = new Random().Next(0, 100), Count = 10, UseProxy = false, ProxyHost = "127.0.0.1", ProxyPort = 9150, LocalDatabase = false };
         File.WriteAllText(path, JsonConvert.SerializeObject(_config));
     }
     else

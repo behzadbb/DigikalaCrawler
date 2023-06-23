@@ -13,10 +13,10 @@ namespace DigikalaCrawler.Share.Models.Question
     public class Questions
     {
         public List<Question> questions { get; set; }
-        public Pager pager { get; set; }
+        public PagerQuestion pager { get; set; }
     }
 
-    public class Pager
+    public class PagerQuestion
     {
         public int current_page { get; set; }
         public int total_pages { get; set; }
@@ -37,14 +37,14 @@ namespace DigikalaCrawler.Share.Models.Question
     {
         public int id { get; set; }
         public string text { get; set; }
-        public Reactions reactions { get; set; }
+        public QuestionReactions reactions { get; set; }
         public string created_at { get; set; }
         public string sender { get; set; }
         public string type { get; set; }
         public bool has_qa_badge { get; set; }
     }
 
-    public class Reactions
+    public class QuestionReactions
     {
         public int likes { get; set; }
         public int dislikes { get; set; }
