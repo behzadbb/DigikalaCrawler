@@ -12,6 +12,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
+using Microsoft.Extensions.DependencyInjection;
 
 namespace DigikalaCrawler.Share.Services
 {
@@ -68,11 +69,14 @@ namespace DigikalaCrawler.Share.Services
             "89.165.40.12:8080",
             "94.74.132.129:808"};
 
-        public DigikalaCrawlerServiceV1()
+        private readonly IHttpClientFactory _clientFactory;
+
+        public DigikalaCrawlerServiceV1(IHttpClientFactory clientFactory)
         {
+            _clientFactory = clientFactory;
         }
 
-        public DigikalaCrawlerServiceV1(Config config)
+        public void SetConfig(Config config)
         {
             _config = config;
         }
@@ -87,13 +91,13 @@ namespace DigikalaCrawler.Share.Services
                 {
                     Proxy = proxy
                 };
-                client = new HttpClient(handler);
+                client = new HttpClient();
             }
             else
             {
-                client = new HttpClient();
+                client = _clientFactory.CreateClient();
             }
-            return client.GetAsync(url);
+            return client.GetAsync(url, HttpCompletionOption.ResponseContentRead);
         }
         #endregion
 
@@ -296,7 +300,7 @@ namespace DigikalaCrawler.Share.Services
         #region Server Call
         public async Task<List<long>> GetFreeProductsFromServer(bool checkUserId)
         {
-            using (HttpClient client = new HttpClient())
+            using (HttpClient client = _clientFactory.CreateClient())
             {
                 string url = $"{_config.Server}/Digikala/GetFreeProducts/{_config.UserId}/{_config.Count}/{checkUserId}";
                 string res = await client.GetAsync(url).Result.Content.ReadAsStringAsync();
@@ -305,7 +309,7 @@ namespace DigikalaCrawler.Share.Services
         }
         public Task SendProductsServer(SetProductsDTO products)
         {
-            using (HttpClient client = new HttpClient())
+            using (HttpClient client = _clientFactory.CreateClient())
             {
                 string url = $"{_config.Server}/Digikala/SendProducts/";
                 var json = JsonConvert.SerializeObject(products);

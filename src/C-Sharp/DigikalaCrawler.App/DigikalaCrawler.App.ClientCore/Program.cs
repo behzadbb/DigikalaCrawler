@@ -1,8 +1,13 @@
 ﻿using DigikalaCrawler.Share.Models;
 using DigikalaCrawler.Share.Services;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using System.Diagnostics;
-using System.IO;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Http;
 
 Montoring monitoring = new Montoring();
 Console.WriteLine("Start: {0}", DateTime.Now);
@@ -12,12 +17,24 @@ loadConfig();
 var checkUserId = true;
 Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t| Error ____");
 
+IHost _host = Host.CreateDefaultBuilder(args)
+    .ConfigureServices(services =>
+    {
+        services.AddHttpClient();
+        services.AddTransient<DigikalaCrawlerServiceV1>();
+        
+    }).Build();
+
+_host.Start();
+
 Stopwatch sw = new Stopwatch();
 while (!string.IsNullOrEmpty(_config.Server))
 {
     sw.Restart();
-    using (DigikalaCrawlerServiceV1 digi = new DigikalaCrawlerServiceV1(_config))
+
+    using (DigikalaCrawlerServiceV1 digi = _host.Services.GetRequiredService<DigikalaCrawlerServiceV1>())
     {
+        digi.SetConfig(_config);
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 50);
@@ -72,6 +89,7 @@ while (!string.IsNullOrEmpty(_config.Server))
             }
         }
     }
+
     sw.Stop();
     monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
     monitoring.TimeSheet.Add(monitoring.Last);
@@ -98,8 +116,8 @@ void Calc()
             Thread.Sleep(5000);
         }
     }
-
-    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| { monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t|_{monitoring.ClientError}________________.");
+    Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t| Error ____");
+    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t|_{monitoring.ClientError}________________.");
 }
 
 void loadConfig()
