@@ -36,7 +36,7 @@ namespace DigikalaCrawler.Share.Models
         public string title { get; set; }
         public string body { get; set; }
         public string created_at { get; set; }
-        public int rate { get; set; }
+        public float rate { get; set; }
         public Reaction reactions { get; set; }
         public List<object> files { get; set; }
         public string recommendation_status { get; set; }
@@ -44,9 +44,37 @@ namespace DigikalaCrawler.Share.Models
         public string user_name { get; set; }
         public bool is_anonymous { get; set; }
         public object purchased_item { get; set; }
+        //[JsonProperty("advantages")] // and specify possible list of types as string or CompanyModel
+        //[JsonConverter(typeof(AdvantagesJsonConverter))] // add this line
         public List<string> advantages { get; set; }
         public List<string> disadvantages { get; set; }
     }
+    //public class AdvantagesJsonConverter : JsonConverter
+    //{
+
+    //    public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+    //    {}
+
+    //    public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+    //    {
+    //        JToken token = JToken.Load(reader);
+    //        if (token.Type == JTokenType.Null || token.Count() == 0)
+    //        {
+    //            return new List<string>();
+    //        }
+    //        if (token.Type == JTokenType.Array)
+    //        {
+    //            return token.ToObject<List<string>>();
+    //        }
+    //        else
+    //        {
+    //            return token.ToObject<List<string>>();
+    //        }
+    //    }
+
+    //    public override bool CanConvert(Type objectType)
+    //    {return true;}
+    //}
 
     public class Reaction
     {
@@ -90,14 +118,14 @@ namespace DigikalaCrawler.Share.Models
         public string title { get; set; }
         public string body { get; set; }
         public string created_at { get; set; }
-        public int rate { get; set; }
+        public float rate { get; set; }
         public Reactions1 reactions { get; set; }
         public List<MediaFile> files { get; set; }
         public string recommendation_status { get; set; }
         public bool is_buyer { get; set; }
         public string user_name { get; set; }
         public bool is_anonymous { get; set; }
-        public Purchased_Item purchased_item { get; set; }
+        public object purchased_item { get; set; }
         public List<string> advantages { get; set; }
         public List<string> disadvantages { get; set; }
     }

@@ -31,8 +31,7 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpGet("/[controller]/SetSitemap")]
         public async Task<IActionResult> SetSitemap()
         {
-            string path = "";
-            path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "DigikalaSiteMap");
+            string path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "DigikalaSiteMap");
             _logger.Log(LogLevel.Information, "0 _ Path: " + path);
             if (string.IsNullOrEmpty(path))
             {
@@ -46,7 +45,7 @@ namespace DigikalaCrawler.WebServer.Controllers
             IList<string> sitemaps = await _crawler.GetMainSitemap();
             _logger.Log(LogLevel.Information, "2 _ Count: " + sitemaps.Count());
             List<long> productLinks = new List<long>();
-            foreach (string sitemap in sitemaps.Skip(10).Take(2))
+            foreach (string sitemap in sitemaps.Skip(43).Take(2))
             {
                 var _xmlPath = await _crawler.DownloadSitemap(sitemap, path);
                 var _fullUrl = await _crawler.GetSitemap(_xmlPath);
@@ -114,7 +113,7 @@ namespace DigikalaCrawler.WebServer.Controllers
             StringBuilder sb = new StringBuilder();
             sb.AppendLine(_digi.ProductCount());
             if (CountStatic.LastTime.Any())
-                sb.AppendLine(string.Join("\n", CountStatic.LastTime.Select(x => x.Key + ": " + (DateTime.Now - x.Value).TotalSeconds + "s")));
+                sb.AppendLine(string.Join("\n", CountStatic.LastTime.Select(x => "User "+ x.Key + ": " + (DateTime.Now - x.Value).TotalSeconds + "s")));
             return Ok(sb.ToString());
         }
 

@@ -2,12 +2,9 @@
 using DigikalaCrawler.Share.Services;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Newtonsoft.Json;
 using System.Diagnostics;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Http;
 
 Montoring monitoring = new Montoring();
 Console.WriteLine("Start: {0}", DateTime.Now);
@@ -15,16 +12,26 @@ Thread.Sleep(1000);
 Config _config;
 loadConfig();
 var checkUserId = true;
-Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t| Error ____");
+Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t\t| Error ____");
 
 IHost _host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
     {
-        services.AddHttpClient();
-        services.AddTransient<DigikalaCrawlerServiceV1>();
-        
-    }).Build();
+        services.AddHttpClient("ConfiguredHttpMessageHandler")
+            .ConfigurePrimaryHttpMessageHandler(() =>
+                new HttpClientHandler
+                {
+                    AllowAutoRedirect = true,
+                    UseDefaultCredentials = true,
 
+                });
+        services.AddTransient<DigikalaCrawlerServiceV1>();
+    }).ConfigureLogging(logging =>
+    {
+        logging.ClearProviders();
+
+        //... add my providers here
+    }).Build();
 _host.Start();
 
 Stopwatch sw = new Stopwatch();
@@ -38,7 +45,7 @@ while (!string.IsNullOrEmpty(_config.Server))
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 50);
-        Thread.Sleep(random * 10);
+        Thread.Sleep(random * 3);
         if (ids != null && ids.Any())
         {
             checkUserId = false;
@@ -54,13 +61,49 @@ while (!string.IsNullOrEmpty(_config.Server))
                     Thread.Sleep(random);
                     if (product.Product != null && product.Product.product.comments_count > 0)
                     {
-                        product.Comments = digi.GetProductComments(ids[i]).Result;
+                        for (int k = 1; k < 3; k++)
+                        {
+                            product.Comments = digi.GetProductComments(ids[i]).Result;
+                            if (product.Comments == null || product.Comments.comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.Comments.comments.Count())
+                            {
+                                Console.WriteLine("\n\n\t\t\tComment Error\n\n\n\n");
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        if (product.Product.product.comments_count > product.Comments.comments.Count())
+                        {
+
+                        }
+                        if (product.Comments == null || product.Comments.comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.Comments.comments.Count())
+                        {
+                            throw new ArgumentException("Comment Count");
+                        }
                     }
                     Thread.Sleep(random);
                     if (product.Product != null && product.Product.product.questions_count > 0)
                     {
                         product.Questions = digi.GetQuestions(ids[i]).Result;
+                        for (int k = 1; k < 3; k++)
+                        {
+                            product.Questions = digi.GetQuestions(ids[i]).Result;
+                            if (product.Questions == null || product.Questions.questions == null || Math.Min(product.Product.product.questions_count, 1000) > product.Questions.questions.Count())
+                            {
+                                Console.WriteLine($"\tQuestion Error:\tdkp-{ids[i]}\ttry={k}");
+                            }
+                            else
+                            {
+                                break;
+                            }
+                        }
+                        if (product.Questions == null || product.Questions.questions == null || product.Product.product.questions_count > product.Questions.questions.Count())
+                        {
+                            throw new ArgumentException("Question Count");
+                        }
                     }
+
                 }
                 catch (Exception ex)
                 {
@@ -94,6 +137,7 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
+    Thread.Sleep(300);
 }
 
 void Calc()
@@ -116,8 +160,7 @@ void Calc()
             Thread.Sleep(5000);
         }
     }
-    Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t| Error ____");
-    Console.Write($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t|_{monitoring.ClientError}________________.");
+    Console.WriteLine($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t\t|_{monitoring.ClientError}________________.");
 }
 
 void loadConfig()

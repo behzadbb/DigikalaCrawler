@@ -81,7 +81,7 @@ namespace DigikalaCrawler.Share.Services
             _config = config;
         }
 
-        public Task<HttpResponseMessage> GetHttp(string url)
+        public async Task<HttpContent> GetHttp(string url)
         {
             HttpClient client;
             if (_config.UseProxy)
@@ -97,7 +97,23 @@ namespace DigikalaCrawler.Share.Services
             {
                 client = _clientFactory.CreateClient();
             }
-            return client.GetAsync(url, HttpCompletionOption.ResponseContentRead);
+
+            for (int i = 1; i < 4; i++)
+            {
+                var response = await client.GetAsync(url);
+                if (response.StatusCode == HttpStatusCode.OK)
+                {
+                    return response.Content;
+                }
+                else
+                {
+                    await Task.Delay(i * 150);
+                    client.Dispose();
+                    client = _clientFactory.CreateClient();
+                    Console.WriteLine($"Error:\n\n\n\t{url}\n\n\n");
+                }
+            }
+            return (await client.GetAsync(url)).Content;
         }
         #endregion
 
@@ -106,16 +122,13 @@ namespace DigikalaCrawler.Share.Services
         {
             var response = await GetHttp("https://www.digikala.com/sitemap.xml");
             List<string> locs = new List<string>();
-            if (response.IsSuccessStatusCode)
+            XmlDocument xml = new XmlDocument();
+            xml.LoadXml(response.ReadAsStringAsync().Result);
+            var ienum = xml.GetElementsByTagName("loc").GetEnumerator();
+            while (ienum.MoveNext())
             {
-                XmlDocument xml = new XmlDocument();
-                xml.LoadXml(response.Content.ReadAsStringAsync().Result);
-                var ienum = xml.GetElementsByTagName("loc").GetEnumerator();
-                while (ienum.MoveNext())
-                {
-                    XmlNode title = (XmlNode)ienum.Current;
-                    locs.Add(title.InnerText);
-                }
+                XmlNode title = (XmlNode)ienum.Current;
+                locs.Add(title.InnerText);
             }
             return locs;
         }
@@ -192,7 +205,7 @@ namespace DigikalaCrawler.Share.Services
         public async Task<ProductData> GetProduct(long productId)
         {
             string url = "https://api.digikala.com/v1/product/" + productId + "/";
-            string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
+            string res = await (await GetHttp(url)).ReadAsStringAsync();
             var product = JsonConvert.DeserializeObject<ProductObjV1>(res).data;
             return product;
         }
@@ -202,23 +215,39 @@ namespace DigikalaCrawler.Share.Services
             try
             {
                 string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
-                string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
+                string res = await (await GetHttp(url)).ReadAsStringAsync();
+                if (res.Contains("advantages\":{"))
+                {
+                    res = FixAdventages(res);
+                }
                 return JsonConvert.DeserializeObject<CommentObjV1>(res);
             }
-            catch
+            catch (Exception ex)
             {
-                return new CommentObjV1();
+                throw ex;
             }
+        }
+        private string FixAdventages(string str)
+        {
+            while (str.Contains("advantages\":{"))
+            {
+                var index = str.IndexOf("advantages\":{");
+                var index1 = str.IndexOf('}', index);
+                var s = str.Substring(index, index1 - index + 1);
+                string new1 = s.Replace("{", "[").Replace("}", "]").Replace("\":\"", "\",\"");
+                str = str.Replace(s, new1);
+            }
+            return str;
         }
 
         public async Task<CommentDetails> GetProductComments(long productId)
         {
-            int random = new Random().Next(10, 45);
+            int random = new Random().Next(20, 65);
             CommentDetails cm = (await GetProductComment(productId, 1)).data;
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
             if (cm != null && cm.pager.total_pages > 1)
             {
-                for (int i = 2; i <= cm.pager.total_pages; i++)
+                for (int i = 2; i <= Math.Min(cm.pager.total_pages, 100); i++)
                 {
                     tasks.Add(GetProductComment(productId, i));
                     Thread.Sleep(random);
@@ -236,11 +265,13 @@ namespace DigikalaCrawler.Share.Services
             catch
             {
             }
-            foreach (var task in tasks)
+            for (int i = 0; i < tasks.Count(); i++)
             {
-                var _data = task.Result;
+                var _data = tasks[i].Result;
                 if (_data != null && _data.data != null && _data.data.comments != null && _data.data.comments.Count() > 0)
                     cm.comments.AddRange(_data.data.comments.ToList());
+                else
+                    Console.WriteLine("GetProductComments, i:" + i + "\t staus:" + _data.status);
             }
             return cm;
         }
@@ -252,24 +283,24 @@ namespace DigikalaCrawler.Share.Services
         {
             try
             {
-                string url =  $"https://api.digikala.com/v1/product/{productId}/questions/?page={page}&sort=created_at";
-                string res = await GetHttp(url).Result.Content.ReadAsStringAsync();
+                string url = $"https://api.digikala.com/v1/product/{productId}/questions/?page={page}&sort=created_at";
+                string res = await (await GetHttp(url)).ReadAsStringAsync();
                 return JsonConvert.DeserializeObject<QuestionResponse>(res);
             }
-            catch
+            catch (Exception ex)
             {
-                return new QuestionResponse();
+                throw ex;
             }
         }
 
         public async Task<Questions> GetQuestions(long productId)
         {
-            int random = new Random().Next(10, 45);
+            int random = new Random().Next(20, 65);
             Questions _questions = (await GetQuestion(productId, 1)).data;
             List<Task<QuestionResponse>> tasks = new List<Task<QuestionResponse>>();
             if (_questions != null && _questions.pager.total_pages > 1)
             {
-                for (int i = 2; i <= _questions.pager.total_pages; i++)
+                for (int i = 2; i <= Math.Min(_questions.pager.total_pages, 49); i++)
                 {
                     tasks.Add(GetQuestion(productId, i));
                     Thread.Sleep(random);
