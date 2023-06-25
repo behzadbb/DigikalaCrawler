@@ -103,9 +103,9 @@ namespace DigikalaCrawler.Share.Models
         //[JsonPropertyName("is_anonymous")]
         public bool? IsAnonymous;
 
-        [JsonProperty("purchased_item", NullValueHandling = NullValueHandling.Ignore)]
+        //[JsonProperty("purchased_item", NullValueHandling = NullValueHandling.Ignore)]
         //[JsonPropertyName("purchased_item")]
-        public object PurchasedItem;
+        //public object PurchasedItem;
 
         [JsonProperty("advantages", NullValueHandling = NullValueHandling.Ignore)]
         //[JsonPropertyName("advantages")]
@@ -223,9 +223,9 @@ namespace DigikalaCrawler.Share.Models
         //[JsonPropertyName("is_anonymous")]
         public bool? IsAnonymous;
 
-        [JsonProperty("purchased_item", NullValueHandling = NullValueHandling.Ignore)]
+        //[JsonProperty("purchased_item", NullValueHandling = NullValueHandling.Ignore)]
         //[JsonPropertyName("purchased_item")]
-        public PurchasedItem PurchasedItem;
+        //public PurchasedItem PurchasedItem;
 
         [JsonProperty("advantages", NullValueHandling = NullValueHandling.Ignore)]
         //[JsonPropertyName("advantages")]

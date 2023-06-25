@@ -127,11 +127,10 @@ namespace DigikalaCrawler.WebServer.Controllers
         [HttpPost("/[controller]/SendProducts")]
         public async Task<IActionResult> SendProducts([FromBody] object json)
         {
-            SetProductsDTO dto = new SetProductsDTO();
+            //SetProductsDTO dto = new SetProductsDTO();
             string s = json.ToString();
-            dto = Newtonsoft.Json.JsonConvert.DeserializeObject<SetProductsDTO>(s);
-            _logger.LogWarning($"Comments:{dto.Products.Sum(x=>x.CommentsCount)}, Send:{dto.Products.Sum(x => x.SendCommentsCount)}");
-            _logger.LogWarning($"Comments:{dto.Products.Sum(x=>x.CommentsCount)}, Send:{dto.Products.Sum(x => x.SendCommentsCount)}, Recive:{dto.Products.Where(x=>x.CommentData!=null && x.CommentData.Comments.Any()).Sum(x=>x.CommentData.Comments.Count())}");
+            var dto = Newtonsoft.Json.JsonConvert.DeserializeObject<SetProductsDTO>(s);
+            //_logger.LogWarning($"Comments:{dto.Products.Sum(x=>x.CommentsCount)}, Send:{dto.Products.Sum(x => x.SendCommentsCount)}, Recive:{dto.Products.Where(x=>x.CommentData!=null && x.CommentData.Comments.Any()).Sum(x=>x.CommentData.Comments.Count())}");
             
             //dto = (SetProductsDTO)json;
             if (CountStatic.LastTime.ContainsKey(dto.UserId))
@@ -158,11 +157,11 @@ namespace DigikalaCrawler.WebServer.Controllers
             }).ToList();
             foreach (var product in products)
             {
-                _digi.InsertDigikalaProductCrawl(product);
-                //await Task.Run(() =>
-                //{
-                //    _digi.InsertDigikalaProductCrawl(product);
-                //});
+                //_digi.InsertDigikalaProductCrawl(product);
+                await Task.Run(() =>
+                {
+                    _digi.InsertDigikalaProductCrawl(product);
+                });
             }
             _ = Task.Run(() =>
             {

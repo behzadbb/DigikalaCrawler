@@ -17,6 +17,13 @@ namespace DigikalaCrawler.Share.Models
         public double LastCrawlTimeProducts { set; get; } = 0;
         public double LastSendToServerTimeProducts { set; get; } = 0;
         public double Last { set; get; } = 0;
+        public double ProductPerDay
+        {
+            get
+            {
+                return ((60 * 60 * 24 * 10) / this.AvrageCrawling) / 1000;
+            }
+        }
         public long K { set; get; } = 0;
         public List<double> TimeSheet = new List<double>();
         public int ClientError = 0;

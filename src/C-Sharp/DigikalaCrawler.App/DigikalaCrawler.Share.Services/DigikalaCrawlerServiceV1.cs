@@ -347,7 +347,6 @@ namespace DigikalaCrawler.Share.Services
             {
                 string url = $"{_config.Server}/Digikala/SendProducts/";
                 var json = JsonConvert.SerializeObject(products, Newtonsoft.Json.Formatting.Indented);
-                var model = JsonConvert.DeserializeObject<SetProductsDTO>(json);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
                 client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
                 return Task.CompletedTask;

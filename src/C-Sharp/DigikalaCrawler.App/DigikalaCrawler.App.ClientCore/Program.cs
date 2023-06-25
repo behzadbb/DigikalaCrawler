@@ -13,7 +13,7 @@ Config _config;
 loadConfig();
 var checkUserId = true;
 Console.ForegroundColor = ConsoleColor.Yellow;
-Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| PCM \t| CM \t| CMs \t| H \t| CmH \t\t| Error ____");
+Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| PPD \t| PCM \t| CM \t| CMs \t| H \t| CmH \t\t| Error ____");
 Console.ForegroundColor = ConsoleColor.White;
 
 IHost _host = Host.CreateDefaultBuilder(args)
@@ -186,7 +186,7 @@ void Calc()
     Console.ForegroundColor = ConsoleColor.Green;
     Console.Write($"\r{String.Format("{0:00000}", ++monitoring.K)}\t");
     Console.ForegroundColor = ConsoleColor.White;
-    Console.Write($"| {String.Format("{0:000000}", monitoring.TotalProductCount)} \t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {String.Format("{0:00}", monitoring.ProductComments)} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {(monitoring.CountPerHours > 1000 ? Math.Round((double)(monitoring.CountPerHours / 1000), 1) + "_k" : monitoring.CountPerHours)} \t\t| {String.Format("{0:000000}", monitoring.ClientError)}");
+    Console.Write($"| {String.Format("{0:000000}", monitoring.TotalProductCount)} \t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {String.Format("{0:000}", monitoring.ProductPerDay)}k \t| {String.Format("{0:00}", monitoring.ProductComments)} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {(monitoring.CountPerHours > 1000 ? Math.Round((double)(monitoring.CountPerHours / 1000), 1) + "_k" : monitoring.CountPerHours)} \t\t| {String.Format("{0:000000}", monitoring.ClientError)}");
 }
 
 void loadConfig()
