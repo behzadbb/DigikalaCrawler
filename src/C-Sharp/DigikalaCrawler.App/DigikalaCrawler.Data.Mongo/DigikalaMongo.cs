@@ -1,8 +1,10 @@
 ﻿using DigikalaCrawler.Data.Mongo.DBModels;
+using Microsoft.Extensions.Logging;
 using MongoDB.Driver;
 using MongoDB.Driver.Builders;
 using Newtonsoft.Json;
 using System.Text;
+using ILogger = Microsoft.Extensions.Logging.ILogger;
 
 namespace DigikalaCrawler.Data.Mongo;
 public class DigikalaMongo : IDisposable
@@ -205,6 +207,7 @@ public class DigikalaMongo : IDisposable
             newObj.Error = true;
             newObj.ProductId = dto.ProductId;
             DigikalaProductCrawls.Insert(newObj);
+            Console.WriteLine($"\n\nError in insert mongo, ids:{dto.ProductId}\n\n");
         }
         return Task.CompletedTask;
     }
@@ -223,7 +226,7 @@ public class DigikalaMongo : IDisposable
     public List<long> GetDigikalaProductCrawl1()
     {
         Console.WriteLine("GetDigikalaProductCrawl1");
-        IMongoQuery querySelect1 = Query<DigikalaProductCrawl>.NE(p => p.CommentDetails, null);
+        IMongoQuery querySelect1 = Query<DigikalaProductCrawl>.NE(p => p.CommentData, null);
         var ids11 = DigikalaProductCrawls.Find(querySelect1).Select(x => x.ProductId).ToList();
         Console.WriteLine("Count: " + ids11.Count());
         return ids11;

@@ -6,7 +6,7 @@ namespace DigikalaCrawler.Data.Mongo.DBModels;
 public class DigikalaProduct : Page
 {
     public ObjectId _id { get; set; }
-    public CommentDetails CommentDetails { get; set; }
+    public CommentData CommentData { get; set; }
     public ProductData ProductData { get; set; }
 
     public DigikalaProduct()
@@ -30,7 +30,10 @@ public class DigikalaProductCrawl
     public string JsonObject { get; set; }
     public bool ClientError { get; set; } = false;
     public bool ServerError { get; set; } = false;
-    public CommentDetails CommentDetails { get; set; }
+    public int CommentsCount { get; set; } = 0;
+    public int SendCommentsCount { get; set; } = 0;
+    public int QuestionsCount { get; set; } = 0;
+    public CommentData CommentData { get; set; }
     public Questions Questions { get; set; }
     public ProductData ProductData { get; set; }
 }

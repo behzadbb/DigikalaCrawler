@@ -1,5 +1,6 @@
 ﻿using DigikalaCrawler.Share.Models;
 using DigikalaCrawler.Share.Models.Question;
+using HtmlAgilityPack;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,6 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 using System.Xml;
-using Microsoft.Extensions.DependencyInjection;
 
 namespace DigikalaCrawler.Share.Services
 {
@@ -52,23 +52,6 @@ namespace DigikalaCrawler.Share.Services
 
         #region init
         private Config _config;
-
-        List<string> proxies = new List<string>(){
-            "130.185.73.139:8888",
-            "185.72.27.98:8080",
-            "188.95.89.81:8080",
-            "217.60.194.51:8080",
-            "37.255.135.18:8080",
-            "46.100.166.38:8080",
-            "5.202.191.226:8080",
-            "77.104.97.5:8080",
-            "78.38.100.121:8080",
-            "79.127.56.147:8080",
-            "80.191.162.2:514",
-            "81.91.144.190:55443",
-            "89.165.40.12:8080",
-            "94.74.132.129:808"};
-
         private readonly IHttpClientFactory _clientFactory;
 
         public DigikalaCrawlerServiceV1(IHttpClientFactory clientFactory)
@@ -84,19 +67,7 @@ namespace DigikalaCrawler.Share.Services
         public async Task<HttpContent> GetHttp(string url)
         {
             HttpClient client;
-            if (_config.UseProxy)
-            {
-                MihaZupan.HttpToSocks5Proxy proxy = new MihaZupan.HttpToSocks5Proxy(_config.ProxyHost, _config.ProxyPort);
-                var handler = new HttpClientHandler
-                {
-                    Proxy = proxy
-                };
-                client = new HttpClient();
-            }
-            else
-            {
-                client = _clientFactory.CreateClient();
-            }
+            client = _clientFactory.CreateClient();
 
             for (int i = 1; i < 4; i++)
             {
@@ -141,25 +112,37 @@ namespace DigikalaCrawler.Share.Services
             string fullPath = Path.Combine(savePath, fileName + ".xml");
             if (!Directory.Exists(Path.Combine(savePath, "Compress")))
                 Directory.CreateDirectory(Path.Combine(savePath, "Compress"));
-            if (!File.Exists(fullPathCompress))
+            try
             {
-                WebClient ClientI = new WebClient();
-                ClientI.DownloadFile(url, fullPathCompress);
-                Thread.Sleep(500);
+                if (!File.Exists(fullPathCompress))
+                {
+                    WebClient ClientI = new WebClient();
+                    ClientI.DownloadFile(url, fullPathCompress);
+                    Console.Write("|");
+                    Thread.Sleep(500);
+                }
+                if (!File.Exists(fullPath))
+                {
+                    string ReadData = "";
+                    GZipStream instreamI = new GZipStream(File.OpenRead(fullPathCompress), CompressionMode.Decompress);
+                    StreamReader readerI = new StreamReader(instreamI, Encoding.UTF8);
+                    ReadData = readerI.ReadToEnd();
+                    readerI.Close();
+                    XmlDocument xdocI = new XmlDocument();
+                    xdocI.LoadXml(ReadData);
+                    xdocI.Save(fullPath);
+                }
             }
-            string ReadData = "";
-            GZipStream instreamI = new GZipStream(File.OpenRead(fullPathCompress), CompressionMode.Decompress);
-            StreamReader readerI = new StreamReader(instreamI, Encoding.UTF8);
-            ReadData = readerI.ReadToEnd();
-            readerI.Close();
-            XmlDocument xdocI = new XmlDocument();
-            xdocI.LoadXml(ReadData);
-            xdocI.Save(fullPath);
+            catch (Exception ex)
+            {
+                Console.WriteLine($"\n\nurl: {url}\n{ex.Message}\n");
+            }
             return fullPath;
         }
 
         public async Task<IList<string>> GetSitemap(string path)
         {
+
             List<string> locs = new List<string>();
             if (File.Exists(path))
             {
@@ -171,6 +154,20 @@ namespace DigikalaCrawler.Share.Services
                     XmlNode title = (XmlNode)ienum.Current;
                     locs.Add(title.InnerText);
                 }
+            }
+            return locs;
+        }
+        public async Task<IList<string>> GetSitemap1(string path)
+        {
+            List<string> locs = new List<string>();
+            if (File.Exists(path))
+            {
+                HtmlDocument doc = new HtmlDocument();
+                doc.Load(path);
+
+                // Get all <loc> elements
+                var locNodes = doc.DocumentNode.SelectNodes("//loc").Select(x=>x.InnerText).ToList();
+                return locNodes;
             }
             return locs;
         }
@@ -206,8 +203,7 @@ namespace DigikalaCrawler.Share.Services
         {
             string url = "https://api.digikala.com/v1/product/" + productId + "/";
             string res = await (await GetHttp(url)).ReadAsStringAsync();
-            var product = JsonConvert.DeserializeObject<ProductObjV1>(res).data;
-            return product;
+            return JsonConvert.DeserializeObject<ProductObjV1>(res).data;
         }
 
         public async Task<CommentObjV1> GetProductComment(long productId, int page = 1)
@@ -224,6 +220,13 @@ namespace DigikalaCrawler.Share.Services
             }
             catch (Exception ex)
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+                Console.WriteLine($"\nComment Error, DKP: {productId}  ,  Page: {page}");
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.WriteLine($"\nError:\t{ex.Message}");
+                Console.ForegroundColor = ConsoleColor.Cyan;
+                Console.WriteLine($"\nStack:\t{ex.StackTrace}");
+                Console.ForegroundColor = ConsoleColor.White;
                 throw ex;
             }
         }
@@ -240,14 +243,14 @@ namespace DigikalaCrawler.Share.Services
             return str;
         }
 
-        public async Task<CommentDetails> GetProductComments(long productId)
+        public async Task<CommentData> GetProductComments(long productId)
         {
-            int random = new Random().Next(20, 65);
-            CommentDetails cm = (await GetProductComment(productId, 1)).data;
+            int random = new Random().Next(20, 50);
+            CommentData cm = (await GetProductComment(productId, 1)).Data;
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
-            if (cm != null && cm.pager.total_pages > 1)
+            if (cm != null && cm.Pager.total_pages > 1)
             {
-                for (int i = 2; i <= Math.Min(cm.pager.total_pages, 100); i++)
+                for (int i = 2; i <= Math.Min(cm.Pager.total_pages, 100); i++)
                 {
                     tasks.Add(GetProductComment(productId, i));
                     Thread.Sleep(random);
@@ -268,10 +271,10 @@ namespace DigikalaCrawler.Share.Services
             for (int i = 0; i < tasks.Count(); i++)
             {
                 var _data = tasks[i].Result;
-                if (_data != null && _data.data != null && _data.data.comments != null && _data.data.comments.Count() > 0)
-                    cm.comments.AddRange(_data.data.comments.ToList());
+                if (_data != null && _data.Data != null && _data.Data.Comments != null && _data.Data.Comments.Count() > 0)
+                    cm.Comments.AddRange(_data.Data.Comments.ToList());
                 else
-                    Console.WriteLine("GetProductComments, i:" + i + "\t staus:" + _data.status);
+                    Console.WriteLine("GetProductComments, i:" + i + "\t staus:" + _data.Status);
             }
             return cm;
         }
@@ -295,7 +298,7 @@ namespace DigikalaCrawler.Share.Services
 
         public async Task<Questions> GetQuestions(long productId)
         {
-            int random = new Random().Next(20, 65);
+            int random = new Random().Next(20, 50);
             Questions _questions = (await GetQuestion(productId, 1)).data;
             List<Task<QuestionResponse>> tasks = new List<Task<QuestionResponse>>();
             if (_questions != null && _questions.pager.total_pages > 1)
@@ -343,7 +346,8 @@ namespace DigikalaCrawler.Share.Services
             using (HttpClient client = _clientFactory.CreateClient())
             {
                 string url = $"{_config.Server}/Digikala/SendProducts/";
-                var json = JsonConvert.SerializeObject(products);
+                var json = JsonConvert.SerializeObject(products, Newtonsoft.Json.Formatting.Indented);
+                var model = JsonConvert.DeserializeObject<SetProductsDTO>(json);
                 var data = new StringContent(json, Encoding.UTF8, "application/json");
                 client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
                 return Task.CompletedTask;

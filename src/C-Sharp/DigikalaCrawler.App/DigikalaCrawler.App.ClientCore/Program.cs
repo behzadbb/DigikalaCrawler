@@ -12,7 +12,9 @@ Thread.Sleep(1000);
 Config _config;
 loadConfig();
 var checkUserId = true;
-Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| CM \t| CMs \t| H \t| CmH \t\t| Error ____");
+Console.ForegroundColor = ConsoleColor.Yellow;
+Console.WriteLine($"#_ \t| ALL  \t\t| Lst \t| Lod \t| Crwl \t| Snd \t| Avg \t| PCM \t| CM \t| CMs \t| H \t| CmH \t\t| Error ____");
+Console.ForegroundColor = ConsoleColor.White;
 
 IHost _host = Host.CreateDefaultBuilder(args)
     .ConfigureServices(services =>
@@ -45,7 +47,8 @@ while (!string.IsNullOrEmpty(_config.Server))
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 50);
-        Thread.Sleep(random * 3);
+        //Console.WriteLine("Random: {0}", random);
+        Thread.Sleep(random);
         if (ids != null && ids.Any())
         {
             checkUserId = false;
@@ -58,13 +61,15 @@ while (!string.IsNullOrEmpty(_config.Server))
                 try
                 {
                     product.Product = digi.GetProduct(ids[i]).Result;
+                    product.CommentsCount = product.Product.product.comments_count;
                     Thread.Sleep(random);
                     if (product.Product != null && product.Product.product.comments_count > 0)
                     {
                         for (int k = 1; k < 3; k++)
                         {
-                            product.Comments = digi.GetProductComments(ids[i]).Result;
-                            if (product.Comments == null || product.Comments.comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.Comments.comments.Count())
+                            product.CommentData = digi.GetProductComments(ids[i]).Result;
+                            product.SendCommentsCount = product.CommentData.Comments.Count();
+                            if (product.CommentData == null || product.CommentData.Comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.CommentData.Comments.Count())
                             {
                                 Console.WriteLine("\n\n\t\t\tComment Error\n\n\n\n");
                             }
@@ -73,11 +78,11 @@ while (!string.IsNullOrEmpty(_config.Server))
                                 break;
                             }
                         }
-                        if (product.Product.product.comments_count > product.Comments.comments.Count())
+                        if (product.Product.product.comments_count > product.CommentData.Comments.Count())
                         {
 
                         }
-                        if (product.Comments == null || product.Comments.comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.Comments.comments.Count())
+                        if (product.CommentData == null || product.CommentData.Comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.CommentData.Comments.Count())
                         {
                             throw new ArgumentException("Comment Count");
                         }
@@ -101,6 +106,15 @@ while (!string.IsNullOrEmpty(_config.Server))
                         if (product.Questions == null || product.Questions.questions == null || product.Product.product.questions_count > product.Questions.questions.Count())
                         {
                             throw new ArgumentException("Question Count");
+                        }
+                        try
+                        {
+
+                        }
+                        catch (Exception)
+                        {
+
+                            throw;
                         }
                     }
 
@@ -127,14 +141,15 @@ while (!string.IsNullOrEmpty(_config.Server))
                 {
 
                 }
+                monitoring.ProductComments = products.Products.Count(x => x.CommentData != null);
                 digi.SendProductsServer(products);
-                monitoring.LastSendToServerTimeProducts = Math.Round(((double)sw.ElapsedMilliseconds / 1000) - monitoring.LoadTimeProducts - monitoring.LastCrawlTimeProducts, 1);
+                monitoring.LastSendToServerTimeProducts = Math.Abs(Math.Round(((double)sw.ElapsedMilliseconds / 1000) - monitoring.LoadTimeProducts - monitoring.LastCrawlTimeProducts, 1));
             }
         }
     }
 
     sw.Stop();
-    monitoring.Last = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
+    monitoring.Last = Math.Abs(Math.Round((double)sw.ElapsedMilliseconds / 1000, 1));
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
     Thread.Sleep(300);
@@ -142,7 +157,7 @@ while (!string.IsNullOrEmpty(_config.Server))
 
 void Calc()
 {
-    if (monitoring.K % 2 == 0)
+    if (monitoring.K > 0 && monitoring.K % 2 == 0)
     {
         try
         {
@@ -154,13 +169,24 @@ void Calc()
         catch
         {
         }
-        Thread.Sleep(1500);
+        Thread.Sleep(100);
         if (monitoring.K % 10 == 0)
         {
-            Thread.Sleep(5000);
+            Thread.Sleep(1000);
+            if (monitoring.K % 100 == 0)
+            {
+                Thread.Sleep(10000);
+                if (monitoring.K % 20000 == 0)
+                {
+                    Thread.Sleep(60 * 1000);
+                }
+            }
         }
     }
-    Console.WriteLine($"\r{monitoring.K++}  \t| {monitoring.TotalProductCount}  \t\t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {monitoring.CountPerHours} \t\t|_{monitoring.ClientError}________________.");
+    Console.ForegroundColor = ConsoleColor.Green;
+    Console.Write($"\r{String.Format("{0:00000}", ++monitoring.K)}\t");
+    Console.ForegroundColor = ConsoleColor.White;
+    Console.Write($"| {String.Format("{0:000000}", monitoring.TotalProductCount)} \t| {monitoring.Last} \t| {monitoring.LoadTimeProducts} \t| {monitoring.LastCrawlTimeProducts} \t| {monitoring.LastSendToServerTimeProducts} \t| {monitoring.AvrageCrawling} \t| {String.Format("{0:00}", monitoring.ProductComments)} \t| {monitoring.LastCommentCount} \t| {(monitoring.TotalCommentCount < 10000 ? monitoring.TotalCommentCount : Math.Round((double)(monitoring.TotalCommentCount / 1000), 1) + "_k")} \t| {monitoring.HoursDurration} \t| {(monitoring.CountPerHours > 1000 ? Math.Round((double)(monitoring.CountPerHours / 1000), 1) + "_k" : monitoring.CountPerHours)} \t\t| {String.Format("{0:000000}", monitoring.ClientError)}");
 }
 
 void loadConfig()

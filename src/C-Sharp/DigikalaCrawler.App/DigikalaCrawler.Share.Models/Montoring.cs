@@ -12,6 +12,7 @@ namespace DigikalaCrawler.Share.Models
         public int TotalProductCount { set; get; } = 0;
         public double HoursDurration { set; get; } = 0;
         public int CountPerHours { set; get; } = 0;
+        public int ProductComments { get; set; } = 0;
         public double LoadTimeProducts { set; get; } = 0;
         public double LastCrawlTimeProducts { set; get; } = 0;
         public double LastSendToServerTimeProducts { set; get; } = 0;
