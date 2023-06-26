@@ -24,26 +24,22 @@ IHost _host = Host.CreateDefaultBuilder(args)
                 new HttpClientHandler
                 {
                     AllowAutoRedirect = true,
-                    UseDefaultCredentials = true,
-
+                    UseDefaultCredentials = true
                 });
         services.AddTransient<DigikalaCrawlerServiceV1>();
     }).ConfigureLogging(logging =>
     {
         logging.ClearProviders();
-
-        //... add my providers here
     }).Build();
 _host.Start();
 
 Stopwatch sw = new Stopwatch();
 while (!string.IsNullOrEmpty(_config.Server))
 {
-    sw.Restart();
-
     using (DigikalaCrawlerServiceV1 digi = _host.Services.GetRequiredService<DigikalaCrawlerServiceV1>())
     {
         digi.SetConfig(_config);
+        sw.Restart();
         List<long> ids = await digi.GetFreeProductsFromServer(checkUserId);
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 50);
@@ -62,6 +58,7 @@ while (!string.IsNullOrEmpty(_config.Server))
                 {
                     product.Product = digi.GetProduct(ids[i]).Result;
                     product.CommentsCount = product.Product.product.comments_count;
+                    product.QuestionsCount = product.Product.product.questions_count;
                     Thread.Sleep(random);
                     if (product.Product != null && product.Product.product.comments_count > 0)
                     {
@@ -78,10 +75,6 @@ while (!string.IsNullOrEmpty(_config.Server))
                                 break;
                             }
                         }
-                        if (product.Product.product.comments_count > product.CommentData.Comments.Count())
-                        {
-
-                        }
                         if (product.CommentData == null || product.CommentData.Comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.CommentData.Comments.Count())
                         {
                             throw new ArgumentException("Comment Count");
@@ -90,7 +83,6 @@ while (!string.IsNullOrEmpty(_config.Server))
                     Thread.Sleep(random);
                     if (product.Product != null && product.Product.product.questions_count > 0)
                     {
-                        product.Questions = digi.GetQuestions(ids[i]).Result;
                         for (int k = 1; k < 3; k++)
                         {
                             product.Questions = digi.GetQuestions(ids[i]).Result;
@@ -152,7 +144,7 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Abs(Math.Round((double)sw.ElapsedMilliseconds / 1000, 1));
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
-    Thread.Sleep(300);
+    Thread.Sleep(2000);
 }
 
 void Calc()

@@ -53,6 +53,7 @@ namespace DigikalaCrawler.Share.Services
         #region init
         private Config _config;
         private readonly IHttpClientFactory _clientFactory;
+        private DateTime last;
 
         public DigikalaCrawlerServiceV1(IHttpClientFactory clientFactory)
         {
@@ -62,6 +63,7 @@ namespace DigikalaCrawler.Share.Services
         public void SetConfig(Config config)
         {
             _config = config;
+            last = DateTime.Now;
         }
 
         public async Task<HttpContent> GetHttp(string url)
@@ -71,6 +73,8 @@ namespace DigikalaCrawler.Share.Services
 
             for (int i = 1; i < 4; i++)
             {
+                Console.WriteLine($"_{(DateTime.Now - last).TotalMilliseconds}");
+                last = DateTime.Now;
                 var response = await client.GetAsync(url);
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
@@ -210,6 +214,7 @@ namespace DigikalaCrawler.Share.Services
         {
             try
             {
+                Console.Write("\t|");
                 string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
                 string res = await (await GetHttp(url)).ReadAsStringAsync();
                 if (res.Contains("advantages\":{"))
@@ -245,7 +250,8 @@ namespace DigikalaCrawler.Share.Services
 
         public async Task<CommentData> GetProductComments(long productId)
         {
-            int random = new Random().Next(20, 50);
+            
+            int random = new Random().Next(30, 70);
             CommentData cm = (await GetProductComment(productId, 1)).Data;
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
             if (cm != null && cm.Pager.total_pages > 1)
@@ -254,10 +260,16 @@ namespace DigikalaCrawler.Share.Services
                 {
                     tasks.Add(GetProductComment(productId, i));
                     Thread.Sleep(random);
-                    if (i > 10 && i % 5 == 0)
-                    {
+                    if (i > 9 && i % 5 == 0)
+                        Thread.Sleep(100);
+                    if (i > 9 && i % 10 == 0)
+                        Thread.Sleep(1500);
+                    if (i > 19)
                         Thread.Sleep(50);
-                    }
+                    if (i > 30)
+                        Thread.Sleep(50);
+                    if (i > 60)
+                        Thread.Sleep(50);
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());
@@ -307,10 +319,14 @@ namespace DigikalaCrawler.Share.Services
                 {
                     tasks.Add(GetQuestion(productId, i));
                     Thread.Sleep(random);
-                    if (i > 10 && i % 5 == 0)
-                    {
+                    if (i > 9 && i % 5 == 0)
+                        Thread.Sleep(100);
+                    if (i > 9 && i % 10 == 0)
+                        Thread.Sleep(1500);
+                    if (i > 19)
                         Thread.Sleep(50);
-                    }
+                    if (i > 30)
+                        Thread.Sleep(50);
                 }
             }
             Task t = Task.WhenAll(tasks.ToArray());
