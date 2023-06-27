@@ -70,10 +70,9 @@ namespace DigikalaCrawler.Share.Services
         {
             HttpClient client;
             client = _clientFactory.CreateClient();
-
             for (int i = 1; i < 4; i++)
             {
-                Console.WriteLine($"_{(DateTime.Now - last).TotalMilliseconds}");
+                //Console.WriteLine($"_{(DateTime.Now - last).TotalMilliseconds}");
                 last = DateTime.Now;
                 var response = await client.GetAsync(url);
                 if (response.StatusCode == HttpStatusCode.OK)
@@ -170,7 +169,7 @@ namespace DigikalaCrawler.Share.Services
                 doc.Load(path);
 
                 // Get all <loc> elements
-                var locNodes = doc.DocumentNode.SelectNodes("//loc").Select(x=>x.InnerText).ToList();
+                var locNodes = doc.DocumentNode.SelectNodes("//loc").Select(x => x.InnerText).ToList();
                 return locNodes;
             }
             return locs;
@@ -214,7 +213,7 @@ namespace DigikalaCrawler.Share.Services
         {
             try
             {
-                Console.Write("\t|");
+                //Console.Write("\t|--> ");
                 string url = $"https://api.digikala.com/v1/product/{productId}/comments/?page={page}&order=created_at";
                 string res = await (await GetHttp(url)).ReadAsStringAsync();
                 if (res.Contains("advantages\":{"))
@@ -248,29 +247,16 @@ namespace DigikalaCrawler.Share.Services
             return str;
         }
 
-        public async Task<CommentData> GetProductComments(long productId)
+        public async Task<List<CommentObjV1>> GetProductCommentsPart(long productId, params int[] pages)
         {
-            
-            int random = new Random().Next(30, 70);
-            CommentData cm = (await GetProductComment(productId, 1)).Data;
+            int random = new Random().Next(65, 80);
+            List<CommentObjV1> _comments = new List<CommentObjV1>();
+
             List<Task<CommentObjV1>> tasks = new List<Task<CommentObjV1>>();
-            if (cm != null && cm.Pager.total_pages > 1)
+            for (int i = 0; i < pages.Length; i++)
             {
-                for (int i = 2; i <= Math.Min(cm.Pager.total_pages, 100); i++)
-                {
-                    tasks.Add(GetProductComment(productId, i));
-                    Thread.Sleep(random);
-                    if (i > 9 && i % 5 == 0)
-                        Thread.Sleep(100);
-                    if (i > 9 && i % 10 == 0)
-                        Thread.Sleep(1500);
-                    if (i > 19)
-                        Thread.Sleep(50);
-                    if (i > 30)
-                        Thread.Sleep(50);
-                    if (i > 60)
-                        Thread.Sleep(50);
-                }
+                tasks.Add(GetProductComment(productId, pages[i]));
+                await Task.Delay(random);
             }
             Task t = Task.WhenAll(tasks.ToArray());
             try
@@ -284,11 +270,50 @@ namespace DigikalaCrawler.Share.Services
             {
                 var _data = tasks[i].Result;
                 if (_data != null && _data.Data != null && _data.Data.Comments != null && _data.Data.Comments.Count() > 0)
-                    cm.Comments.AddRange(_data.Data.Comments.ToList());
+                    _comments.Add(_data);
                 else
                     Console.WriteLine("GetProductComments, i:" + i + "\t staus:" + _data.Status);
             }
-            return cm;
+            //Console.WriteLine("______________" + string.Join(" | ", pages) + "______________");
+            return _comments;
+        }
+
+        public async Task<CommentData> GetProductComments(long productId, int pages)
+        {
+            var conditions = Math.Min(100, (int)Math.Ceiling((double)pages / 20));
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine($"\t\tDKP: {productId}  -  Comments: {pages}  -  Condition: {conditions}");
+            //Console.ForegroundColor = ConsoleColor.Cyan;
+            
+            int step = 5;
+            List<CommentObjV1> _comments = new List<CommentObjV1>();
+            for (int i = 0; i < conditions; i++)
+            {
+                List<int> _pages = new List<int>();
+                int k = i * step;
+                while (k < pages && k < ((i + 1) * step) && k < conditions)
+                {
+                    _pages.Add(k + 1);
+                    k++;
+                }
+                _comments.AddRange(await GetProductCommentsPart(productId, _pages.ToArray()));
+                if (k >= conditions)
+                {
+                    break;
+                }
+                //await Task.Delay(100);
+            }
+
+            CommentData comment = new CommentData();
+            comment.SortOptions = _comments[0].Data.SortOptions;
+            comment.Sort = _comments[0].Data.Sort;
+            comment.IntentData = _comments[0].Data.IntentData;
+            comment.Ratings = _comments[0].Data.Ratings;
+            comment.MediaComments = _comments.SelectMany(x => x.Data.MediaComments).Distinct().ToList();
+            comment.Comments = _comments.SelectMany(x => x.Data.Comments).Distinct().ToList();
+            comment.Pager = _comments[0].Data.Pager;
+            //Console.ForegroundColor = ConsoleColor.White;
+            return comment;
         }
 
         #endregion
@@ -308,6 +333,71 @@ namespace DigikalaCrawler.Share.Services
             }
         }
 
+        public async Task<List<QuestionResponse>> GetQuestionPart(long productId, params int[] pages)
+        {
+            int random = new Random().Next(65, 80);
+            List<QuestionResponse> _questions = new List<QuestionResponse>();
+
+            List<Task<QuestionResponse>> tasks = new List<Task<QuestionResponse>>();
+            for (int i = 0; i < pages.Length; i++)
+            {
+                tasks.Add(GetQuestion(productId, pages[i]));
+                await Task.Delay(random);
+            }
+            Task t = Task.WhenAll(tasks.ToArray());
+            try
+            {
+                await t;
+            }
+            catch
+            {
+            }
+            for (int i = 0; i < tasks.Count(); i++)
+            {
+                var _data = tasks[i].Result;
+                if (_data != null && _data.data != null && _data.data.questions != null && _data.data.questions.Count() > 0)
+                    _questions.Add(_data);
+                else
+                    Console.WriteLine("Get Question Part, i:" + i + "\t staus:" + _data.status);
+            }
+            //Console.WriteLine("______________" + string.Join(" | ", pages) + "______________");
+            return _questions;
+        }
+
+
+        public async Task<Questions> GetQuestions(long productId, int pages)
+        {
+            var conditions = Math.Min(50, (int)Math.Ceiling((double)pages / 20));
+            //Console.ForegroundColor = ConsoleColor.Red;
+            //Console.WriteLine($"\t\tDKP: {productId}  -  Question: {pages}  -  Condition: {conditions}");
+            //Console.ForegroundColor = ConsoleColor.Cyan;
+
+            int step = 5;
+            List<QuestionResponse> _question = new List<QuestionResponse>();
+            for (int i = 0; i < conditions; i++)
+            {
+                List<int> _pages = new List<int>();
+                int k = i * step;
+                while (k < pages && k < ((i + 1) * step) && k < conditions)
+                {
+                    _pages.Add(k + 1);
+                    k++;
+                }
+                _question.AddRange(await GetQuestionPart(productId, _pages.ToArray()));
+                if (k >= conditions)
+                {
+                    break;
+                }
+                //await Task.Delay(100);
+            }
+
+            Questions q = new Questions();
+            q.pager = _question[0].data.pager;
+            q.questions = _question.SelectMany(x=>x.data.questions).ToList();
+            //Console.ForegroundColor = ConsoleColor.White;
+            return q;
+        }
+
         public async Task<Questions> GetQuestions(long productId)
         {
             int random = new Random().Next(20, 50);
@@ -320,7 +410,7 @@ namespace DigikalaCrawler.Share.Services
                     tasks.Add(GetQuestion(productId, i));
                     Thread.Sleep(random);
                     if (i > 9 && i % 5 == 0)
-                        Thread.Sleep(100);
+                        await Task.Delay(100);
                     if (i > 9 && i % 10 == 0)
                         Thread.Sleep(1500);
                     if (i > 19)

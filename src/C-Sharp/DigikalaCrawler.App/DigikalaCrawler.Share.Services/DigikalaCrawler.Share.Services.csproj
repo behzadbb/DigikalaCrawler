@@ -1,8 +1,13 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
+	  <!--<TargetLatestRuntimePatch>true</TargetLatestRuntimePatch>-->
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DigikalaCrawlerServiceV2.cs" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="HtmlAgilityPack" Version="1.11.48" />

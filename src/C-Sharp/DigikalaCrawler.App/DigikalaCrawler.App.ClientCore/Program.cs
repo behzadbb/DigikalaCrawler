@@ -33,6 +33,9 @@ IHost _host = Host.CreateDefaultBuilder(args)
     }).Build();
 _host.Start();
 
+double qt = 0;
+double ct = 0;
+
 Stopwatch sw = new Stopwatch();
 while (!string.IsNullOrEmpty(_config.Server))
 {
@@ -50,7 +53,7 @@ while (!string.IsNullOrEmpty(_config.Server))
             checkUserId = false;
             SetProductsDTO products = new SetProductsDTO();
             products.UserId = _config.UserId;
-            for (int i = 0; i < ids.Count(); i++)
+            for (int i = 0; i < 10; i++)
             {
                 var product = new SetProductDTO();
                 product.ProductId = ids[i];
@@ -59,12 +62,15 @@ while (!string.IsNullOrEmpty(_config.Server))
                     product.Product = digi.GetProduct(ids[i]).Result;
                     product.CommentsCount = product.Product.product.comments_count;
                     product.QuestionsCount = product.Product.product.questions_count;
-                    Thread.Sleep(random);
+                    //Thread.Sleep(random);
+                    ct = 0;
                     if (product.Product != null && product.Product.product.comments_count > 0)
                     {
                         for (int k = 1; k < 3; k++)
                         {
-                            product.CommentData = digi.GetProductComments(ids[i]).Result;
+                            var startct = DateTime.Now;
+                            product.CommentData = digi.GetProductComments(ids[i], product.Product.product.comments_count).Result;
+                            ct = (DateTime.Now - startct).TotalMilliseconds;
                             product.SendCommentsCount = product.CommentData.Comments.Count();
                             if (product.CommentData == null || product.CommentData.Comments == null || Math.Min(product.Product.product.comments_count, 2000) > product.CommentData.Comments.Count())
                             {
@@ -80,12 +86,15 @@ while (!string.IsNullOrEmpty(_config.Server))
                             throw new ArgumentException("Comment Count");
                         }
                     }
-                    Thread.Sleep(random);
+                    //Thread.Sleep(random);
+                    qt = 0;
                     if (product.Product != null && product.Product.product.questions_count > 0)
                     {
                         for (int k = 1; k < 3; k++)
                         {
-                            product.Questions = digi.GetQuestions(ids[i]).Result;
+                            var startqt = DateTime.Now;
+                            product.Questions = digi.GetQuestions(ids[i], product.Product.product.questions_count).Result;
+                            qt = (DateTime.Now - startqt).TotalMilliseconds;
                             if (product.Questions == null || product.Questions.questions == null || Math.Min(product.Product.product.questions_count, 1000) > product.Questions.questions.Count())
                             {
                                 Console.WriteLine($"\tQuestion Error:\tdkp-{ids[i]}\ttry={k}");
@@ -118,6 +127,7 @@ while (!string.IsNullOrEmpty(_config.Server))
                     product.ErrorMessage = ex.Message;
                     product.ClientError = true;
                 }
+                //Console.WriteLine($"\t\t\tComment Time:{ct} - Count:{product.CommentsCount} \t\t Question Time:{qt} - Count:{product.QuestionsCount}");
                 products.Products.Add(product);
             }
             monitoring.LastCrawlTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000 - monitoring.LoadTimeProducts, 1);
@@ -144,7 +154,7 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Abs(Math.Round((double)sw.ElapsedMilliseconds / 1000, 1));
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
-    Thread.Sleep(2000);
+    Thread.Sleep(100);
 }
 
 void Calc()
