@@ -58,6 +58,7 @@ namespace DigikalaCrawler.Share.Services
         public DigikalaCrawlerServiceV1(IHttpClientFactory clientFactory)
         {
             _clientFactory = clientFactory;
+            TicketState.SetNew();
         }
 
         public void SetConfig(Config config)
@@ -73,8 +74,15 @@ namespace DigikalaCrawler.Share.Services
             for (int i = 1; i < 4; i++)
             {
                 //Console.WriteLine($"_{(DateTime.Now - last).TotalMilliseconds}");
-                last = DateTime.Now;
+                var diff = TicketState.Diff;
+                if (diff < 60)
+                {
+                    await Task.Delay(60 - diff);
+                }
+                //Console.Write($"\r{String.Format("{0:0000}", TicketState.Diff)}");
+                TicketState.SetNew();
                 var response = await client.GetAsync(url);
+
                 if (response.StatusCode == HttpStatusCode.OK)
                 {
                     return response.Content;
@@ -256,7 +264,7 @@ namespace DigikalaCrawler.Share.Services
             for (int i = 0; i < pages.Length; i++)
             {
                 tasks.Add(GetProductComment(productId, pages[i]));
-                await Task.Delay(random);
+                await Task.Delay(5);
             }
             Task t = Task.WhenAll(tasks.ToArray());
             try
@@ -284,8 +292,8 @@ namespace DigikalaCrawler.Share.Services
             //Console.ForegroundColor = ConsoleColor.Red;
             //Console.WriteLine($"\t\tDKP: {productId}  -  Comments: {pages}  -  Condition: {conditions}");
             //Console.ForegroundColor = ConsoleColor.Cyan;
-            
-            int step = 5;
+
+            int step = 15;
             List<CommentObjV1> _comments = new List<CommentObjV1>();
             for (int i = 0; i < conditions; i++)
             {
@@ -342,7 +350,7 @@ namespace DigikalaCrawler.Share.Services
             for (int i = 0; i < pages.Length; i++)
             {
                 tasks.Add(GetQuestion(productId, pages[i]));
-                await Task.Delay(random);
+                //await Task.Delay(random);
             }
             Task t = Task.WhenAll(tasks.ToArray());
             try
@@ -393,7 +401,7 @@ namespace DigikalaCrawler.Share.Services
 
             Questions q = new Questions();
             q.pager = _question[0].data.pager;
-            q.questions = _question.SelectMany(x=>x.data.questions).ToList();
+            q.questions = _question.SelectMany(x => x.data.questions).ToList();
             //Console.ForegroundColor = ConsoleColor.White;
             return q;
         }
@@ -447,15 +455,57 @@ namespace DigikalaCrawler.Share.Services
                 return JsonConvert.DeserializeObject<List<long>>(res);
             }
         }
-        public Task SendProductsServer(SetProductsDTO products)
+        public async Task SendProductsServer(SetProductsDTO products)
         {
-            using (HttpClient client = _clientFactory.CreateClient())
+            if (_config.LocalDatabase)
             {
-                string url = $"{_config.Server}/Digikala/SendProducts/";
-                var json = JsonConvert.SerializeObject(products, Newtonsoft.Json.Formatting.Indented);
-                var data = new StringContent(json, Encoding.UTF8, "application/json");
-                client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
-                return Task.CompletedTask;
+                Task.Run(() => SaveToFile(products));
+                using (HttpClient client = _clientFactory.CreateClient())
+                {
+                    string url = $"{_config.Server}/Digikala/CrawlProducts/";
+                    var _data = new CrawlProductsDTO
+                    {
+                        IDs = products.Products.Select(x => x.ProductId).ToList(),
+                        UserId = products.UserId
+                    };
+                    var json = JsonConvert.SerializeObject(_data);
+                    var data = new StringContent(json, Encoding.UTF8, "application/json");
+                    await client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
+                }
+            }
+            else
+            {
+                using (HttpClient client = _clientFactory.CreateClient())
+                {
+                    string url = $"{_config.Server}/Digikala/SendProducts/";
+                    var json = JsonConvert.SerializeObject(products);
+                    var data = new StringContent(json, Encoding.UTF8, "application/json");
+                    await client.PostAsync(url, data).Result.Content.ReadAsStringAsync();
+                }
+            }
+        }
+        #endregion
+
+        #region
+        private async Task<string> GetPath(long productId)
+        {
+            var _path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Desktop), "Digikala_Crawl", Math.Round(productId / 1000000.0, 0).ToString());
+            var _pathFile = Path.Combine(_path, $"{productId}.json");
+            if (Directory.Exists(_path))
+                Directory.CreateDirectory(_path);
+            return _pathFile;
+        }
+        public async Task SaveToFile(SetProductDTO product)
+        {
+            var _pathFile = GetPath(product.ProductId);
+            var json = JsonConvert.SerializeObject(product);
+            await File.WriteAllTextAsync(await _pathFile, json);
+        }
+        public async Task SaveToFile(SetProductsDTO products)
+        {
+            foreach (var product in products.Products)
+            {
+                await SaveToFile(product);
             }
         }
         #endregion

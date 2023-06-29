@@ -47,7 +47,7 @@ while (!string.IsNullOrEmpty(_config.Server))
         monitoring.LoadTimeProducts = Math.Round((double)sw.ElapsedMilliseconds / 1000, 1);
         int random = new Random().Next(3, 50);
         //Console.WriteLine("Random: {0}", random);
-        Thread.Sleep(random);
+        //Thread.Sleep(random);
         if (ids != null && ids.Any())
         {
             checkUserId = false;
@@ -154,7 +154,7 @@ while (!string.IsNullOrEmpty(_config.Server))
     monitoring.Last = Math.Abs(Math.Round((double)sw.ElapsedMilliseconds / 1000, 1));
     monitoring.TimeSheet.Add(monitoring.Last);
     Calc();
-    Thread.Sleep(100);
+    //Thread.Sleep(100);
 }
 
 void Calc()
@@ -171,7 +171,7 @@ void Calc()
         catch
         {
         }
-        Thread.Sleep(100);
+        //Thread.Sleep(100);
         if (monitoring.K % 10 == 0)
         {
             Thread.Sleep(1000);

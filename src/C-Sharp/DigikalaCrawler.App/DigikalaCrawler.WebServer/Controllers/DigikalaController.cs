@@ -125,6 +125,27 @@ namespace DigikalaCrawler.WebServer.Controllers
         }
 
         [HttpPost("/[controller]/SendProducts")]
+        public async Task<IActionResult> CrawlProducts([FromBody] CrawlProductsDTO dto)
+        {
+            //SetProductsDTO dto = new SetProductsDTO();
+            //string s = json.ToString();
+            //var dto = Newtonsoft.Json.JsonConvert.DeserializeObject<SetProductsDTO>(s);
+            //_logger.LogWarning($"Comments:{dto.Products.Sum(x=>x.CommentsCount)}, Send:{dto.Products.Sum(x => x.SendCommentsCount)}, Recive:{dto.Products.Where(x=>x.CommentData!=null && x.CommentData.Comments.Any()).Sum(x=>x.CommentData.Comments.Count())}");
+            
+            //dto = (SetProductsDTO)json;
+            if (CountStatic.LastTime.ContainsKey(dto.UserId))
+                CountStatic.LastTime[dto.UserId] = DateTime.Now;
+            else
+                CountStatic.LastTime.Add(dto.UserId, DateTime.Now);
+
+            _ = Task.Run(() =>
+            {
+                _digi.UpdateProductsCrawlAsync(dto.IDs);
+            });
+            return Ok();
+        }
+
+        [HttpPost("/[controller]/SendProducts")]
         public async Task<IActionResult> SendProducts([FromBody] object json)
         {
             //SetProductsDTO dto = new SetProductsDTO();
